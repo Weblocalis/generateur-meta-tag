@@ -29,9 +29,6 @@ Les contributions sont les bienvenues ! Si vous souhaitez améliorer ce généra
 Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT). Vous êtes libre de l'utiliser et de le modifier selon vos besoins.
 
 ---
-Développé par [WebLocalis](https://www.weblocalis.com)
-
----
 
 # MetaTagGenerator
 
