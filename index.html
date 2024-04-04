@@ -424,7 +424,15 @@
 			<footer id="footer">
 				<div class="inner">
 					<div class="copyright">
-					<p>&copy; 2019-<?php echo date("Y"); ?> Générateur de Balise Meta. Tous droits réservés.</p>
+    <p id="year">&copy; 2019-<span id="currentYear"></span> Générateur de Balise Meta. Tous droits réservés.</p>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+      var currentYear = new Date().getFullYear();
+      var spanCurrentYear = document.getElementById("currentYear");
+      spanCurrentYear.textContent = currentYear;
+    });
+</script>
+
 					</div>
 				</div>
 				
