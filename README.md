@@ -30,3 +30,39 @@ Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT). Vous ête
 
 ---
 Développé par [WebLocalis](https://www.weblocalis.com)
+
+---
+
+# MetaTagGenerator
+
+MetaTagGenerator is a simple static page meta tag generator, using JavaScript, HTML5, and CSS. This project offers a completely free solution for quickly generating meta tags. Designed to be lightweight and easy to use, it's the perfect tool to save time and optimize the SEO of your website hassle-free.
+
+## Features
+
+- Fast and easy generation of customized meta tags.
+- Use of JavaScript, HTML5, and CSS for a smooth user experience.
+- Completely free solution, no need to pay for additional features.
+- Lightweight and without dependency on a backend server.
+
+## Usage
+
+1. Fill in the fields with the relevant information for your website.
+2. Click the "Generate" button to obtain the meta tags.
+3. Copy and paste the generated tags into the `<head>` of your HTML pages.
+
+## Contribution
+
+Contributions are welcome! If you'd like to improve this meta tag generator, feel free to submit a pull request. Here's how you can contribute:
+
+- Add new features.
+- Improve the user interface.
+- Fix bugs.
+- Propose enhancement suggestions.
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). You are free to use and modify it as needed.
+
+---
+Developed by [WebLocalis](https://www.weblocalis.com)
+
