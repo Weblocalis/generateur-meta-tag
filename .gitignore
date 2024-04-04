@@ -1,0 +1,33 @@
+# Fichiers générés par l'environnement de développement
+/node_modules
+
+# Fichiers générés par les éditeurs de texte
+*.swp
+*.swo
+.vscode/
+
+# Fichiers de configuration spécifiques à l'environnement
+.env
+
+# Fichiers de build
+/build
+/dist
+
+# Fichiers de cache
+.cache
+
+# Fichiers de logs
+/logs
+
+# Fichiers de sauvegarde automatique
+*.bak
+
+# Fichiers d'administration spécifiques
+/admin/node_modules
+
+# Fichiers de sauvegarde de données locales (pour les serveurs de développement)
+*.sqlite
+
+# Ignorer les fichiers sensibles contenant des informations de connexion, etc. (s'ils sont présents)
+config.php
+database.php
