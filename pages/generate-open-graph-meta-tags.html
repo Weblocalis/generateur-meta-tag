@@ -1,0 +1,559 @@
+<!DOCTYPE HTML>
+
+<html lang="fr">
+
+<head>
+    <title>Générer des balises méta Open Graph</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="content-language" content="fr">
+    <meta name="description"
+        content="Générez facilement des balises méta Open Graph pour votre site web afin d'optimiser son partage sur les réseaux sociaux et d'améliorer son référencement.">
+    <meta name="keywords" content="generate, open graph, meta tags, social media, SEO">
+    <meta name="author" content="WebLocalis">
+    <meta name="robots" content="index,follow">
+
+    <!-- Balises Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <!-- Balises Twitter Card pour Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+
+
+    <!-- Icônes Apple Touch -->
+    <link rel="apple-touch-icon" href="../images/favicon/apple-icon-180x180.ico"
+        sizes="57x57, 60x60, 72x72, 76x76, 114x114, 120x120, 144x144, 152x152, 180x180">
+    <!-- Icônes Android -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/android-icon-192x192.ico" sizes="192x192">
+    <!-- Icônes Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon-32x32.ico" sizes="32x32">
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon-96x96.ico" sizes="96x96">
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico" sizes="16x16">
+    <link rel="shortcut icon" href="images/favicon/favicon.ico">
+
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- Script JavaScript externe pour mettre à jour les balises meta -->
+    <script src="../assets/js/updateMetaTags.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+            <a href="index.html" class="logo">Générateur de <strong>Balise Meta</strong></a>
+            <nav id="nav">
+                <a href="index.html">Accueil</a>
+            </nav>
+            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+        </div>
+    </header>
+
+    <!-- Banner -->
+    <section id="banner">
+        <div class="inner">
+            <header>
+                <h1>Générateur des Balises-Meta</h1>
+            </header>
+
+            <div class="flex ">
+
+                <div>
+                    <span class="icon fa-share-alt"></span>
+                    <h3>OpenGraph</h3>
+                    <p>Optimisation partage contenu</p>
+
+                    <a href="" title="" class="button">OpenGraph</a>
+
+                </div>
+
+                <div>
+                    <span class="icon fa-code"></span>
+                    <h3>Meta Tags Standards</h3>
+                    <p>Normes Meta Tags pour SEO</p>
+
+                    <a href="#generateur" title="" class="button">Balises Meta</a>
+
+                </div>
+
+                <div>
+                    <span class="icon fa-share-square"></span>
+                    <h3>Meta Tag pour RS</h3>
+                    <p>Meta Tag pour Réseaux sociaux</p>
+
+                    <a href="" title="" class="button">Meta RS</a>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="wrapper align-center">
+        <div class="inner">
+            <div id="generateur" class="flex flex-3">
+
+                <form method="post" action="#">
+                    <!--Métadonnées de base-->
+                    <div class="row">
+                        <div>
+                            <h2 id="content">Métadonnées de base :</h2>
+                            <p>Les métadonnées de base sont des éléments essentiels décrivant succinctement votre site
+                                web.
+                                Elles servent de fondement à sa visibilité et à sa compréhension par les moteurs de
+                                recherche et
+                                les visiteurs. Cette section inclut généralement des données telles que le titre de la
+                                page, la
+                                description, les mots-clés, l'URL canonique et d'autres balises HTML cruciales.
+                                Optimiser ces
+                                métadonnées améliore l'indexation par les moteurs de recherche et favorise une
+                                présentation plus
+                                efficace dans les résultats de recherche. Cela accroît ainsi l'attractivité et la
+                                pertinence de
+                                votre site pour les utilisateurs potentiels.</p>
+                        </div>
+                        <!--Balise Title -->
+                        <div class="6u 12u$(small)">
+                            <label for="title">Balise <span lang="en">Title</span> :</label>
+                            <input type="text" id="title" name="title" value=""
+                                placeholder="Entrez le titre de la page" />
+                        </div>
+
+                        <!--Balise Charset -->
+                        <div class="3u 6u(medium) 12u$(small)">
+                            <label for="content_type">Charset :</label>
+                            <select id="content_type" name="content_type">
+                                <option value="UTF-8" selected="selected">UTF-8</option>
+                                <option value="ISO-8859-1">ISO-8859-1</option>
+                                <option value="ISO-8859-15">ISO-8859-15</option>
+                                <option value="cp1252">cp1252</option>
+                                <option value="BIG5">BIG5</option>
+                                <option value="GB2312">GB2312</option>
+                                <option value="BIG5-HKSCS">BIG5-HKSCS</option>
+                                <option value="Shift_JIS">Shift_JIS</option>
+                                <option value="EUCJP">EUCJP</option>
+                            </select>
+                        </div>
+                        <!--Balise Langue -->
+                        <div class="3u$ 6u$(medium) 12u$(small)">
+                            <label for="content_language">Langue :</label>
+                            <select id="content_language" name="content_language">
+                                <option value="af">Africain, af</option>
+                                <option value="sq">Albanais, sq</option>
+                                <option value="ar-dz">Algérien, ar-dz</option>
+                                <option value="de">Allemand, de</option>
+                                <option value="de-at">Allemand (Austrian), de-at</option>
+                                <option value="de-li">Allemand (Liechtenstein), de-li</option>
+                                <option value="de-lu">Allemand (Luxembourg), de-lu</option>
+                                <option value="de-ch">Allemand (Suisse), de-ch</option>
+                                <option value="en-us">Américain, en-us</option>
+                                <option value="en">Anglais, en</option>
+                                <option value="en-za">Anglais (Afrique du sud), en-za</option>
+                                <option value="en-bz">Anglais (Bélize), en-bz</option>
+                                <option value="en-gb">Anglais (Great Britain), en-gb</option>
+                                <option value="ar">Arabe, ar</option>
+                                <option value="ar-sa">Arabe (Arabie Saoudite), ar-sa</option>
+                                <option value="ar-bh">Arabe (Bahreïn), ar-bh</option>
+                                <option value="ar-ae">Arabe (Emirat arabe uni), ar-ae</option>
+                                <option value="en-au">Australien, en-au</option>
+                                <option value="eu">Basque, eu</option>
+                                <option value="nl-be">Belge, nl-be</option>
+                                <option value="be">Biélorussie, be</option>
+                                <option value="bg">Bulgarre, bg</option>
+                                <option value="en-ca">Canadien, en-ca</option>
+                                <option value="ca">Catalan, ca</option>
+                                <option value="zh">Chinois, zh</option>
+                                <option value="zh-hk">Chinois (Hong-Kong), zh-hk</option>
+                                <option value="zh-cn">Chinois (PRC), zh-cn</option>
+                                <option value="zh-sg">Chinois (Singapourg), zh-sg</option>
+                                <option value="zh-tw">Chinois (Taïwan), zh-tw</option>
+                                <option value="ko">Coréein, ko</option>
+                                <option value="cs">Crète, cs</option>
+                                <option value="hr">Croate, hr</option>
+                                <option value="da">Danois, da</option>
+                                <option value="ar-eg">Egyptien, ar-eg</option>
+                                <option value="es">Espagnol, es</option>
+                                <option value="es-ar">Espagnol (Argentine), es-ar</option>
+                                <option value="es-bo">Espagnol (Bolivie), es-bo</option>
+                                <option value="es-cl">Espagnol (Chilie), es-cl</option>
+                                <option value="es-co">Espagnol (Colombie), es-co</option>
+                                <option value="es-cr">Espagnol (Costa Rica), es-cr</option>
+                                <option value="es-sv">Espagnol (El Salvador), es-sv</option>
+                                <option value="es-ec">Espagnol (Equateur), es-ec</option>
+                                <option value="es-gt">Espagnol (Guatemala), es-gt</option>
+                                <option value="es-hn">Espagnol (Honduras), es-hn</option>
+                                <option value="es-mx">Espagnol (Mexique), es-mx</option>
+                                <option value="es-ni">Espagnol (Nicaragua), es-ni</option>
+                                <option value="es-pa">Espagnol (Panama), es-pa</option>
+                                <option value="es-py">Espagnol (Paraguay), es-py</option>
+                                <option value="es-pe">Espagnol (Pérou), es-pe</option>
+                                <option value="es-pr">Espagnol (Puerto Rico), es-pr</option>
+                                <option value="en-tt">Espagnol (Trinidad), en-tt</option>
+                                <option value="es-uy">Espagnol (Uruguay), es-uy</option>
+                                <option value="es-ve">Espagnol (Venezuela), es-ve</option>
+                                <option value="et">Estonien, et</option>
+                                <option value="sx">Estonien, sx</option>
+                                <option value="fo">Faeroese, fo</option>
+                                <option value="fi">Finlandais, fi</option>
+                                <option value="fr" selected="selected">Français, fr</option>
+                                <option value="fr-be">Français (Belgique), fr-be</option>
+                                <option value="fr-ca">Français (Canada), fr-ca</option>
+                                <option value="fr-lu">Français (Luxembourg), fr-lu</option>
+                                <option value="fr-ch">Français (Suisse), fr-ch</option>
+                                <option value="gd">Galicien, gd</option>
+                                <option value="el">Gréc, el</option>
+                                <option value="he">Hébreux, he</option>
+                                <option value="nl">Hollandais, nl</option>
+                                <option value="hu">Hongrois, hu</option>
+                                <option value="in">Indonésien, in</option>
+                                <option value="hi">Indou, hi</option>
+                                <option value="fa">Iranien, fa</option>
+                                <option value="ar-iq">Iraquien, ar-iq</option>
+                                <option value="en-ie">Irlandais, en-ie</option>
+                                <option value="is">Islandais, is</option>
+                                <option value="it">Italien, it</option>
+                                <option value="it-ch">Italien (Suisse), it-ch</option>
+                                <option value="en-jm">Jamaicain, en-jm</option>
+                                <option value="ja">Japonais, ja</option>
+                                <option value="ar-jo">Jordanien, ar-jo</option>
+                                <option value="ar-kw">Koweitien, ar-kw</option>
+                                <option value="lv">Lettische, lv</option>
+                                <option value="ar-lb">Libanais, ar-lb</option>
+                                <option value="lt">Littuanien, lt</option>
+                                <option value="ar-ly">Lybien, ar-ly</option>
+                                <option value="mk">Macédoine, mk</option>
+                                <option value="ms">Malésien, ms</option>
+                                <option value="mt">Maltais, mt</option>
+                                <option value="ar-ma">Marocain, ar-ma</option>
+                                <option value="en-nz">Néo-zélandais, en-nz</option>
+                                <option value="no">Norvégien (Nynorsk), no</option>
+                                <option value="ar-om">Oman, ar-om</option>
+                                <option value="pl">Polonais, pl</option>
+                                <option value="pt">Portugais, pt</option>
+                                <option value="pt-br">Portugais (Brésil), pt-br</option>
+                                <option value="ar-qa">Quatar, ar-qa</option>
+                                <option value="rm">Rhaeto-Romanic, rm</option>
+                                <option value="ro">Roumain, ro</option>
+                                <option value="ro-mo">Roumain (Moldavie), ro-mo</option>
+                                <option value="ru">Russe, ru</option>
+                                <option value="ru-mo">Russe (Moldavie), ru-mo</option>
+                                <option value="sr">Serbe (Latin), sr</option>
+                                <option value="sk">Slovaque, sk</option>
+                                <option value="sl">Slovéne, sl</option>
+                                <option value="sb">Sorbian, sb</option>
+                                <option value="sv">Suèdois, sv</option>
+                                <option value="sv-fi">Suèdois (Finlande), sv-fi</option>
+                                <option value="ch">Suisse, ch</option>
+                                <option value="ar-sy">Syrien, ar-sy</option>
+                                <option value="th">Thaïlandais, th</option>
+                                <option value="ts">Tsonga (Afrique du sud), ts</option>
+                                <option value="tn">Tswana (Afrique du sud), tn</option>
+                                <option value="ar-tn">Tunisien, ar-tn</option>
+                                <option value="tr">Turc, tr</option>
+                                <option value="uk">Ukrainien, uk</option>
+                                <option value="ur">Urdu, ur</option>
+                                <option value="vi">Vietnamien, vi</option>
+                                <option value="xh">Xhosa (Afrique), xh</option>
+                                <option value="ar-ye">Yémen, ar-ye</option>
+                                <option value="ji">Yiddish, ji</option>
+                                <option value="zu">Zulu (Afrique), zu</option>
+                            </select>
+                        </div>
+                        <!--Balise Description -->
+                        <div class="6u 12u$(medium) 12u$(xsmall)">
+                            <label for="description">Meta Description :</label>
+                            <textarea id="description" name="description" placeholder="Saisissez votre description"
+                                cols="50" rows="5"></textarea>
+                        </div>
+                        <!--Balise  Keywords-->
+                        <div class="6u 12u$(medium) 12u$(xsmall)">
+                            <label for="keywords">Balise <span lang="en">Keywords</span> :</label>
+                            <textarea id="keywords" name="keywords" placeholder="Ex: mot-clé 1, mot-clé 2, mot-clé 3"
+                                cols="50" rows="5"></textarea>
+                        </div>
+                        <!--Balise  sujet-->
+                        <div class="6u 12u$(medium)">
+                            <label for="subject">Sujet de la page :</label>
+                            <input type="text" id="subject" name="subject" />
+                        </div>
+                        <!-- Balise Copyright -->
+                        <div class="6u 12u$(medium)">
+                            <label for="copyright">Droits d'auteur :</label>
+                            <input type="text" id="copyright" name="copyright" />
+                        </div>
+                        <!-- Champ de saisie pour l'auteur -->
+                        <div class="6u 12u$(medium)">
+                            <label for="author">Auteur de la page :</label>
+                            <input type="text" id="author" name="author" />
+                        </div>
+                        <!-- Champ de saisie pour le publisher -->
+                        <div class="6u 12u$(medium)">
+                            <label for="publisher">Éditeur :</label>
+                            <input type="text" id="publisher" name="publisher" />
+                        </div>
+                        <!-- Champ de saisie pour l'URL de la page -->
+                        <div class="6u 12u$(medium)">
+                            <label for="identifier_url">Adresse web de la page :</label>
+                            <input type="text" id="identifier_url" name="identifier_url" pattern="https?://.+"
+                                title="Veuillez entrer une URL valide commençant par http:// ou https://">
+                        </div>
+                        <!-- Champ de saisie pour l'adresse e-mail de réponse -->
+                        <div class="6u 12u$(medium)">
+                            <label for="reply_to">Adresse e-mail pour les réponses :</label>
+                            <input type="text" id="reply_to" name="reply_to" />
+                        </div>
+                    </div>
+
+                    <hr />
+
+                    <!--Métadonnées pour le contrôle des moteurs de recherche-->
+                    <div class="row">
+                        <div>
+                            <h2 id="content">Métadonnées pour le contrôle des moteurs de recherche :</h2>
+                            <p>Les métadonnées pour le contrôle des moteurs de recherche sont des balises spécifiques
+                                qui
+                                influencent l'indexation et l'affichage des pages de votre site. Elles comprennent des
+                                instructions telles que les balises "robots", qui guident les moteurs de recherche sur
+                                les pages
+                                à indexer ou à exclure, ainsi que les directives d'indexation comme les balises
+                                "noindex" et
+                                "nofollow". En utilisant ces métadonnées de manière stratégique, vous pouvez mieux
+                                contrôler
+                                l'interprétation et la présentation de votre site dans les résultats de recherche,
+                                optimisant
+                                ainsi sa visibilité et sa performance en ligne.</p>
+                        </div>
+                        <!--Revisiter la page dans-->
+                        <div class="6u 12u$(medium)">
+                            <label for="revisit_after">Fréquence de révision :</label>
+                            <select id="revisit_after" name="revisit_after">
+                                <option value="1 day">1 jour</option>
+                                <option value="2 days">2 jours</option>
+                                <option value="3 days">3 jours</option>
+                                <option value="4 days">4 jours</option>
+                                <option value="5 days">5 jours</option>
+                                <option value="6 days">6 jours</option>
+                                <option value="7 days">7 jours</option>
+                                <option value="8 days">8 jours</option>
+                                <option value="9 days">9 jours</option>
+                                <option value="10 days">10 jours</option>
+                                <option value="11 days">11 jours</option>
+                                <option value="12 days">12 jours</option>
+                                <option value="13 days">13 jours</option>
+                                <option value="14 days">14 jours</option>
+                                <option value="15 days" selected="selected">15 jours</option>
+                                <option value="16 days">16 jours</option>
+                                <option value="17 days">17 jours</option>
+                                <option value="18 days">18 jours</option>
+                                <option value="19 days">19 jours</option>
+                                <option value="20 days">20 jours</option>
+                                <option value="21 days">21 jours</option>
+                                <option value="22 days">22 jours</option>
+                                <option value="23 days">23 jours</option>
+                                <option value="24 days">24 jours</option>
+                                <option value="25 days">25 jours</option>
+                                <option value="26 days">26 jours</option>
+                                <option value="27 days">27 jours</option>
+                                <option value="28 days">28 jours</option>
+                                <option value="29 days">29 jours</option>
+                                <option value="30 days">30 jours</option>
+                                <option value="31 days">31 jours</option>
+                            </select>
+                        </div>
+
+                        <!--Directives aux robots-->
+                        <div class="6u$ 12u$(medium)">
+                            <label for="robots">Directives aux robots :</label>
+                            <select id="robots" name="robots">
+                                <option value="index"><abbr title="indexation" lang="en">Index</abbr> (Autoriser
+                                    l'indexation du contenu.)</option>
+                                <option value="noindex"><span lang="en">Noindex</span> (Empêcher l'indexation du
+                                    contenu.)</option>
+                                <option value="follow"><span lang="en">Follow</span> (Autoriser le suivi des liens.)
+                                </option>
+                                <option value="nofollow"><span lang="en">Nofollow</span> (Empêcher le suivi des liens.)
+                                </option>
+                                <option value="all"><span lang="en">All</span> (Équivalent à Index, Follow.)</option>
+                                <option value="none"><span lang="en">None</span> (Équivalent à Noindex, Nofollow.)
+                                </option>
+                                <option value="archive">Archive (Conserver une copie de la page.)</option>
+                                <option value="noarchive"><span lang="en">Noarchive</span> (Ne pas conserver de copie de
+                                    la page.)</option>
+                                <option value="noodp"><span lang="en">Noodp</span> (Empêcher l'utilisation de la
+                                    description Open Directory Project (ODP).)</option>
+                                <option value="noydir"><span lang="en">Noydir</span> (Empêcher l'utilisation de la
+                                    description Yahoo!.)</option>
+                                <option value="nosnippet"><span lang="en">Nosnippet</span> (Empêcher l'affichage d'un
+                                    extrait dans les résultats de recherche.)</option>
+                                <option value="notranslate"><span lang="en">Notranslate</span> (Empêcher la proposition
+                                    de traduction.)</option>
+                                <option value="noimageindex"><span lang="en">Noimageindex</span> (Empêcher l'indexation
+                                    des images.)</option>
+
+                            </select>
+                        </div>
+
+                        <!--Classification-->
+                        <div class="6u 12u$(medium)">
+                            <label for="rating">Classification (définit le type de contenu du site) :</label>
+                            <select id="rating" name="rating">
+                                <option value="general">Pour tout public</option>
+                                <option value="mature">Site pour adulte</option>
+                                <option value="restricted">Accès restreint</option>
+                                <option value="14 years">Plus de 14 ans</option>
+                                <option value="educational">À vocation éducative</option>
+                                <option value="business">À vocation commerciale</option>
+                                <option value="news">Site d'actualités</option>
+                            </select>
+                        </div>
+                        <!--Distribution du contenu-->
+                        <div class="6u$ 12u$(medium)">
+                            <label for="distribution">Distribution du contenu :</label>
+                            <select id="distribution" name="distribution">
+                                <option value="global">Global (web)</option>
+                                <option value="local">Local (local uniquement)</option>
+                                <option value="iu">Accès intranet</option>
+                            </select>
+                        </div>
+                        <!--Date d'expiration de la page-->
+                        <div class="6u 12u$(medium)">
+                            <label for="expires">Date d'expiration de la page :</label>
+                            <input type="text" id="expires" name="expires" />
+                        </div>
+
+                    </div>
+
+                    <hr />
+
+                    <!--Métadonnées spécifiques au contenu-->
+                    <div class="row">
+
+                        <div>
+                            <h2 id="content">Métadonnées spécifiques au contenu :</h2>
+                            <p>Les métadonnées spécifiques au contenu sont des informations supplémentaires associées à
+                                des
+                                éléments spécifiques de votre site web, tels que des articles, des produits ou des pages
+                                individuelles. Elles fournissent des détails précis sur le contenu, tels que le titre,
+                                la
+                                description, les mots-clés, la langue, la date de publication, l'auteur, et d'autres
+                                informations pertinentes. Ces métadonnées aident les moteurs de recherche à comprendre
+                                et à
+                                classer le contenu de manière appropriée, ce qui peut améliorer la visibilité et la
+                                pertinence
+                                de votre site dans les résultats de recherche. En utilisant correctement les métadonnées
+                                spécifiques au contenu, vous pouvez optimiser l'expérience utilisateur et renforcer la
+                                crédibilité de votre site auprès des moteurs de recherche et des visiteurs.</p>
+                        </div>
+
+                        <!--Géographie de la page -->
+                        <div class="6u 12u$(medium)">
+                            <label for="geography">Géographie de la page (ville, pays, code postal) :</label>
+                            <p>Utilisez les codes ISO 3166-1 alpha-2 pour les pays (par exemple, &quot;Fr&quot; pour la
+                                France) ou des codes spécifiques à votre région.</p>
+                            <input type="text" id="geography" name="geography" />
+                        </div>
+
+                        <div class="6u$ 12u$(medium)">
+                            <label for="category">Catégorie du contenu :</label>
+                            <select id="category" name="category">
+                                <option value="animals">Animaux</option>
+                                <option value="astronomy">Astronomie</option>
+                                <option value="economics">Economie</option>
+                                <option value="engineering">Engineering</option>
+                                <option value="environment">Environment</option>
+                                <option value="family">Famille</option>
+                                <option value="finance">Finance</option>
+                                <option value="games">Jeux</option>
+                                <option value="internet">Internet</option>
+                                <option value="literature">Littérature</option>
+                                <option value="software">Logiciels</option>
+                                <option value="photography">Photographie</option>
+                                <option value="health">Santé</option>
+                                <option value="shopping">Shopping</option>
+                                <option value="sports">Sports</option>
+                                <option value="travel">Voyage</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <hr />
+                    <!--Métadonnées Dublin Core -->
+                    <div class="row">
+                        <div>
+                            <h2 id="content">Métadonnées Dublin Core :</h2>
+                            <p>Les métadonnées Dublin Core sont un ensemble de balises standardisées utilisées pour
+                                décrire les
+                                ressources numériques, telles que les pages web, les images, les vidéos, etc. Ces
+                                métadonnées
+                                fournissent des informations générales sur les ressources, telles que le titre,
+                                l'auteur, la
+                                date de création, la langue, le sujet, et d'autres éléments pertinents. Leur utilisation
+                                permet
+                                d'améliorer la recherche, la découverte et la gestion des ressources en ligne, en
+                                fournissant
+                                des informations cohérentes et structurées qui facilitent l'indexation et la
+                                récupération des
+                                données. En intégrant les métadonnées Dublin Core dans votre site web, vous contribuez à
+                                son
+                                accessibilité et à son interopérabilité, ce qui peut avoir un impact positif sur sa
+                                visibilité
+                                et sa valeur pour les utilisateurs.</p>
+                        </div>
+                        <div class="6u 12u$(medium)">
+                            <input type="checkbox" id="dc_check" name="dc_check">
+                            <label for="dc_check">Inclure les balises DC ?</label>
+                        </div>
+                    </div>
+                    <div class="row uniform">
+                        <div class="12u$">
+                            <span class="actions" id="change_submit">
+                                <input type="submit" id="launch" name="launch" value="Générer les balises Meta" />
+                            </span>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="inner">
+            <div class="copyright">
+                <small id="year">&copy; 2019-<span id="currentYear"></span> Générateur de Balise Meta. Tous droits
+                    réservés.
+                </small>
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        var currentYear = new Date().getFullYear();
+                        var spanCurrentYear = document.getElementById("currentYear");
+                        spanCurrentYear.textContent = currentYear;
+                    });
+                </script>
+            </div>
+        </div>
+
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/jquery.min.js"></script>
+    <script src="../assets/js/skel.min.js"></script>
+    <script src="../assets/js/util.js"></script>
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/balises-meta.js"></script>
+</body>
+
+</html>
