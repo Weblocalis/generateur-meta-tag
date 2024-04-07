@@ -108,22 +108,25 @@
 
 				<form method="post" action="#">
 					<h2 id="content">Métadonnées de base :</h2>
-					<p>Les métadonnées de base sont les éléments essentiels qui décrivent votre site web de manière
-						concise et précise. Elles constituent les fondations sur lesquelles reposent la visibilité et la
-						compréhension de votre site par les moteurs de recherche et les visiteurs. Cette section
-						comprend généralement des informations telles que le titre de la page, la description, les
-						mots-clés, l'URL canonique et d'autres balises HTML cruciales. Optimiser ces métadonnées
-						garantit une meilleure indexation par les moteurs de recherche et une présentation plus efficace
-						de votre site dans les résultats de recherche, augmentant ainsi son attractivité et sa
-						pertinence pour les utilisateurs potentiels.</p>
+					<p>Les métadonnées de base sont des éléments essentiels décrivant succinctement votre site web.
+						Elles servent de fondement à sa visibilité et à sa compréhension par les moteurs de recherche et
+						les visiteurs. Cette section inclut généralement des données telles que le titre de la page, la
+						description, les mots-clés, l'URL canonique et d'autres balises HTML cruciales. Optimiser ces
+						métadonnées améliore l'indexation par les moteurs de recherche et favorise une présentation plus
+						efficace dans les résultats de recherche. Cela accroît ainsi l'attractivité et la pertinence de
+						votre site pour les utilisateurs potentiels.</p>
 					<div class="row">
+
+						<!--Balise Title -->
 						<div class="6u 12u$(small)">
 							<label for="title">Balise <span lang="en">Title</span> :</label>
 							<input type="text" id="title" name="title" value=""
 								placeholder="Entrez le titre de la page" />
 						</div>
+
+						<!--Balise Charset -->
 						<div class="3u 6u(medium) 12u$(small)">
-							<label for="content_type">Balise <span lang="en">Charset</span> :</label>
+							<label for="content_type">Charset :</label>
 							<select id="content_type" name="content_type">
 								<option value="UTF-8" selected="selected">UTF-8</option>
 								<option value="ISO-8859-1">ISO-8859-1</option>
@@ -136,7 +139,7 @@
 								<option value="EUCJP">EUCJP</option>
 							</select>
 						</div>
-
+						<!--Balise Langue -->
 						<div class="3u$ 6u$(medium) 12u$(small)">
 							<label for="content_language">Langue :</label>
 							<select id="content_language" name="content_language">
@@ -261,39 +264,46 @@
 								<option value="zu">Zulu (Afrique), zu</option>
 							</select>
 						</div>
-
+						<!--Balise Description -->
 						<div class="6u 12u$(medium) 12u$(xsmall)">
-							<label for="description">Balise Description :</label>
-							<textarea id="description" name="description" placeholder="Entrez votre description"
+							<label for="description">Meta Description :</label>
+							<textarea id="description" name="description" placeholder="Saisissez votre description"
 								cols="50" rows="5"></textarea>
 						</div>
+						<!--Balise  Keywords-->
 						<div class="6u 12u$(medium) 12u$(xsmall)">
 							<label for="keywords">Balise <span lang="en">Keywords</span> :</label>
 							<textarea id="keywords" name="keywords" placeholder="Ex: mot-clé 1, mot-clé 2, mot-clé 3"
 								cols="50" rows="5"></textarea>
 						</div>
+						<!--Balise  sujet-->
 						<div class="6u 12u$(medium)">
 							<label for="subject">Sujet :</label>
 							<input type="text" id="subject" name="subject" />
 						</div>
+						<!-- Balise Copyright -->
 						<div class="6u 12u$(medium)">
 							<label for="copyright">Copyright :</label>
 							<input type="text" id="copyright" name="copyright" />
 						</div>
+						<!-- Champ de saisie pour l'auteur -->
 						<div class="6u 12u$(medium)">
 							<label for="author">Auteur :</label>
 							<input type="text" id="author" name="author" />
 						</div>
+						<!-- Champ de saisie pour le publisher -->
 						<div class="6u 12u$(medium)">
 							<label for="publisher">Publisher (celui qui publie la page) :</label>
 							<input type="text" id="publisher" name="publisher" />
 						</div>
+						<!-- Champ de saisie pour l'URL de la page -->
 						<div class="6u 12u$(medium)">
 							<label for="identifier_url"><abbr title="Uniform Resource Locator" lang="en">URL</abbr> de
 								la page :</label>
 							<input type="text" id="identifier_url" name="identifier_url" pattern="https?://.+"
 								title="Veuillez entrer une URL valide commençant par http:// ou https://">
 						</div>
+						<!-- Champ de saisie pour l'adresse e-mail de réponse -->
 						<div class="6u 12u$(medium)">
 							<label for="reply_to">Répondre à (mail) :</label>
 							<input type="text" id="reply_to" name="reply_to" />
@@ -488,7 +498,6 @@
 						spanCurrentYear.textContent = currentYear;
 					});
 				</script>
-
 			</div>
 		</div>
 
