@@ -115,6 +115,8 @@
 						métadonnées améliore l'indexation par les moteurs de recherche et favorise une présentation plus
 						efficace dans les résultats de recherche. Cela accroît ainsi l'attractivité et la pertinence de
 						votre site pour les utilisateurs potentiels.</p>
+
+					<!--Métadonnées de base-->
 					<div class="row">
 
 						<!--Balise Title -->
@@ -278,51 +280,53 @@
 						</div>
 						<!--Balise  sujet-->
 						<div class="6u 12u$(medium)">
-							<label for="subject">Sujet :</label>
+							<label for="subject">Sujet de la page :</label>
 							<input type="text" id="subject" name="subject" />
 						</div>
 						<!-- Balise Copyright -->
 						<div class="6u 12u$(medium)">
-							<label for="copyright">Copyright :</label>
+							<label for="copyright">Droits d'auteur :</label>
 							<input type="text" id="copyright" name="copyright" />
 						</div>
 						<!-- Champ de saisie pour l'auteur -->
 						<div class="6u 12u$(medium)">
-							<label for="author">Auteur :</label>
+							<label for="author">Auteur de la page :</label>
 							<input type="text" id="author" name="author" />
 						</div>
 						<!-- Champ de saisie pour le publisher -->
 						<div class="6u 12u$(medium)">
-							<label for="publisher">Publisher (celui qui publie la page) :</label>
+							<label for="publisher">Éditeur :</label>
 							<input type="text" id="publisher" name="publisher" />
 						</div>
 						<!-- Champ de saisie pour l'URL de la page -->
 						<div class="6u 12u$(medium)">
-							<label for="identifier_url"><abbr title="Uniform Resource Locator" lang="en">URL</abbr> de
-								la page :</label>
+							<label for="identifier_url">Adresse web de la page :</label>
 							<input type="text" id="identifier_url" name="identifier_url" pattern="https?://.+"
 								title="Veuillez entrer une URL valide commençant par http:// ou https://">
 						</div>
 						<!-- Champ de saisie pour l'adresse e-mail de réponse -->
 						<div class="6u 12u$(medium)">
-							<label for="reply_to">Répondre à (mail) :</label>
+							<label for="reply_to">Adresse e-mail pour les réponses :</label>
 							<input type="text" id="reply_to" name="reply_to" />
 						</div>
 					</div>
 
+
 					<hr />
 					<h2 id="content">Métadonnées pour le contrôle des moteurs de recherche :</h2>
-					<p>Les métadonnées pour le contrôle des moteurs de recherche sont des balises spécifiques utilisées
-						pour influencer le comportement des moteurs de recherche lors de l'indexation et de l'affichage
-						des pages de votre site. Ces métadonnées incluent des instructions telles que les balises
-						"robots", qui indiquent aux moteurs de recherche les pages à indexer ou à exclure, ainsi que les
-						directives de l'indexation, telles que les balises "noindex" et "nofollow". En utilisant ces
-						métadonnées de manière stratégique, vous pouvez mieux contrôler la manière dont votre site est
-						interprété et présenté dans les résultats de recherche, optimisant ainsi sa visibilité et sa
-						performance en ligne.</p>
+					<p>Les métadonnées pour le contrôle des moteurs de recherche sont des balises spécifiques qui
+						influencent l'indexation et l'affichage des pages de votre site. Elles comprennent des
+						instructions telles que les balises "robots", qui guident les moteurs de recherche sur les pages
+						à indexer ou à exclure, ainsi que les directives d'indexation comme les balises "noindex" et
+						"nofollow". En utilisant ces métadonnées de manière stratégique, vous pouvez mieux contrôler
+						l'interprétation et la présentation de votre site dans les résultats de recherche, optimisant
+						ainsi sa visibilité et sa performance en ligne.</p>
+
+					<!--Métadonnées pour le contrôle des moteurs de recherche-->
 					<div class="row">
+						<!--Revisiter la page dans-->
 						<div class="6u 12u$(medium)">
-							<label for="revisit_after">Revisiter la page dans :</label>
+							<label for="revisit_after">Fréquence de révision :</label>
 							<select id="revisit_after" name="revisit_after">
 								<option value="1 day">1 jour</option>
 								<option value="2 days">2 jours</option>
@@ -358,9 +362,9 @@
 							</select>
 						</div>
 
-
+						<!--Directives aux robots-->
 						<div class="6u$ 12u$(medium)">
-							<label for="robots">Les Robots suivent :</label>
+							<label for="robots">Directives aux robots :</label>
 							<select id="robots" name="robots">
 								<option value="index"><abbr title="indexation" lang="en">Index</abbr> (Autoriser
 									l'indexation du contenu.)</option>
@@ -390,30 +394,36 @@
 							</select>
 						</div>
 
-
+						<!--Classification-->
 						<div class="6u 12u$(medium)">
-							<label for="rating">Rating (défini le type de contenu du site) :</label>
+							<label for="rating">Classification (définit le type de contenu du site) :</label>
 							<select id="rating" name="rating">
 								<option value="general">Pour tout public</option>
 								<option value="mature">Site pour adulte</option>
 								<option value="restricted">Accès restreint</option>
 								<option value="14 years">Plus de 14 ans</option>
+								<option value="educational">À vocation éducative</option>
+								<option value="business">À vocation commerciale</option>
+								<option value="news">Site d'actualités</option>
 							</select>
 						</div>
+						<!--Distribution du contenu-->
 						<div class="6u$ 12u$(medium)">
-							<label for="distribution">Distribution :</label>
+							<label for="distribution">Distribution du contenu :</label>
 							<select id="distribution" name="distribution">
 								<option value="global">Global (web)</option>
 								<option value="local">Local (local uniquement)</option>
 								<option value="iu">Accès intranet</option>
 							</select>
 						</div>
+						<!--Date d'expiration de la page-->
 						<div class="6u 12u$(medium)">
 							<label for="expires">Date d'expiration de la page :</label>
 							<input type="text" id="expires" name="expires" />
 						</div>
 
 					</div>
+					
 					<hr />
 					<h2 id="content">Métadonnées spécifiques au contenu :</h2>
 					<p>Les métadonnées spécifiques au contenu sont des informations supplémentaires associées à des
@@ -425,6 +435,8 @@
 						de votre site dans les résultats de recherche. En utilisant correctement les métadonnées
 						spécifiques au contenu, vous pouvez optimiser l'expérience utilisateur et renforcer la
 						crédibilité de votre site auprès des moteurs de recherche et des visiteurs.</p>
+
+						<!--Métadonnées spécifiques au contenu-->
 					<div class="row">
 						<div class="6u 12u$(medium)">
 							<label for="geography">Géographie de la page (ville, pays, code postal) :</label>
@@ -489,8 +501,8 @@
 	<footer id="footer">
 		<div class="inner">
 			<div class="copyright">
-				<p id="year">&copy; 2019-<span id="currentYear"></span> Générateur de Balise Meta. Tous droits réservés.
-				</p>
+				<small id="year">&copy; 2019-<span id="currentYear"></span> Générateur de Balise Meta. Tous droits réservés.
+				</small>
 				<script>
 					document.addEventListener("DOMContentLoaded", function () {
 						var currentYear = new Date().getFullYear();
@@ -509,9 +521,6 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script src="assets/js/balises-meta.js"></script>
-
-
-
 </body>
 
 </html>
