@@ -67,7 +67,7 @@
 	<section id="banner">
 		<div class="inner">
 			<header>
-				<h1>Générateur des Balises-Meta</h1>
+				<h1>Générateur Meta Tags</h1>
 			</header>
 		</div>
 	</section>
@@ -277,7 +277,7 @@
 						<!-- Champ de saisie pour l'URL de la page -->
 						<div class="6u 12u$(medium)">
 							<label for="identifier_url">Adresse web de la page :</label>
-							<input type="text" id="identifier_url" name="identifier_url" pattern="https?://.+"
+							<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
 								title="Veuillez entrer une URL valide commençant par http:// ou https://">
 						</div>
 						<!-- Champ de saisie pour l'adresse e-mail de réponse -->
@@ -347,7 +347,7 @@
 						<!--Directives aux robots-->
 						<div class="6u$ 12u$(medium)">
 							<label for="robots">Directives aux robots :</label>
-							<select id="robots" name="robots">
+							<select type="checkbox" id="robots" name="robots" multiple>
 								<option value="index"><abbr title="indexation" lang="en">Index</abbr> (Autoriser
 									l'indexation du contenu.)</option>
 								<option value="noindex"><span lang="en">Noindex</span> (Empêcher l'indexation du
