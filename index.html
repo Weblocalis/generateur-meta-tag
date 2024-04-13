@@ -95,18 +95,12 @@
 								pertinence de
 								votre site pour les utilisateurs potentiels.</p>
 						</div>
-							<!--Balise Title -->
-							<div class="6u 12u$(small)">
-								<label for="title">Balise <span lang="en">Title</span> :</label>
-								<p>La balise title ne doit pas dépasser 512 pixels soit environ 55 à 65 caractères.</p>
-								<input type="text" id="title" name="title" value="" placeholder="Entrez le titre de la page" />
-								<p id="remainingChars">Caractères restants : 55</p>
-							</div>
-							
 
+						<div class="flex flex-container">
 							<!--Balise Charset -->
-							<div class="3u 6u(medium) 12u$(small)">
+							<div class="6u 12u$(small) flex-item">
 								<label for="content_type">Charset :</label>
+								<p>Choisir et appliquer un encodage de caractères</p>
 								<select id="content_type" name="content_type">
 									<option value="UTF-8" selected="selected">UTF-8</option>
 									<option value="ISO-8859-1">ISO-8859-1</option>
@@ -119,9 +113,12 @@
 									<option value="EUCJP">EUCJP</option>
 								</select>
 							</div>
+
 							<!--Balise Langue -->
-							<div class="3u$ 6u$(medium) 12u$(small)">
+							<div class="6u$ 12u$(small) flex-item">
 								<label for="content_language">Langue :</label>
+								<p>Les navigateurs ignorent souvent cet élément meta, mais il peut servir à définir la
+									langue par défaut en l'absence d'attribut de langue dans la balise HTML.</p>
 								<select id="content_language" name="content_language">
 									<option value="af">Africain, af</option>
 									<option value="sq">Albanais, sq</option>
@@ -244,49 +241,70 @@
 									<option value="zu">Zulu (Afrique), zu</option>
 								</select>
 							</div>
+						</div>
+
+						<!--Balise Title -->
+						<div class="6u$ 12u$(medium)">
+							<label for="title">Balise <span lang="en">Title</span> :</label>
+							<p>La balise title ne doit pas dépasser 512 pixels soit environ 55 à 65 caractères.
+								<b id="remainingChars">(Caractères restants : 55)</b>
+							</p>
+							<input type="text" id="title" name="title" value=""
+								placeholder="Entrez le titre de la page" />
+						</div>
+
+
+
+						<div class="flex flexend">
 							<!--Balise Description -->
-							<div class="6u 12u$(medium) 12u$(xsmall)">
+							<div class="6u 12u$(medium)">
 								<label for="description">Meta Description :</label>
-								<textarea id="description" name="description" placeholder="Saisissez une description de votre page"
-									cols="50" rows="5"></textarea>
+								<p>La taille maximale recommandée pour la meta description était souvent entre 150 et
+									160
+									caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b></p>
+								<textarea id="description" name="description"
+									placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
 							</div>
 							<!--Balise  Keywords-->
-							<div class="6u 12u$(medium) 12u$(xsmall)">
+							<div class="6u 12u$(medium)">
 								<label for="keywords">Balise <span lang="en">Keywords</span> :</label>
 								<textarea id="keywords" name="keywords"
 									placeholder="Ex: mot-clé 1, mot-clé 2, mot-clé 3" cols="50" rows="5"></textarea>
 							</div>
-							<!--Balise  sujet-->
-							<div class="6u 12u$(medium)">
-								<label for="subject">Sujet de la page :</label>
-								<input type="text" id="subject" name="subject" />
-							</div>
-							<!-- Balise Copyright -->
-							<div class="6u 12u$(medium)">
-								<label for="copyright">Droits d'auteur :</label>
-								<input type="text" id="copyright" name="copyright" />
-							</div>
-							<!-- Champ de saisie pour l'auteur -->
-							<div class="6u 12u$(medium)">
-								<label for="author">Auteur de la page :</label>
-								<input type="text" id="author" name="author" />
-							</div>
-							<!-- Champ de saisie pour le publisher -->
-							<div class="6u 12u$(medium)">
-								<label for="publisher">Éditeur :</label>
-								<input type="text" id="publisher" name="publisher" />
-							</div>
-							<!-- Champ de saisie pour l'URL de la page -->
-							<div class="6u 12u$(medium)">
-								<label for="identifier_url">Adresse web de la page :</label>
-								<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
-									title="Veuillez entrer une URL valide commençant par http:// ou https://">
-							</div>
-							<!-- Champ de saisie pour l'adresse e-mail de réponse -->
-							<div class="6u 12u$(medium)">
-								<label for="reply_to">Adresse e-mail pour les réponses :</label>
-								<input type="text" id="reply_to" name="reply_to" />
-							</div>
+						</div>
+
+
+						<!--Balise  sujet-->
+						<div class="6u 12u$(medium)">
+							<label for="subject">Sujet de la page :</label>
+							<input type="text" id="subject" name="subject" />
+						</div>
+						<!-- Balise Copyright -->
+						<div class="6u 12u$(medium)">
+							<label for="copyright">Droits d'auteur :</label>
+							<input type="text" id="copyright" name="copyright" />
+						</div>
+						<!-- Champ de saisie pour l'auteur -->
+						<div class="6u 12u$(medium)">
+							<label for="author">Auteur de la page :</label>
+							<input type="text" id="author" name="author" />
+						</div>
+						<!-- Champ de saisie pour le publisher -->
+						<div class="6u 12u$(medium)">
+							<label for="publisher">Éditeur :</label>
+							<input type="text" id="publisher" name="publisher" />
+						</div>
+						<!-- Champ de saisie pour l'URL de la page -->
+						<div class="6u 12u$(medium)">
+							<label for="identifier_url">Adresse web de la page :</label>
+							<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
+								title="Veuillez entrer une URL valide commençant par http:// ou https://">
+						</div>
+						<!-- Champ de saisie pour l'adresse e-mail de réponse -->
+						<div class="6u 12u$(medium)">
+							<label for="reply_to">Adresse e-mail pour les réponses :</label>
+							<input type="text" id="reply_to" name="reply_to" />
+						</div>
 					</div>
 
 

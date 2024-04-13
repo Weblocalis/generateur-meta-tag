@@ -3,7 +3,7 @@ function replace_submit() {
     document.head.innerHTML += '<style type="text/css">.hidden_with_js { display:none; }</style>';
 
     // Remplace le contenu de l'élément avec l'ID "change_submit" par le nouveau bouton et la zone de texte
-    document.getElementById("change_submit").innerHTML = '<input type="button" id="launch" value="Générer les balises Meta" onclick="gene_balise(this.form)" /><br><label for="balises_meta">Collez ce code dans la balise <code>&lt;head&gt;-&lt;/head&gt;</code> de votre page web :</label><br><textarea id="balises_meta" name="balises_meta" style="white-space: pre-wrap;" rows="12" cols="60" readonly></textarea>';
+    document.getElementById("change_submit").innerHTML = '<input type="button" id="launch" value="Générer les balises Meta" onclick="gene_balise(this.form)" /><br><label for="balises_meta">Collez ce code dans la balise <code>&lt;head&gt;-&lt;/head&gt;</code> de votre page web :</label><br><textarea id="balises_meta" name="balises_meta" style="white-space: pre-wrap;" rows="12" cols="60" readonly></textarea><br><button type="button" onclick="copierTexte()">Copier</button>';
 }
 
 
@@ -175,3 +175,38 @@ document.getElementById("title").addEventListener("input", updateCharsRemaining)
 
 // Appeler la fonction une première fois pour initialiser l'affichage
 updateCharsRemaining();
+
+
+function updateCharsRemainingDescription() {
+    var input = document.getElementById("description");
+    var remainingCharsElement = document.getElementById("remainingCharsDescription");
+    var maxLength = 120;
+    var remaining = maxLength - input.value.length;
+    remainingCharsElement.textContent = "Caractères restants : " + remaining;
+}
+
+document.getElementById("description").addEventListener("input", updateCharsRemainingDescription);
+
+updateCharsRemainingDescription();
+
+
+
+
+
+
+
+function copierTexte() {
+    var zoneTexte = document.getElementById("balises_meta");
+    
+    // Sélectionner le texte dans la zone de texte
+    zoneTexte.select();
+    
+    try {
+        // Copier le texte sélectionné dans le presse-papiers
+        var copieReussie = document.execCommand('copy');
+        var message = copieReussie ? 'Copié dans le presse-papiers' : 'La copie a échoué';
+        console.log(message);
+    } catch (err) {
+        console.error('Erreur lors de la copie du texte : ', err);
+    }
+}

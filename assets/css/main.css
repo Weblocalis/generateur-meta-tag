@@ -582,11 +582,11 @@ body {
 @media screen and (max-width: 1680px) {
 
 	.row>* {
-		padding: 0 0 0 2em;
+		padding: 0 0 0 0em;
 	}
 
 	.row {
-		margin: 0 0 -1px -2em;
+		margin: 0 0 0px 0em;
 	}
 
 	.row.uniform>* {
@@ -1959,7 +1959,7 @@ hr.major {
 }
 
 .inner {
-	max-width: 75em;
+	max-width: 67em;
 	margin: 0 auto;
 }
 
@@ -3380,4 +3380,15 @@ button:disabled,
 		padding: 3em 0;
 	}
 
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-item {
+    flex: 1;
+    margin: 10px; /* Ajoutez des marges si nécessaire */
+	align-content: end;
 }
