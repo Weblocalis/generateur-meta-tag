@@ -152,3 +152,26 @@ function gene_balise(form) {
 }
 
 window.addEventListener('load', replace_submit);
+
+
+// Fonction pour mettre à jour le nombre de caractères restants
+function updateCharsRemaining() {
+    // Récupérer l'élément input et l'élément pour afficher le nombre de caractères restants
+    var input = document.getElementById("title");
+    var remainingCharsElement = document.getElementById("remainingChars");
+
+    // Définir la longueur maximale autorisée
+    var maxLength = 65; // Vous pouvez ajuster cette valeur selon vos besoins
+
+    // Calculer le nombre de caractères restants
+    var remaining = maxLength - input.value.length;
+
+    // Mettre à jour le texte de l'élément affichant le nombre de caractères restants
+    remainingCharsElement.textContent = "Caractères restants : " + remaining;
+}
+
+// Ajouter un écouteur d'événements pour détecter les frappes de l'utilisateur
+document.getElementById("title").addEventListener("input", updateCharsRemaining);
+
+// Appeler la fonction une première fois pour initialiser l'affichage
+updateCharsRemaining();
