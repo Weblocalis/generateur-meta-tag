@@ -2,8 +2,8 @@ function replace_submit() {
     // Ajoute un style CSS pour masquer les éléments avec la classe "hidden_with_js"
     document.head.innerHTML += '<style type="text/css">.hidden_with_js { display:none; }</style>';
 
-    // Remplace le contenu de l'élément avec l'ID "change_submit" par le nouveau bouton et la zone de texte
-    document.getElementById("change_submit").innerHTML = '<input type="button" id="launch" value="Générer les balises Meta" onclick="gene_balise(this.form)" /><br><label for="balises_meta">Collez ce code dans la balise <code>&lt;head&gt;-&lt;/head&gt;</code> de votre page web :</label><br><textarea id="balises_meta" name="balises_meta" style="white-space: pre-wrap;" rows="12" cols="60" readonly></textarea><br><button type="button" onclick="copierTexte()">Copier</button>';
+        // Remplace le contenu de l'élément avec l'ID "change_submit" par le nouveau bouton et la zone de texte
+    document.getElementById("change_submit").innerHTML = '<label for="balises_meta">Collez ce code dans la balise <code>&lt;head&gt;-&lt;/head&gt;</code> de votre page web :</label><br><textarea id="balises_meta" name="balises_meta" style="white-space: pre-wrap;" rows="12" cols="60" readonly></textarea><br><input type="button" id="launch" value="Générer les balises Meta" onclick="gene_balise(this.form)" /> <button type="button" onclick="copierTexte()">Copier</button>';
 }
 
 
@@ -26,6 +26,56 @@ function gene_balise(form) {
     if (form.content_language.value.trim() !== "") {
         form.balises_meta.value += '<meta name="content-language" content="' + form.content_language.value + '">\n';
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    var tagViewport = document.getElementById("TagViewport");
+
+    if (tagViewport) {
+        var width = tagViewport.querySelector('[name="viewport_width"]').value.trim();
+        var height = tagViewport.querySelector('[name="viewport_height"]').value.trim();
+        var initialScale = tagViewport.querySelector('[name="viewport_initial_scale"]').value.trim();
+        var minimumScale = tagViewport.querySelector('[name="viewport_minimum_scale"]').value.trim();
+        var maximumScale = tagViewport.querySelector('[name="viewport_maximum_scale"]').value.trim();
+        var userScalable = tagViewport.querySelector('[name="viewport_user_scalable"]').value.trim();
+
+        // Vérifier si au moins un champ du viewport est renseigné
+        if (width !== "" || height !== "" || initialScale !== "" || minimumScale !== "" || maximumScale !== "" || userScalable !== "") {
+            var contentValue = "";
+            if (width !== "") contentValue += "width=" + width + ", ";
+            if (height !== "") contentValue += "height=" + height + ", ";
+            if (initialScale !== "") contentValue += "initial-scale=" + initialScale + ", ";
+            if (minimumScale !== "") contentValue += "minimum-scale=" + minimumScale + ", ";
+            if (maximumScale !== "") contentValue += "maximum-scale=" + maximumScale + ", ";
+            if (userScalable !== "") contentValue += "user-scalable=" + userScalable;
+
+            // Génération de la balise meta viewport
+            form.balises_meta.value += '<meta name="viewport" content="' + contentValue + '">\n';
+        }
+    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Vérifier si le champ description est renseigné
     if (form.description.value.trim() !== "") {
@@ -150,29 +200,47 @@ function gene_balise(form) {
     }
 
 }
-
 window.addEventListener('load', replace_submit);
 
 
-// Fonction pour mettre à jour le nombre de caractères restants
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// *************************************************************//
+// Fonction pour mettre à jour le nombre de caractères restants //
+// *************************************************************//
 function updateCharsRemaining() {
-    // Récupérer l'élément input et l'élément pour afficher le nombre de caractères restants
-    var input = document.getElementById("title");
+    var input = document.getElementById("title"); // Récupérer l'élément input et l'élément pour afficher le nombre de caractères restants
     var remainingCharsElement = document.getElementById("remainingChars");
-
-    // Définir la longueur maximale autorisée
-    var maxLength = 65; // Vous pouvez ajuster cette valeur selon vos besoins
-
-    // Calculer le nombre de caractères restants
-    var remaining = maxLength - input.value.length;
-
-    // Mettre à jour le texte de l'élément affichant le nombre de caractères restants
-    remainingCharsElement.textContent = "Caractères restants : " + remaining;
+    var maxLength = 65; // Définir la longueur maximale autorisée
+    var remaining = maxLength - input.value.length; // Calculer le nombre de caractères restants
+    remainingCharsElement.textContent = "Caractères restants : " + remaining; // Mettre à jour le texte de l'élément affichant le nombre de caractères restants
 }
-
 // Ajouter un écouteur d'événements pour détecter les frappes de l'utilisateur
 document.getElementById("title").addEventListener("input", updateCharsRemaining);
-
 // Appeler la fonction une première fois pour initialiser l'affichage
 updateCharsRemaining();
 
@@ -184,23 +252,22 @@ function updateCharsRemainingDescription() {
     var remaining = maxLength - input.value.length;
     remainingCharsElement.textContent = "Caractères restants : " + remaining;
 }
-
 document.getElementById("description").addEventListener("input", updateCharsRemainingDescription);
-
 updateCharsRemainingDescription();
 
+// ***********************************************************************//
+// FIN de la Fonction pour mettre à jour le nombre de caractères restants //
+// ***********************************************************************//
 
-
-
-
-
-
+// *****************************************************************//
+// Fonction pour Copier le texte sélectionné dans le presse-papiers //
+// *****************************************************************//
 function copierTexte() {
     var zoneTexte = document.getElementById("balises_meta");
-    
+
     // Sélectionner le texte dans la zone de texte
     zoneTexte.select();
-    
+
     try {
         // Copier le texte sélectionné dans le presse-papiers
         var copieReussie = document.execCommand('copy');

@@ -96,11 +96,12 @@
 								votre site pour les utilisateurs potentiels.</p>
 						</div>
 
-						<div class="flex flex-container">
+						<div class="flex flex-container"
+							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;">
 							<!--Balise Charset -->
 							<div class="6u 12u$(small) flex-item">
 								<label for="content_type">Charset :</label>
-								<p>Choisir et appliquer un encodage de caractères</p>
+								<p class="paraphform">Choisir et appliquer un encodage de caractères</p>
 								<select id="content_type" name="content_type">
 									<option value="UTF-8" selected="selected">UTF-8</option>
 									<option value="ISO-8859-1">ISO-8859-1</option>
@@ -117,7 +118,8 @@
 							<!--Balise Langue -->
 							<div class="6u$ 12u$(small) flex-item">
 								<label for="content_language">Langue :</label>
-								<p>Les navigateurs ignorent souvent cet élément meta, mais il peut servir à définir la
+								<p class="paraphform">Les navigateurs ignorent souvent cet élément meta, mais il peut
+									servir à définir la
 									langue par défaut en l'absence d'attribut de langue dans la balise HTML.</p>
 								<select id="content_language" name="content_language">
 									<option value="af">Africain, af</option>
@@ -243,14 +245,67 @@
 							</div>
 						</div>
 
+						<!-- Balise Viewport -->
+						<div class="flex flex-container"
+							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;"
+							id="TagViewport">
+							<div class="viewport-title">
+								<span>Balises Viewport</span>
+							</div>
+							<div class="flex flex-container">
+								<div class="6u 12u$(medium) flex-item">
+									<label for="width">Largeur du viewport</label>
+									<input type="text" id="width" value="" name="viewport_width"
+										placeholder="device-width ou un nombre entier positif (en pixels)">
+								</div>
+								<div class="6u 12u$(small) flex-item">
+									<label for="height">Hauteur du viewport</label>
+									<input type="text" id="height" value="" name="viewport_height"
+										placeholder="device-height ou un nombre entier positif (en pixels)">
+								</div>
+							</div>
+							<div class="flex flex-container">
+								<div class="6u 12u$(small) flex-item">
+									<label for="initial_scale">Échelle initiale</label>
+									<input type="text" id="initial_scale" value="" name="viewport_initial_scale"
+										placeholder="Un nombre positif entre 0.0 et 10.0">
+								</div>
+								<div class="6u 12u$(small) flex-item">
+									<label for="minimum_scale">Échelle minimale</label>
+									<input type="text" id="minimum_scale" value="" name="viewport_minimum_scale"
+										placeholder="Un nombre positif entre 0.0 et 10.0">
+								</div>
+							</div>
+							<div class="flex flex-container">
+								<div class="6u 12u$(small) flex-item">
+									<label for="maximum_scale">Échelle maximale</label>
+									<input type="text" id="maximum_scale" value="" name="viewport_maximum_scale"
+										placeholder="Un nombre positif entre 0.0 et 10.0">
+								</div>
+								<div class="6u 12u$(small) flex-item">
+									<label for="user_scalable">Zoom par utilisateur</label>
+									<select id="user_scalable" name="viewport_user_scalable">
+										<option value="yes">Oui</option>
+										<option value="no">Non</option>
+									</select>
+								</div>
+							</div>
+						</div>
+
+
+
 						<!--Balise Title -->
-						<div class="6u$ 12u$(medium)">
-							<label for="title">Balise <span lang="en">Title</span> :</label>
-							<p>La balise title ne doit pas dépasser 512 pixels soit environ 55 à 65 caractères.
-								<b id="remainingChars">(Caractères restants : 55)</b>
-							</p>
-							<input type="text" id="title" name="title" value=""
-								placeholder="Entrez le titre de la page" />
+						<div class="flex flex-container" style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;">
+							<div class="6u$ 12u$(medium) flex-item">
+								<label for="title">Balise <span lang="en">Title</span> :</label>
+								<p class="paraphform">La balise title ne doit pas dépasser 512 pixels soit environ 55 à
+									65
+									caractères.
+									<b id="remainingChars">(Caractères restants : 55)</b>
+								</p>
+								<input type="text" id="title" name="title" value=""
+									placeholder="Entrez le titre de la page" />
+							</div>
 						</div>
 
 
@@ -259,9 +314,11 @@
 							<!--Balise Description -->
 							<div class="6u 12u$(medium)">
 								<label for="description">Meta Description :</label>
-								<p>La taille maximale recommandée pour la meta description était souvent entre 150 et
+								<p class="paraphform">La taille maximale recommandée pour la meta description était
+									souvent entre 150 et
 									160
-									caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b></p>
+									caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b>
+								</p>
 								<textarea id="description" name="description"
 									placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
 							</div>
@@ -314,10 +371,13 @@
 					<div class="row">
 						<div>
 							<h2 id="content">Métadonnées pour le contrôle des moteurs de recherche :</h2>
-							<p>Les métadonnées pour le contrôle des moteurs de recherche sont des balises spécifiques
+							<p>Les métadonnées pour le contrôle des moteurs de recherche sont des balises
+								spécifiques
 								qui
-								influencent l'indexation et l'affichage des pages de votre site. Elles comprennent des
-								instructions telles que les balises "robots", qui guident les moteurs de recherche sur
+								influencent l'indexation et l'affichage des pages de votre site. Elles comprennent
+								des
+								instructions telles que les balises "robots", qui guident les moteurs de recherche
+								sur
 								les pages
 								à indexer ou à exclure, ainsi que les directives d'indexation comme les balises
 								"noindex" et
@@ -374,14 +434,16 @@
 										l'indexation du contenu.)</option>
 									<option value="noindex"><span lang="en">Noindex</span> (Empêcher l'indexation du
 										contenu.)</option>
-									<option value="follow"><span lang="en">Follow</span> (Autoriser le suivi des liens.)
+									<option value="follow"><span lang="en">Follow</span> (Autoriser le suivi des
+										liens.)
 									</option>
 									<option value="nofollow"><span lang="en">Nofollow</span> (Empêcher le suivi des
 										liens.)
 									</option>
 									<option value="all"><span lang="en">All</span> (Équivalent à Index, Follow.)
 									</option>
-									<option value="none"><span lang="en">None</span> (Équivalent à Noindex, Nofollow.)
+									<option value="none"><span lang="en">None</span> (Équivalent à Noindex,
+										Nofollow.)
 									</option>
 									<option value="archive">Archive (Conserver une copie de la page.)</option>
 									<option value="noarchive"><span lang="en">Noarchive</span> (Ne pas conserver de
@@ -389,7 +451,8 @@
 										la page.)</option>
 									<option value="noodp"><span lang="en">Noodp</span> (Empêcher l'utilisation de la
 										description Open Directory Project (ODP).)</option>
-									<option value="noydir"><span lang="en">Noydir</span> (Empêcher l'utilisation de la
+									<option value="noydir"><span lang="en">Noydir</span> (Empêcher l'utilisation de
+										la
 										description Yahoo!.)</option>
 									<option value="nosnippet"><span lang="en">Nosnippet</span> (Empêcher l'affichage
 										d'un
@@ -442,25 +505,32 @@
 
 						<div>
 							<h2 id="content">Métadonnées spécifiques au contenu :</h2>
-							<p>Les métadonnées spécifiques au contenu sont des informations supplémentaires associées à
+							<p>Les métadonnées spécifiques au contenu sont des informations supplémentaires
+								associées à
 								des
-								éléments spécifiques de votre site web, tels que des articles, des produits ou des pages
-								individuelles. Elles fournissent des détails précis sur le contenu, tels que le titre,
+								éléments spécifiques de votre site web, tels que des articles, des produits ou des
+								pages
+								individuelles. Elles fournissent des détails précis sur le contenu, tels que le
+								titre,
 								la
 								description, les mots-clés, la langue, la date de publication, l'auteur, et d'autres
-								informations pertinentes. Ces métadonnées aident les moteurs de recherche à comprendre
+								informations pertinentes. Ces métadonnées aident les moteurs de recherche à
+								comprendre
 								et à
 								classer le contenu de manière appropriée, ce qui peut améliorer la visibilité et la
 								pertinence
-								de votre site dans les résultats de recherche. En utilisant correctement les métadonnées
-								spécifiques au contenu, vous pouvez optimiser l'expérience utilisateur et renforcer la
+								de votre site dans les résultats de recherche. En utilisant correctement les
+								métadonnées
+								spécifiques au contenu, vous pouvez optimiser l'expérience utilisateur et renforcer
+								la
 								crédibilité de votre site auprès des moteurs de recherche et des visiteurs.</p>
 						</div>
 
 						<!--Géographie de la page -->
 						<div class="6u 12u$(medium)">
 							<label for="geography">Géographie de la page (ville, pays, code postal) :</label>
-							<p>Utilisez les codes ISO 3166-1 alpha-2 pour les pays (par exemple, &quot;Fr&quot; pour la
+							<p>Utilisez les codes ISO 3166-1 alpha-2 pour les pays (par exemple, &quot;Fr&quot; pour
+								la
 								France) ou des codes spécifiques à votre région.</p>
 							<input type="text" id="geography" name="geography" />
 						</div>
@@ -499,13 +569,15 @@
 								métadonnées
 								fournissent des informations générales sur les ressources, telles que le titre,
 								l'auteur, la
-								date de création, la langue, le sujet, et d'autres éléments pertinents. Leur utilisation
+								date de création, la langue, le sujet, et d'autres éléments pertinents. Leur
+								utilisation
 								permet
 								d'améliorer la recherche, la découverte et la gestion des ressources en ligne, en
 								fournissant
 								des informations cohérentes et structurées qui facilitent l'indexation et la
 								récupération des
-								données. En intégrant les métadonnées Dublin Core dans votre site web, vous contribuez à
+								données. En intégrant les métadonnées Dublin Core dans votre site web, vous
+								contribuez à
 								son
 								accessibilité et à son interopérabilité, ce qui peut avoir un impact positif sur sa
 								visibilité
