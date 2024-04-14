@@ -1036,7 +1036,7 @@ body {
 @media screen and (max-width: 980px) {
 
 	.row>* {
-		padding: 0 0 0 1.5em;
+		padding: 0 0 0 0;
 	}
 
 	.row {
@@ -1263,7 +1263,7 @@ body {
 @media screen and (max-width: 736px) {
 
 	.row>* {
-		padding: 0 0 0 1.25em;
+		padding: 0 0 0 0;
 	}
 
 	.row {
@@ -3384,16 +3384,25 @@ button:disabled,
 
 /* Mes Ajouts */
 
-.flex-container {
+/* Pour les écrans de taille moyenne et supérieure */
+.flex.flex-container {
     display: flex;
     flex-wrap: wrap;
+	align-items: end;
 }
 
 .flex-item {
-    flex: 3;
-    margin: 10px; /* Ajoutez des marges si nécessaire */
-	align-content: end;
+    width: 49%; /* Affiche deux éléments par ligne */
+	margin: 10px 5px 15px 5px;
 }
+
+/* Pour les écrans de petite taille, comme les mobiles */
+@media screen and (max-width: 768px) {
+    .flex-item {
+        width: 100%; /* Affiche un élément par ligne */
+    }
+}
+
 
 p.paraphform {
     margin: 0px 25px 10px 25px;
