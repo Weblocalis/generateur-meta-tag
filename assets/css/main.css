@@ -2030,7 +2030,7 @@ article.wrapper article header {
 
 	section.wrapper,
 	article.wrapper {
-		padding: 3em 0;
+		padding: 3em 0em 3em 1em;
 	}
 
 	section.wrapper header,
