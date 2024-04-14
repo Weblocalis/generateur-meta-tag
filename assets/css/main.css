@@ -3396,6 +3396,10 @@ button:disabled,
 	margin: 10px 5px 15px 5px;
 }
 
+.\36 u\$.\31 2u\$\(medium\).flex-item {
+    width: 100%;
+}
+
 /* Pour les écrans de petite taille, comme les mobiles */
 @media screen and (max-width: 768px) {
     .flex-item {
