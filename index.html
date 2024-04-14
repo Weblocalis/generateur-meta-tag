@@ -263,11 +263,13 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(medium) flex-item">
 									<label for="width">Largeur du viewport</label>
+									<p>Définit la largeur, en pixels, de la zone d'affichage</p>
 									<input type="text" id="width" value="" name="viewport_width"
 										placeholder="device-width ou un nombre entier positif (en pixels)">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="height">Hauteur du viewport</label>
+									<p>Définit la hauteur, en pixels, de la zone d'affichage</p>
 									<input type="text" id="height" value="" name="viewport_height"
 										placeholder="device-height ou un nombre entier positif (en pixels)">
 								</div>
@@ -275,11 +277,16 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(small) flex-item">
 									<label for="initial_scale">Échelle initiale</label>
+									<p class="paraphform">Définit le ratio entre la taille de l'écran du terminal
+										(device-width en portrait ou device-height en paysage) et la taille de la zone
+										d'affichage.</p>
 									<input type="text" id="initial_scale" value="" name="viewport_initial_scale"
 										placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="minimum_scale">Échelle minimale</label>
+									<p class="paraphform">Définit la valeur minimale du zoom possible. Doit être
+										inférieur ou égal à maximum-scale, sinon le comportement est indéterminé</p>
 									<input type="text" id="minimum_scale" value="" name="viewport_minimum_scale"
 										placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
@@ -287,11 +294,13 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(small) flex-item">
 									<label for="maximum_scale">Échelle maximale</label>
+									<p class="paraphform">Définit la valeur maximale du zoom possible. Doit être supérieur ou égal à minimum-scale, sinon le comportement est indéterminé</p>
 									<input type="text" id="maximum_scale" value="" name="viewport_maximum_scale"
 										placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="user_scalable">Zoom par utilisateur</label>
+									<p class="paraphform">Si la valeur est no, l'utilisateur ne pourra pas zoomer sur le document. Par défaut, la valeur est yes.</p>
 									<select id="user_scalable" name="viewport_user_scalable">
 										<option value="" disabled selected hidden>Choisissez une option</option>
 										<option value="yes">Oui</option>
