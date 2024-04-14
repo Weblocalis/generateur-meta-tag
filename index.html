@@ -103,7 +103,8 @@
 								<label for="content_type">Charset :</label>
 								<p class="paraphform">Choisir et appliquer un encodage de caractères</p>
 								<select id="content_type" name="content_type">
-									<option value="UTF-8" selected="selected">UTF-8</option>
+									<option value="" disabled selected hidden>Choisissez un encodage</option>
+									<option value="UTF-8">UTF-8</option>
 									<option value="ISO-8859-1">ISO-8859-1</option>
 									<option value="ISO-8859-15">ISO-8859-15</option>
 									<option value="cp1252">cp1252</option>
@@ -122,6 +123,7 @@
 									servir à définir la
 									langue par défaut en l'absence d'attribut de langue dans la balise HTML.</p>
 								<select id="content_language" name="content_language">
+									<option value="" disabled selected hidden>Choisissez une langue</option>
 									<option value="af">Africain, af</option>
 									<option value="sq">Albanais, sq</option>
 									<option value="ar-dz">Algérien, ar-dz</option>
@@ -179,7 +181,7 @@
 									<option value="sx">Estonien, sx</option>
 									<option value="fo">Faeroese, fo</option>
 									<option value="fi">Finlandais, fi</option>
-									<option value="fr" selected="selected">Français, fr</option>
+									<option value="fr">Français, fr</option>
 									<option value="fr-be">Français (Belgique), fr-be</option>
 									<option value="fr-ca">Français (Canada), fr-ca</option>
 									<option value="fr-lu">Français (Luxembourg), fr-lu</option>
@@ -291,6 +293,7 @@
 								<div class="6u 12u$(small) flex-item">
 									<label for="user_scalable">Zoom par utilisateur</label>
 									<select id="user_scalable" name="viewport_user_scalable">
+										<option value="" disabled selected hidden>Choisissez une option</option>
 										<option value="yes">Oui</option>
 										<option value="no">Non</option>
 									</select>
@@ -304,7 +307,7 @@
 										générale qui est souvent considérée comme une bonne pratique :</p>
 								</div>
 								<div class="6u 12u$(small) flex-item">
-									<input type="checkbox" id="suggect_viewport" value="" name="suggect_viewport">
+									<input type="checkbox" id="suggect_viewport" name="suggect_viewport">
 									<label for="suggect_viewport">Suggestion de meilleure pratique</label>
 								</div>
 							</div>
@@ -411,6 +414,7 @@
 						<div class="6u 12u$(medium)">
 							<label for="revisit_after">Fréquence de révision :</label>
 							<select id="revisit_after" name="revisit_after">
+								<option value="" disabled selected hidden>Choisissez la Fréquence</option>
 								<option value="1 day">1 jour</option>
 								<option value="2 days">2 jours</option>
 								<option value="3 days">3 jours</option>
@@ -425,7 +429,7 @@
 								<option value="12 days">12 jours</option>
 								<option value="13 days">13 jours</option>
 								<option value="14 days">14 jours</option>
-								<option value="15 days" selected="selected">15 jours</option>
+								<option value="15 days">15 jours</option>
 								<option value="16 days">16 jours</option>
 								<option value="17 days">17 jours</option>
 								<option value="18 days">18 jours</option>
@@ -449,7 +453,8 @@
 						<div class="6u$ 12u$(medium)">
 							<div class="select-wrapper">
 								<label for="robots">Directives aux robots :</label>
-								<select id="robots" name="robots" multiple size="1">
+								<select id="robots" name="robots">
+									<option value="" disabled selected hidden>Choisissez la directives</option>
 									<option value="index"><abbr title="indexation" lang="en">Index</abbr> (Autoriser
 										l'indexation du contenu.)</option>
 									<option value="noindex"><span lang="en">Noindex</span> (Empêcher l'indexation du
@@ -492,6 +497,7 @@
 						<div class="6u 12u$(medium)">
 							<label for="rating">Classification (définit le type de contenu du site) :</label>
 							<select id="rating" name="rating">
+								<option value="" disabled selected hidden>Choisissez la classification</option>
 								<option value="general">Pour tout public</option>
 								<option value="mature">Site pour adulte</option>
 								<option value="restricted">Accès restreint</option>
@@ -505,6 +511,7 @@
 						<div class="6u$ 12u$(medium)">
 							<label for="distribution">Distribution du contenu :</label>
 							<select id="distribution" name="distribution">
+								<option value="" disabled selected hidden>Choisissez la distribution</option>
 								<option value="global">Global (web)</option>
 								<option value="local">Local (local uniquement)</option>
 								<option value="iu">Accès intranet</option>
@@ -558,6 +565,7 @@
 						<div class="6u$ 12u$(medium)">
 							<label for="category">Catégorie du contenu :</label>
 							<select id="category" name="category">
+								<option value="" disabled selected hidden>Choisissez la categorie</option>
 								<option value="animals">Animaux</option>
 								<option value="astronomy">Astronomie</option>
 								<option value="economics">Economie</option>

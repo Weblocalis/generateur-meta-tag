@@ -2,7 +2,7 @@ function replace_submit() {
     // Ajoute un style CSS pour masquer les éléments avec la classe "hidden_with_js"
     document.head.innerHTML += '<style type="text/css">.hidden_with_js { display:none; }</style>';
 
-        // Remplace le contenu de l'élément avec l'ID "change_submit" par le nouveau bouton et la zone de texte
+    // Remplace le contenu de l'élément avec l'ID "change_submit" par le nouveau bouton et la zone de texte
     document.getElementById("change_submit").innerHTML = '<label for="balises_meta">Collez ce code dans la balise <code>&lt;head&gt;-&lt;/head&gt;</code> de votre page web :</label><br><textarea id="balises_meta" name="balises_meta" style="white-space: pre-wrap;" rows="12" cols="60" readonly></textarea><br><input type="button" id="launch" value="Générer les balises Meta" onclick="gene_balise(this.form)" /> <button type="button" onclick="copierTexte()">Copier</button>';
 }
 
@@ -40,14 +40,19 @@ function gene_balise(form) {
 
     var tagViewport = document.getElementById("TagViewport");
 
-    if (tagViewport) {
+    if (form.suggect_viewport.checked == true) {
+        if (form.suggect_viewport.value.trim() !== "") {
+            // Si l'option "suggect_viewport" est cochée, générer uniquement la balise meta pour viewport avec width=device-width, initial-scale=1.0
+            form.balises_meta.value += '<meta name="viewport" content="width=device-width, initial-scale=1.0">\n';
+        }
+    } else if (tagViewport) {
         var width = tagViewport.querySelector('[name="viewport_width"]').value.trim();
         var height = tagViewport.querySelector('[name="viewport_height"]').value.trim();
         var initialScale = tagViewport.querySelector('[name="viewport_initial_scale"]').value.trim();
         var minimumScale = tagViewport.querySelector('[name="viewport_minimum_scale"]').value.trim();
         var maximumScale = tagViewport.querySelector('[name="viewport_maximum_scale"]').value.trim();
         var userScalable = tagViewport.querySelector('[name="viewport_user_scalable"]').value.trim();
-
+    
         // Vérifier si au moins un champ du viewport est renseigné
         if (width !== "" || height !== "" || initialScale !== "" || minimumScale !== "" || maximumScale !== "" || userScalable !== "") {
             var contentValue = "";
@@ -57,12 +62,11 @@ function gene_balise(form) {
             if (minimumScale !== "") contentValue += "minimum-scale=" + minimumScale + ", ";
             if (maximumScale !== "") contentValue += "maximum-scale=" + maximumScale + ", ";
             if (userScalable !== "") contentValue += "user-scalable=" + userScalable;
-
+    
             // Génération de la balise meta viewport
             form.balises_meta.value += '<meta name="viewport" content="' + contentValue + '">\n';
         }
     }
-    
     
 
 
@@ -122,18 +126,23 @@ function gene_balise(form) {
         form.balises_meta.value += '<meta name="revisit-after" content="' + form.revisit_after.value + '">\n';
     }
 
-    // Vérifier si le champ robots est renseigné
     var selectedOptions = form.robots.selectedOptions;
     var robotsContent = '';
-
-    for (var i = 0; i < selectedOptions.length; i++) {
-        robotsContent += selectedOptions[i].value;
-        if (i < selectedOptions.length - 1) {
-            robotsContent += ', '; // Ajouter une virgule après chaque valeur, sauf la dernière
+    
+    // Vérifier si au moins une option autre que l'option vide est sélectionnée
+    var isOptionSelected = Array.from(selectedOptions).some(option => option.value !== "");
+    
+    if (isOptionSelected) {
+        for (var i = 0; i < selectedOptions.length; i++) {
+            robotsContent += selectedOptions[i].value;
+            if (i < selectedOptions.length - 1) {
+                robotsContent += ', '; // Ajouter une virgule après chaque valeur, sauf la dernière
+            }
         }
+    
+        form.balises_meta.value += '<meta name="robots" content="' + robotsContent + '">\n';
     }
-
-    form.balises_meta.value += '<meta name="robots" content="' + robotsContent + '">\n';
+    
 
 
 
