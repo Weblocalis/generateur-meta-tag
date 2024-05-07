@@ -1840,6 +1840,7 @@ i {
 
 p {
 	margin: 0 0 2em 0;
+	color: black;
 }
 
 h1,
@@ -1851,7 +1852,7 @@ h6 {
 	color: #555;
 	font-weight: 400;
 	line-height: 1.5;
-	margin: 0 0 1em 0;
+	margin: 2em 0 1em 0;
 }
 
 h1 a,
@@ -2060,7 +2061,7 @@ article.wrapper article header {
 }
 
 header p {
-	color: #bbb;
+	color: #000000;
 	position: relative;
 	margin: 0 0 1.5em 0;
 }
@@ -3141,19 +3142,22 @@ button:disabled,
 /* Banner */
 
 #banner {
-	padding: 8em 0 9em 0;
-	background-image: url(../../images/generateur-meta-tagimageOrg.jpg);
-	background-size: cover;
-	background-position: center;
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	text-align: center;
-	position: relative;
+    padding: 8em 0 9em 0;
+    background-image: url(../../images/generateur-meta-tagimageOrg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+    display: flex; /* Utilisation de flexbox */
+    align-items: center; /* Centrer verticalement le contenu */
+    min-height: 100vh; /* Hauteur minimale de la vue */
 }
 
-#banner:before {
-	content: '';
-	background: rgba(75, 75, 93, 0.85);
+#banner:before {	
+	content: "";
+	/*background: rgba(75, 75, 93, 0.85);*/
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -3170,7 +3174,7 @@ button:disabled,
 #banner h1 {
 	font-size: 3em;
 	font-weight: 400;
-	color: #fff;
+	color: #ffffff00;
 	line-height: 1em;
 	margin: 0 0 1em 0;
 	padding: 0;
@@ -3389,11 +3393,19 @@ button:disabled,
     display: flex;
     flex-wrap: wrap;
 	align-items: end;
+	
 }
 
 .flex-item {
     width: 49%; /* Affiche deux éléments par ligne */
 	margin: 10px 5px 15px 5px;
+}
+.containe-mrg-pdd {
+	padding: 30px;
+	margin: 10px 0;
+	border: 2px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
 .\36 u\$.\31 2u\$\(medium\).flex-item {
@@ -3406,7 +3418,6 @@ button:disabled,
         width: 100%; /* Affiche un élément par ligne */
     }
 }
-
 
 p.paraphform {
     margin: 0px 25px 10px 25px;

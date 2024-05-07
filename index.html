@@ -57,6 +57,7 @@
 			<a href="index.html" class="logo">GMT</a>
 			<nav id="nav">
 				<a href="index.html">Accueil</a>
+				<a href="index.html">Contact</a>
 
 			</nav>
 			<a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
@@ -67,9 +68,9 @@
 	<section id="banner">
 		<div class="inner">
 			<header>
-				<h1>Générateur Meta Tags</h1>
-			</header>
-		</div>
+		<h1>Generateur de balise meta</h1>
+	</header>
+	</div>
 	</section>
 
 	<section class="wrapper align-center">
@@ -96,8 +97,7 @@
 								votre site pour les utilisateurs potentiels.</p>
 						</div>
 
-						<div class="flex flex-container"
-							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;">
+						<div class="flex flex-container containe-mrg-pdd">
 							<!--Balise Charset -->
 							<div class="6u 12u$(small) flex-item">
 								<label for="content_type">Charset :</label>
@@ -248,9 +248,7 @@
 						</div>
 
 						<!-- Balise Viewport -->
-						<div class="flex flex-container"
-							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;"
-							id="TagViewport">
+						<div class="flex flex-container containe-mrg-pdd" id="TagViewport">
 							<div class="viewport-title">
 								<p><span>Balises Viewport</span></p>
 								<p class="paraphform">Le viewport, élément essentiel pour une expérience optimale sur
@@ -286,7 +284,7 @@
 								<div class="6u 12u$(small) flex-item">
 									<label for="minimum_scale">Échelle minimale</label>
 									<p class="paraphform">Définit la valeur minimale du zoom possible. Doit être
-										inférieur ou égal à maximum-scale, sinon le comportement est indéterminé</p>
+										inférieur ou égal à "Échelle maximale", sinon le comportement est indéterminé</p>
 									<input type="text" id="minimum_scale" value="" name="viewport_minimum_scale"
 										placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
@@ -294,13 +292,15 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(small) flex-item">
 									<label for="maximum_scale">Échelle maximale</label>
-									<p class="paraphform">Définit la valeur maximale du zoom possible. Doit être supérieur ou égal à minimum-scale, sinon le comportement est indéterminé</p>
+									<p class="paraphform">Définit la valeur maximale du zoom possible. Doit être
+										supérieur ou égal à "Échelle minimale", sinon le comportement est indéterminé</p>
 									<input type="text" id="maximum_scale" value="" name="viewport_maximum_scale"
 										placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="user_scalable">Zoom par utilisateur</label>
-									<p class="paraphform">Si la valeur est no, l'utilisateur ne pourra pas zoomer sur le document. Par défaut, la valeur est yes.</p>
+									<p class="paraphform">Si la valeur est "Non", l'utilisateur ne pourra pas zoomer sur le
+										document. Par défaut, la valeur est "Oui".</p>
 									<select id="user_scalable" name="viewport_user_scalable">
 										<option value="" disabled selected hidden>Choisissez une option</option>
 										<option value="yes">Oui</option>
@@ -311,8 +311,7 @@
 							<div class="flex flex-container">
 								<div>
 									<p class="paraphform">La meilleure pratique pour la balise meta viewport dépend des
-										besoins spécifiques
-										de votre site Web ou de votre application. Cependant, voici une suggestion
+										besoins spécifiques de votre site Web ou de votre application. Cependant, voici une suggestion
 										générale qui est souvent considérée comme une bonne pratique :</p>
 								</div>
 								<div class="6u 12u$(small) flex-item">
@@ -322,11 +321,8 @@
 							</div>
 						</div>
 
-
-
-						<!--Balise Title -->
-						<div class="flex flex-container"
-							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;">
+						<div class="flex flex-container containe-mrg-pdd">
+							<!--Balise Title -->
 							<div class="6u$ 12u$(medium) flex-item">
 								<label for="title">Balise <span lang="en">Title</span> :</label>
 								<p class="paraphform">La balise title ne doit pas dépasser 512 pixels soit environ 55 à
@@ -337,22 +333,12 @@
 								<input type="text" id="title" name="title" value=""
 									placeholder="Entrez le titre de la page" />
 							</div>
-						</div>
-
-
-
-						<div class="flex flex-container"
-							style="border: 2px solid #ccc; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); margin: 10px 0 10px 0;">
 							<!--Balise Description -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="description">Meta Description :</label>
-								<p class="paraphform">La taille maximale recommandée pour la meta description était
-									souvent entre 150 et
-									160
-									caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b>
+								<p class="paraphform">La taille maximale recommandée pour la meta description était souvent entre 150 et 160 caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b>
 								</p>
-								<textarea id="description" name="description"
-									placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
+								<textarea id="description" name="description" placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
 							</div>
 							<!--Balise  Keywords-->
 							<div class="6u 12u$(medium) flex-item">
@@ -362,42 +348,40 @@
 							</div>
 						</div>
 
-
-						<!--Balise  sujet-->
-						<div class="6u 12u$(medium)">
-							<label for="subject">Sujet de la page :</label>
-							<input type="text" id="subject" name="subject" />
-						</div>
-						<!-- Balise Copyright -->
-						<div class="6u 12u$(medium)">
-							<label for="copyright">Droits d'auteur :</label>
-							<input type="text" id="copyright" name="copyright" />
-						</div>
-						<!-- Champ de saisie pour l'auteur -->
-						<div class="6u 12u$(medium)">
-							<label for="author">Auteur de la page :</label>
-							<input type="text" id="author" name="author" />
-						</div>
-						<!-- Champ de saisie pour le publisher -->
-						<div class="6u 12u$(medium)">
-							<label for="publisher">Éditeur :</label>
-							<input type="text" id="publisher" name="publisher" />
-						</div>
-						<!-- Champ de saisie pour l'URL de la page -->
-						<div class="6u 12u$(medium)">
-							<label for="identifier_url">Adresse web de la page :</label>
-							<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
-								title="Veuillez entrer une URL valide commençant par http:// ou https://">
-						</div>
-						<!-- Champ de saisie pour l'adresse e-mail de réponse -->
-						<div class="6u 12u$(medium)">
-							<label for="reply_to">Adresse e-mail pour les réponses :</label>
-							<input type="text" id="reply_to" name="reply_to" />
+						<div class="flex flex-container containe-mrg-pdd">
+							<!--Balise  sujet-->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="subject">Sujet de la page :</label>
+								<input type="text" id="subject" name="subject" />
+							</div>
+							<!-- Balise Copyright -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="copyright">Droits d'auteur :</label>
+								<input type="text" id="copyright" name="copyright" />
+							</div>
+							<!-- Champ de saisie pour l'auteur -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="author">Auteur de la page :</label>
+								<input type="text" id="author" name="author" />
+							</div>
+							<!-- Champ de saisie pour le publisher -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="publisher">Éditeur :</label>
+								<input type="text" id="publisher" name="publisher" />
+							</div>
+							<!-- Champ de saisie pour l'URL de la page -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="identifier_url">Adresse web de la page :</label>
+								<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
+									title="Veuillez entrer une URL valide commençant par http:// ou https://">
+							</div>
+							<!-- Champ de saisie pour l'adresse e-mail de réponse -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="reply_to">Adresse e-mail pour les réponses :</label>
+								<input type="text" id="reply_to" name="reply_to" />
+							</div>
 						</div>
 					</div>
-
-
-					<hr />
 
 					<!--Métadonnées pour le contrôle des moteurs de recherche-->
 					<div class="row">
@@ -419,48 +403,49 @@
 								optimisant
 								ainsi sa visibilité et sa performance en ligne.</p>
 						</div>
-						<!--Revisiter la page dans-->
-						<div class="6u 12u$(medium)">
-							<label for="revisit_after">Fréquence de révision :</label>
-							<select id="revisit_after" name="revisit_after">
-								<option value="" disabled selected hidden>Choisissez la Fréquence</option>
-								<option value="1 day">1 jour</option>
-								<option value="2 days">2 jours</option>
-								<option value="3 days">3 jours</option>
-								<option value="4 days">4 jours</option>
-								<option value="5 days">5 jours</option>
-								<option value="6 days">6 jours</option>
-								<option value="7 days">7 jours</option>
-								<option value="8 days">8 jours</option>
-								<option value="9 days">9 jours</option>
-								<option value="10 days">10 jours</option>
-								<option value="11 days">11 jours</option>
-								<option value="12 days">12 jours</option>
-								<option value="13 days">13 jours</option>
-								<option value="14 days">14 jours</option>
-								<option value="15 days">15 jours</option>
-								<option value="16 days">16 jours</option>
-								<option value="17 days">17 jours</option>
-								<option value="18 days">18 jours</option>
-								<option value="19 days">19 jours</option>
-								<option value="20 days">20 jours</option>
-								<option value="21 days">21 jours</option>
-								<option value="22 days">22 jours</option>
-								<option value="23 days">23 jours</option>
-								<option value="24 days">24 jours</option>
-								<option value="25 days">25 jours</option>
-								<option value="26 days">26 jours</option>
-								<option value="27 days">27 jours</option>
-								<option value="28 days">28 jours</option>
-								<option value="29 days">29 jours</option>
-								<option value="30 days">30 jours</option>
-								<option value="31 days">31 jours</option>
-							</select>
-						</div>
 
-						<!--Directives aux robots-->
-						<div class="6u$ 12u$(medium)">
-							<div class="select-wrapper">
+						<div class="flex flex-container containe-mrg-pdd">
+							<!--Revisiter la page dans-->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="revisit_after">Fréquence de révision :</label>
+								<select id="revisit_after" name="revisit_after">
+									<option value="" disabled selected hidden>Choisissez la Fréquence</option>
+									<option value="1 day">1 jour</option>
+									<option value="2 days">2 jours</option>
+									<option value="3 days">3 jours</option>
+									<option value="4 days">4 jours</option>
+									<option value="5 days">5 jours</option>
+									<option value="6 days">6 jours</option>
+									<option value="7 days">7 jours</option>
+									<option value="8 days">8 jours</option>
+									<option value="9 days">9 jours</option>
+									<option value="10 days">10 jours</option>
+									<option value="11 days">11 jours</option>
+									<option value="12 days">12 jours</option>
+									<option value="13 days">13 jours</option>
+									<option value="14 days">14 jours</option>
+									<option value="15 days">15 jours</option>
+									<option value="16 days">16 jours</option>
+									<option value="17 days">17 jours</option>
+									<option value="18 days">18 jours</option>
+									<option value="19 days">19 jours</option>
+									<option value="20 days">20 jours</option>
+									<option value="21 days">21 jours</option>
+									<option value="22 days">22 jours</option>
+									<option value="23 days">23 jours</option>
+									<option value="24 days">24 jours</option>
+									<option value="25 days">25 jours</option>
+									<option value="26 days">26 jours</option>
+									<option value="27 days">27 jours</option>
+									<option value="28 days">28 jours</option>
+									<option value="29 days">29 jours</option>
+									<option value="30 days">30 jours</option>
+									<option value="31 days">31 jours</option>
+								</select>
+							</div>
+						
+							<!--Directives aux robots-->
+							<div class="6u 12u$(medium) flex-item">
 								<label for="robots">Directives aux robots :</label>
 								<select id="robots" name="robots">
 									<option value="" disabled selected hidden>Choisissez la directives</option>
@@ -497,44 +482,41 @@
 									<option value="noimageindex"><span lang="en">Noimageindex</span> (Empêcher
 										l'indexation
 										des images.)</option>
-
+						
 								</select>
 							</div>
+						
+							<!--Classification-->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="rating">Classification (définit le type de contenu du site) :</label>
+								<select id="rating" name="rating">
+									<option value="" disabled selected hidden>Choisissez la classification</option>
+									<option value="general">Pour tout public</option>
+									<option value="mature">Site pour adulte</option>
+									<option value="restricted">Accès restreint</option>
+									<option value="14 years">Plus de 14 ans</option>
+									<option value="educational">À vocation éducative</option>
+									<option value="business">À vocation commerciale</option>
+									<option value="news">Site d'actualités</option>
+								</select>
+							</div>
+							<!--Distribution du contenu-->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="distribution">Distribution du contenu :</label>
+								<select id="distribution" name="distribution">
+									<option value="" disabled selected hidden>Choisissez la distribution</option>
+									<option value="global">Global (web)</option>
+									<option value="local">Local (local uniquement)</option>
+									<option value="iu">Accès intranet</option>
+								</select>
+							</div>
+							<!--Date d'expiration de la page-->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="expires">Date d'expiration de la page :</label>
+								<input type="text" id="expires" name="expires" />
+							</div>
 						</div>
-
-						<!--Classification-->
-						<div class="6u 12u$(medium)">
-							<label for="rating">Classification (définit le type de contenu du site) :</label>
-							<select id="rating" name="rating">
-								<option value="" disabled selected hidden>Choisissez la classification</option>
-								<option value="general">Pour tout public</option>
-								<option value="mature">Site pour adulte</option>
-								<option value="restricted">Accès restreint</option>
-								<option value="14 years">Plus de 14 ans</option>
-								<option value="educational">À vocation éducative</option>
-								<option value="business">À vocation commerciale</option>
-								<option value="news">Site d'actualités</option>
-							</select>
-						</div>
-						<!--Distribution du contenu-->
-						<div class="6u$ 12u$(medium)">
-							<label for="distribution">Distribution du contenu :</label>
-							<select id="distribution" name="distribution">
-								<option value="" disabled selected hidden>Choisissez la distribution</option>
-								<option value="global">Global (web)</option>
-								<option value="local">Local (local uniquement)</option>
-								<option value="iu">Accès intranet</option>
-							</select>
-						</div>
-						<!--Date d'expiration de la page-->
-						<div class="6u 12u$(medium)">
-							<label for="expires">Date d'expiration de la page :</label>
-							<input type="text" id="expires" name="expires" />
-						</div>
-
 					</div>
-
-					<hr />
 
 					<!--Métadonnées spécifiques au contenu-->
 					<div class="row">
@@ -561,41 +543,40 @@
 								la
 								crédibilité de votre site auprès des moteurs de recherche et des visiteurs.</p>
 						</div>
-
-						<!--Géographie de la page -->
-						<div class="6u 12u$(medium)">
-							<label for="geography">Géographie de la page (ville, pays, code postal) :</label>
-							<p>Utilisez les codes ISO 3166-1 alpha-2 pour les pays (par exemple, &quot;Fr&quot; pour
-								la
-								France) ou des codes spécifiques à votre région.</p>
-							<input type="text" id="geography" name="geography" />
-						</div>
-
-						<div class="6u$ 12u$(medium)">
-							<label for="category">Catégorie du contenu :</label>
-							<select id="category" name="category">
-								<option value="" disabled selected hidden>Choisissez la categorie</option>
-								<option value="animals">Animaux</option>
-								<option value="astronomy">Astronomie</option>
-								<option value="economics">Economie</option>
-								<option value="engineering">Engineering</option>
-								<option value="environment">Environment</option>
-								<option value="family">Famille</option>
-								<option value="finance">Finance</option>
-								<option value="games">Jeux</option>
-								<option value="internet">Internet</option>
-								<option value="literature">Littérature</option>
-								<option value="software">Logiciels</option>
-								<option value="photography">Photographie</option>
-								<option value="health">Santé</option>
-								<option value="shopping">Shopping</option>
-								<option value="sports">Sports</option>
-								<option value="travel">Voyage</option>
-							</select>
+						<div class="flex flex-container containe-mrg-pdd">
+							<!--Géographie de la page -->
+							<div class="6u 12u$(medium) flex-item">
+								<label for="geography">Géographie de la page (ville, pays, code postal) :</label>
+								<p>Utilisez les codes ISO 3166-1 alpha-2 pour les pays (par exemple, &quot;Fr&quot; pour
+									la France) ou des codes spécifiques à votre région.</p>
+								<input type="text" id="geography" name="geography" />
+							</div>
+						
+							<div class="6u 12u$(medium) flex-item">
+								<label for="category">Catégorie du contenu :</label>
+								<select id="category" name="category">
+									<option value="" disabled selected hidden>Choisissez la categorie</option>
+									<option value="animals">Animaux</option>
+									<option value="astronomy">Astronomie</option>
+									<option value="economics">Economie</option>
+									<option value="engineering">Engineering</option>
+									<option value="environment">Environment</option>
+									<option value="family">Famille</option>
+									<option value="finance">Finance</option>
+									<option value="games">Jeux</option>
+									<option value="internet">Internet</option>
+									<option value="literature">Littérature</option>
+									<option value="software">Logiciels</option>
+									<option value="photography">Photographie</option>
+									<option value="health">Santé</option>
+									<option value="shopping">Shopping</option>
+									<option value="sports">Sports</option>
+									<option value="travel">Voyage</option>
+								</select>
+							</div>
 						</div>
 					</div>
 
-					<hr />
 					<!--Métadonnées Dublin Core -->
 					<div class="row">
 						<div>
@@ -645,6 +626,10 @@
 				<small id="year">&copy; 2019-<span id="currentYear"></span> Générateur de Balise Meta. Tous droits
 					réservés.
 				</small>
+				<nav>
+					<a href="/">Mentions Legales</a> - 
+					<a href="/">Politiliques de confidentialites</a>
+				</nav>
 				<script>
 					document.addEventListener("DOMContentLoaded", function () {
 						var currentYear = new Date().getFullYear();
@@ -654,7 +639,6 @@
 				</script>
 			</div>
 		</div>
-
 	</footer>
 
 	<!-- Scripts -->
