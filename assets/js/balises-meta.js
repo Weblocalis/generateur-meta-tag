@@ -286,3 +286,21 @@ function copierTexte() {
         console.error('Erreur lors de la copie du texte : ', err);
     }
 }
+
+
+
+// restreindre les valeurs entrées entre 0 et 10.
+// Récupérer les éléments d'entrée
+const inputs = document.querySelectorAll('.flex-item input[type="number"]');
+
+// Ajouter un écouteur d'événement à chaque élément d'entrée
+inputs.forEach(input => {
+    input.addEventListener("input", function() {
+        let value = parseFloat(this.value);
+        if (isNaN(value) || value < 0) {
+            this.value = 0;
+        } else if (value > 10) {
+            this.value = 10;
+        }
+    });
+});

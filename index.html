@@ -262,13 +262,15 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(medium) flex-item">
 									<label for="width">Largeur du viewport</label>
-									<p>Définit la largeur, en pixels, de la zone d'affichage</p>
+									<p>Détermine la largeur de la zone d'affichage en pixels ou spécifiez « device-width
+										» pour utiliser la largeur du dispositif.</p>
 									<input type="text" id="width" value="" name="viewport_width"
 										placeholder="device-width ou un nombre entier positif (en pixels)">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="height">Hauteur du viewport</label>
-									<p>Définit la hauteur, en pixels, de la zone d'affichage</p>
+									<p>Détermine la hauteur de la zone d'affichage en pixels ou spécifiez «
+										device-height » pour utiliser la hauteur du dispositif.</p>
 									<input type="text" id="height" value="" name="viewport_height"
 										placeholder="device-height ou un nombre entier positif (en pixels)">
 								</div>
@@ -276,31 +278,33 @@
 							<div class="flex flex-container">
 								<div class="6u 12u$(small) flex-item">
 									<label for="initial_scale">Échelle initiale</label>
-									<p class="paraphform">Définit le ratio entre la taille de l'écran du terminal
+									<p>Définit le ratio entre la taille de l'écran du terminal
 										(device-width en portrait ou device-height en paysage) et la taille de la zone
 										d'affichage.</p>
-									<input type="text" id="initial_scale" value="" name="viewport_initial_scale"
-										placeholder="Un nombre positif entre 0.0 et 10.0">
+									<input type="number" id="initial_scale" value="" name="viewport_initial_scale"
+										min="0" max="10" step="0.1" placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="minimum_scale">Échelle minimale</label>
-									<p class="paraphform">Définit la valeur minimale du zoom possible. Doit être
-										inférieur ou égal à "Échelle maximale", sinon le comportement est indéterminé</p>
-									<input type="text" id="minimum_scale" value="" name="viewport_minimum_scale"
-										placeholder="Un nombre positif entre 0.0 et 10.0">
+									<p>Définit la valeur minimale du zoom possible. Doit être
+										inférieur ou égal à "Échelle maximale", sinon le comportement est indéterminé
+									</p>
+									<input type="number" id="minimum_scale" value="" name="viewport_minimum_scale"
+										min="0" max="10" step="0.1" placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 							</div>
 							<div class="flex flex-container">
 								<div class="6u 12u$(small) flex-item">
 									<label for="maximum_scale">Échelle maximale</label>
-									<p class="paraphform">Définit la valeur maximale du zoom possible. Doit être
-										supérieur ou égal à "Échelle minimale", sinon le comportement est indéterminé</p>
-									<input type="text" id="maximum_scale" value="" name="viewport_maximum_scale"
-										placeholder="Un nombre positif entre 0.0 et 10.0">
+									<p>Définit la valeur maximale du zoom possible. Doit être
+										supérieur ou égal à "Échelle minimale", sinon le comportement est indéterminé
+									</p>
+									<input type="number" id="maximum_scale" value="" name="viewport_maximum_scale"
+										min="0" max="10" step="0.1" placeholder="Un nombre positif entre 0.0 et 10.0">
 								</div>
 								<div class="6u 12u$(small) flex-item">
 									<label for="user_scalable">Zoom par utilisateur</label>
-									<p class="paraphform">Si la valeur est "Non", l'utilisateur ne pourra pas zoomer sur le
+									<p>Si la valeur est "Non", l'utilisateur ne pourra pas zoomer sur le
 										document. Par défaut, la valeur est "Oui".</p>
 									<select id="user_scalable" name="viewport_user_scalable">
 										<option value="" disabled selected hidden>Choisissez une option</option>
@@ -312,7 +316,8 @@
 							<div class="flex flex-container">
 								<div>
 									<p class="paraphform">La meilleure pratique pour la balise meta viewport dépend des
-										besoins spécifiques de votre site Web ou de votre application. Cependant, voici une suggestion
+										besoins spécifiques de votre site Web ou de votre application. Cependant, voici
+										une suggestion
 										générale qui est souvent considérée comme une bonne pratique :</p>
 								</div>
 								<div class="6u 12u$(small) flex-item">
@@ -337,13 +342,18 @@
 							<!--Balise Description -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="description">Meta Description :</label>
-								<p class="paraphform">La taille maximale recommandée pour la meta description était souvent entre 150 et 160 caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b>
+								<p>La taille maximale recommandée pour la meta description était souvent entre 150 et
+									160 caractères max. <b id="remainingCharsDescription">(Caractères restants : 55)</b>
 								</p>
-								<textarea id="description" name="description" placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
+								<textarea id="description" name="description"
+									placeholder="Saisissez une description de votre page" cols="50" rows="5"></textarea>
 							</div>
 							<!--Balise  Keywords-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="keywords">Balise <span lang="en">Keywords</span> :</label>
+								<p>Utilisez ce champ pour inclure une liste de mots-clés pertinents pour votre page web.
+									Ces mots-clés peuvent améliorer son référencement et sa visibilité sur les moteurs
+									de recherche.</p>
 								<textarea id="keywords" name="keywords"
 									placeholder="Ex: mot-clé 1, mot-clé 2, mot-clé 3" cols="50" rows="5"></textarea>
 							</div>
@@ -353,32 +363,49 @@
 							<!--Balise  sujet-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="subject">Sujet de la page :</label>
+								<p>Utilisez ce champ pour définir le sujet principal de votre page web, ce qui peut
+									aider les utilisateurs et les moteurs de recherche à comprendre rapidement le
+									contenu de votre page.</p>
 								<input type="text" id="subject" name="subject" />
 							</div>
 							<!-- Balise Copyright -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="copyright">Droits d'auteur :</label>
+								<p>Ce champ permet de spécifier les droits d'auteur associés à votre page web,
+									fournissant ainsi des informations importantes sur la propriété intellectuelle et
+									les autorisations d'utilisation du contenu.</p>
 								<input type="text" id="copyright" name="copyright" />
 							</div>
 							<!-- Champ de saisie pour l'auteur -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="author">Auteur de la page :</label>
+								<p>Utilisez ce champ pour indiquer l'auteur ou les auteurs de la page web, permettant
+									ainsi aux visiteurs de connaître la source du contenu et d'établir une crédibilité
+									pour votre site.</p>
 								<input type="text" id="author" name="author" />
 							</div>
 							<!-- Champ de saisie pour le publisher -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="publisher">Éditeur :</label>
+								<p>Ce champ permet de spécifier l'éditeur de la page web, fournissant des informations
+									importantes sur la source et la crédibilité du contenu publié.</p>
 								<input type="text" id="publisher" name="publisher" />
 							</div>
 							<!-- Champ de saisie pour l'URL de la page -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="identifier_url">Adresse web de la page :</label>
+								<p>Ce champ vous permet d'indiquer l'adresse URL de la page web, fournissant ainsi un
+									moyen direct aux utilisateurs et aux moteurs de recherche pour accéder à son
+									contenu.</p>
 								<input type="url" id="identifier_url" name="identifier_url" pattern="https?://.+"
 									title="Veuillez entrer une URL valide commençant par http:// ou https://">
 							</div>
 							<!-- Champ de saisie pour l'adresse e-mail de réponse -->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="reply_to">Adresse e-mail pour les réponses :</label>
+								<p>Utilisez ce champ pour spécifier une adresse e-mail à laquelle les réponses peuvent
+									être envoyées, offrant ainsi aux utilisateurs un moyen de vous contacter directement
+									en réponse au contenu de la page.</p>
 								<input type="text" id="reply_to" name="reply_to" />
 							</div>
 						</div>
@@ -409,6 +436,9 @@
 							<!--Revisiter la page dans-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="revisit_after">Fréquence de révision :</label>
+								<p>Ce champ permet de spécifier la fréquence à laquelle la page web doit être révisée
+									par les moteurs de recherche, aidant ainsi à maintenir son contenu à jour et
+									pertinent.</p>
 								<select id="revisit_after" name="revisit_after">
 									<option value="" disabled selected hidden>Choisissez la Fréquence</option>
 									<option value="1 day">1 jour</option>
@@ -444,10 +474,13 @@
 									<option value="31 days">31 jours</option>
 								</select>
 							</div>
-						
+
 							<!--Directives aux robots-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="robots">Directives aux robots :</label>
+								<p>Utilisez ce champ pour fournir des directives aux robots des moteurs de recherche sur
+									la manière de crawler et d'indexer votre page web, influençant ainsi sa visibilité
+									et son classement dans les résultats de recherche.</p>
 								<select id="robots" name="robots">
 									<option value="" disabled selected hidden>Choisissez la directives</option>
 									<option value="index"><abbr title="indexation" lang="en">Index</abbr> (Autoriser
@@ -483,13 +516,16 @@
 									<option value="noimageindex"><span lang="en">Noimageindex</span> (Empêcher
 										l'indexation
 										des images.)</option>
-						
+
 								</select>
 							</div>
-						
+
 							<!--Classification-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="rating">Classification (définit le type de contenu du site) :</label>
+								<p>Ce champ permet de spécifier la classification du contenu de votre site web, aidant
+									ainsi les moteurs de recherche à comprendre le type de contenu qu'il contient et à
+									l'indexer de manière appropriée.</p>
 								<select id="rating" name="rating">
 									<option value="" disabled selected hidden>Choisissez la classification</option>
 									<option value="general">Pour tout public</option>
@@ -504,6 +540,9 @@
 							<!--Distribution du contenu-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="distribution">Distribution du contenu :</label>
+								<p>Utilisez ce champ pour indiquer comment vous souhaitez que le contenu de votre site
+									soit distribué, ce qui peut aider à contrôler sa visibilité et sa disponibilité sur
+									différents canaux de diffusion.</p>
 								<select id="distribution" name="distribution">
 									<option value="" disabled selected hidden>Choisissez la distribution</option>
 									<option value="global">Global (web)</option>
@@ -514,6 +553,9 @@
 							<!--Date d'expiration de la page-->
 							<div class="6u 12u$(medium) flex-item">
 								<label for="expires">Date d'expiration de la page :</label>
+								<p>Ce champ vous permet de spécifier la date à laquelle la page web expirera, ce qui
+									peut être utile pour indiquer aux moteurs de recherche quand arrêter d'indexer le
+									contenu et pour informer les utilisateurs de sa pertinence dans le temps.</p>
 								<input type="text" id="expires" name="expires" />
 							</div>
 						</div>
@@ -552,9 +594,12 @@
 									la France) ou des codes spécifiques à votre région.</p>
 								<input type="text" id="geography" name="geography" />
 							</div>
-						
+
 							<div class="6u 12u$(medium) flex-item">
 								<label for="category">Catégorie du contenu :</label>
+								<p>Utilisez ce champ pour spécifier la catégorie ou la classification du contenu de
+									votre page web, ce qui peut aider à organiser et à identifier le contenu pour les
+									utilisateurs et les moteurs de recherche.</p>
 								<select id="category" name="category">
 									<option value="" disabled selected hidden>Choisissez la categorie</option>
 									<option value="animals">Animaux</option>
@@ -583,24 +628,20 @@
 						<div>
 							<h2 id="content">Métadonnées Dublin Core :</h2>
 							<p>Les métadonnées Dublin Core sont un ensemble de balises standardisées utilisées pour
-								décrire les
-								ressources numériques, telles que les pages web, les images, les vidéos, etc. Ces
-								métadonnées
-								fournissent des informations générales sur les ressources, telles que le titre,
-								l'auteur, la
-								date de création, la langue, le sujet, et d'autres éléments pertinents. Leur
-								utilisation
-								permet
-								d'améliorer la recherche, la découverte et la gestion des ressources en ligne, en
-								fournissant
-								des informations cohérentes et structurées qui facilitent l'indexation et la
-								récupération des
-								données. En intégrant les métadonnées Dublin Core dans votre site web, vous
-								contribuez à
-								son
-								accessibilité et à son interopérabilité, ce qui peut avoir un impact positif sur sa
-								visibilité
-								et sa valeur pour les utilisateurs.</p>
+								décrire les ressources numériques, telles que les pages web, les images, les vidéos,
+								etc. Ces
+								métadonnées fournissent des informations générales sur les ressources, telles que le
+								titre,
+								l'auteur, la date de création, la langue, le sujet, et d'autres éléments pertinents.
+								Leur
+								utilisation permet d'améliorer la recherche, la découverte et la gestion des ressources
+								en ligne, en
+								fournissant des informations cohérentes et structurées qui facilitent l'indexation et la
+								récupération des données. En intégrant les métadonnées Dublin Core dans votre site web,
+								vous
+								contribuez à son accessibilité et à son interopérabilité, ce qui peut avoir un impact
+								positif sur sa
+								visibilité et sa valeur pour les utilisateurs.</p>
 						</div>
 						<div class="6u 12u$(medium)">
 							<input type="checkbox" id="dc_check" name="dc_check">
@@ -628,8 +669,8 @@
 					réservés.
 				</small>
 				<nav>
-					<a href="/">Mentions légales</a> - 
-					<a href="/">Politique de confidentialité</a> - 
+					<a href="/">Mentions légales</a> -
+					<a href="/">Politique de confidentialité</a> -
 					<a href="page/contact.html">Contact</a>
 				</nav>
 				<div>
