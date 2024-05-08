@@ -217,27 +217,6 @@ window.addEventListener('load', replace_submit);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // *************************************************************//
 // Fonction pour mettre à jour le nombre de caractères restants //
 // *************************************************************//
