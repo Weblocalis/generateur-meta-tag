@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>HTTP Headers Viewer</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="content-language" content="fr">
+    <meta name="description"
+        content="Créez des balises méta facilement avec notre outil gratuit. Personnalisez titres, descriptions et mots-clés pour un meilleur référencement et plus de visiteurs." />
+    <meta name="keywords"
+        content="html tag meta, Générateur de balises méta en ligne, Créateur de balises SEO en ligne, Balises méta optimisées en ligne, Outils SEO gratuits en ligne, Améliorer le référencement de mon site en ligne, Méta-tags pour site web en ligne, Générer des descriptions de page en ligne, Mots-clés pour le référencement en ligne, Balises HTML pour SEO en ligne, Outils d'optimisation pour les moteurs de recherche en ligne" />
+    <meta name="author" content="WebLocalis">
+    <meta name="robots" content="index,follow">
+    <meta name="theme-color" content="#6cc091" />
+
+    <!-- Balises Open Graph pour les réseaux sociaux -->
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+
+    <!-- Balises Twitter Card pour Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+
+
+    <!-- Icônes Apple Touch -->
+    <link rel="apple-touch-icon" href="../images/favicon/apple-icon-180x180.ico"
+        sizes="57x57, 60x60, 72x72, 76x76, 114x114, 120x120, 144x144, 152x152, 180x180">
+    <!-- Icônes Android -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/android-icon-192x192.ico" sizes="192x192">
+    <!-- Icônes Favicon -->
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon-32x32.ico" sizes="32x32">
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon-96x96.ico" sizes="96x96">
+    <link rel="icon" type="image/x-icon" href="../images/favicon/favicon.ico" sizes="16x16">
+    <link rel="shortcut icon" href="../images/favicon/favicon.ico">
+
+    <!-- Feuilles de style CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- Script JavaScript externe pour mettre à jour les balises meta -->
+    <script src="../assets/js/updateMetaTags.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>HTTP Headers Viewer</h1>
+    </header>
+    <main>
+        <form id="headersForm">
+            <div class="row">
+                <div class="flex flex-container containe-mrg-pdd">
+                    <div class="6u$ 12u$(medium) flex-item">
+                        <label for="url">URL :</label>
+                        <input type="text" placeholder="https://example.com" id="url" name="url" required>
+                    </div>
+                </div>
+                <div class="row uniform">
+                    <div class="12u$">
+                        <button type="submit">Afficher les entêtes HTTP</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div id="headersResult">
+            <!-- Les entêtes HTTP seront affichées ici -->
+        </div>
+    </main>
+    <footer>
+        <p>Créé par [Votre Nom]</p>
+    </footer>
+    <!-- Ajoutez ici le lien vers votre fichier JavaScript -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const headersForm = document.getElementById("headersForm");
+            const headersResult = document.getElementById("headersResult");
+
+            headersForm.addEventListener("submit", function (event) {
+                event.preventDefault(); // Empêcher le rechargement de la page
+
+                const url = document.getElementById("url").value;
+
+                // Envoyer une requête AJAX pour récupérer les entêtes HTTP
+                const xhr = new XMLHttpRequest();
+                xhr.open("HEAD", url);
+                xhr.onload = function () {
+                    if (xhr.status === 200) {
+                        // Afficher les entêtes HTTP dans la zone de résultat
+                        headersResult.innerHTML = xhr.getAllResponseHeaders();
+                    } else {
+                        headersResult.innerHTML = "Erreur lors de la récupération des entêtes HTTP.";
+                    }
+                };
+                xhr.send();
+            });
+        });
+    </script>
+</body>
+
+</html>
