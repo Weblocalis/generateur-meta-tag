@@ -3,7 +3,7 @@
 <html lang="fr">
 
 <head>
-    <title>Contactez-nous</title>
+    <title>Vérificateur de Liens Cassés</title>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -63,46 +63,21 @@
 
     <section>
         <div class="inner align-center">
-                <h1>Contactez-nous</h1>
+                <h1>Vérificateur de Liens Cassés</h1>
         </div>
     </section>
 
 
     <section class="wrapper align-center">
         <div class="inner">
-            <form >
-                <div class="row uniform">
-                    <div class="6u 12u$(xsmall)">
-                        <input type="text" name="demo-name" id="demo-name" value="" placeholder="Nom" />
-                    </div>
-                    <div class="6u$ 12u$(xsmall)">
-                        <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-                    </div>
-                    <!-- Break -->
-                    <div class="12u$">
-                        <div class="select-wrapper">
-                            <select name="demo-category" id="demo-category">
-                                <option value="">- Objet -</option>
-                                <option value="1">Partenariat</option>
-                                <option value="1">Shipping</option>
-                                <option value="1">Administration</option>
-                                <option value="1">Human Resources</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!-- Break -->
-                    <div class="12u$">
-                        <textarea name="demo-message" id="demo-message" placeholder="Entrer votre message"
-                            rows="6"></textarea>
-                    </div>
-                    <!-- Break -->
-                    <div class="12u$">
-                        <ul class="actions">
-                            <li><input type="submit" value="Send Message" /></li>
-                        </ul>
-                    </div>
-                </div>
+            <form id="checkLinksForm">
+                <label for="websiteUrl">URL de votre site Web :</label>
+                <input type="url" id="websiteUrl" name="websiteUrl" required>
+                <button type="submit">Vérifier les liens cassés</button>
             </form>
+            <div id="results">
+                <!-- Les résultats de la vérification seront affichés ici -->
+            </div>
         </div>
     </section>
 
