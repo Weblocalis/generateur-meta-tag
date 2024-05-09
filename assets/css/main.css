@@ -2211,8 +2211,7 @@ input[type="text"]:invalid,
 input[type="number"]:invalid,
 input[type="password"]:invalid,
 input[type="email"]:invalid,
-input[type="tel"]:invalid
-input[type="url"]:invalid,
+input[type="tel"]:invalid input[type="url"]:invalid,
 select:invalid,
 textarea:invalid {
 	box-shadow: none;
@@ -3146,20 +3145,23 @@ button:disabled,
 /* Banner */
 
 #banner {
-    padding: 8em 0 9em 0;
-    background-image: url(../../images/generateur-meta-tagimageOrg.jpg);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: center;
-    position: relative;
-    display: flex; /* Utilisation de flexbox */
-    align-items: center; /* Centrer verticalement le contenu */
-    min-height: 100vh; /* Hauteur minimale de la vue */
+	padding: 8em 0 9em 0;
+	background-image: url(../../images/generateur-meta-tagimageOrg.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	text-align: center;
+	position: relative;
+	display: flex;
+	/* Utilisation de flexbox */
+	align-items: center;
+	/* Centrer verticalement le contenu */
+	min-height: 100vh;
+	/* Hauteur minimale de la vue */
 }
 
-#banner:before {	
+#banner:before {
 	content: "";
 	/*background: rgba(75, 75, 93, 0.85);*/
 	position: absolute;
@@ -3394,16 +3396,18 @@ button:disabled,
 
 /* Pour les écrans de taille moyenne et supérieure */
 .flex.flex-container {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 	align-items: end;
-	
+
 }
 
 .flex-item {
-    width: 49%; /* Affiche deux éléments par ligne */
+	width: 49%;
+	/* Affiche deux éléments par ligne */
 	margin: 10px 5px 15px 5px;
 }
+
 .containe-mrg-pdd {
 	padding: 30px;
 	margin: 10px 0;
@@ -3413,19 +3417,104 @@ button:disabled,
 }
 
 .\36 u\$.\31 2u\$\(medium\).flex-item {
-    width: 100%;
+	width: 100%;
 }
 
 /* Pour les écrans de petite taille, comme les mobiles */
 @media screen and (max-width: 768px) {
-    .flex-item {
-        width: 100%; /* Affiche un élément par ligne */
-    }
+	.flex-item {
+		width: 100%;
+		/* Affiche un élément par ligne */
+	}
 }
 
 p.paraphform {
-    margin: 0px 25px 10px 25px;
+	margin: 0px 25px 10px 25px;
 }
 
 
 /* End Mes Ajouts */
+
+/* CTA */
+
+#cta {
+	padding: 2em 0 0.1em 0;
+	text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+
+	#cta {
+		padding: 2em 2em 0.1em 2em;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#cta {
+		padding: 2em 1em 0.1em 1em;
+	}
+
+	#cta p br {
+		display: none;
+	}
+
+}
+
+/* Main */
+
+#main {
+	padding: 4em 4em 2em 4em;
+	background-color: #ffffff;
+	border-radius: 4px;
+}
+
+#main>header:first-child {
+	text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+
+	#main {
+		padding: 2em 2em 0.1em 2em;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#main {
+		padding: 2em 1em 0.1em 1em;
+	}
+
+}
+
+/* Intro */
+
+#intro {
+	padding: 4em 4em 2em 4em;
+	background-color: #ffffff;
+	border-radius: 4px;
+	text-align: center;
+}
+
+@media screen and (max-width: 736px) {
+
+	#intro {
+		padding: 2em 2em 0.1em 2em;
+	}
+
+}
+
+@media screen and (max-width: 480px) {
+
+	#intro {
+		padding: 2em 1em 0.1em 1em;
+	}
+
+	#intro p br {
+		display: none;
+	}
+
+}

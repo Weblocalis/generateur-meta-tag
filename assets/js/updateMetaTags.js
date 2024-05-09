@@ -28,7 +28,7 @@ function updateMetaTags() {
 
     var ogImageTag = document.querySelector('meta[property="og:image"]');
     if (ogImageTag) {
-        ogImageTag.setAttribute("content", "../generateur-meta-tagimageOrg.jpg");
+        ogImageTag.setAttribute("content", "images/generateur-meta-tagimageOrg.jpg");
     }
 
     // Modifier les balises Twitter Card
@@ -44,7 +44,17 @@ function updateMetaTags() {
 
     var twitterImageTag = document.querySelector('meta[name="twitter:image"]');
     if (twitterImageTag) {
-        twitterImageTag.setAttribute("content", "../generateur-meta-tagimageOrg.jpg");
+        twitterImageTag.setAttribute("content", "images/generateur-meta-tagimageOrg.jpg");
+    }
+
+    // Modifier les balises Schema.org
+    var schemaWebSiteTag = document.querySelector('script[type="application/ld+json"]');
+    if (schemaWebSiteTag) {
+        var schemaData = JSON.parse(schemaWebSiteTag.textContent);
+        schemaData.name = pageTitle;
+        schemaData.description = metaDescriptionTag ? (metaDescriptionTag.getAttribute("content") || "") : "";
+        schemaData.url = pageUrl;
+        schemaWebSiteTag.textContent = JSON.stringify(schemaData, null, 2);
     }
 }
 
