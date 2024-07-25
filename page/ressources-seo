@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Ressources SEO pour Optimiser Votre Site Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 10px 0;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .resource {
+            background: #fff;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .resource p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Top Ressources SEO pour Optimiser Votre Site Web</h1>
+    <p>Découvrez des outils et des plateformes essentiels pour améliorer votre SEO et analyser vos performances en ligne.</p>
+
+    <div class="resource">
+        <h2>Google Search Console</h2>
+        <p><strong>Description :</strong> Analyse des performances de recherche, gestion des erreurs de site, optimisation des mots-clés.</p>
+        <p><a href="https://search.google.com/search-console/" target="_blank">Accéder à Google Search Console</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Google Analytics</h2>
+        <p><strong>Description :</strong> Suivi du trafic web, analyse des comportements des utilisateurs, mesure des conversions.</p>
+        <p><a href="https://analytics.google.com/analytics/web/" target="_blank">Accéder à Google Analytics</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>SEMrush</h2>
+        <p><strong>Description :</strong> Recherche de mots-clés, analyse de la concurrence, audit de site, suivi des positions.</p>
+        <p><a href="https://www.semrush.com/" target="_blank">Accéder à SEMrush</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Ahrefs</h2>
+        <p><strong>Description :</strong> Analyse des backlinks, recherche de mots-clés, audit SEO, suivi des performances de recherche.</p>
+        <p><a href="https://ahrefs.com/" target="_blank">Accéder à Ahrefs</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Moz</h2>
+        <p><strong>Description :</strong> Recherche de mots-clés, analyse des backlinks, audit de site, suivi des rangs.</p>
+        <p><a href="https://moz.com/" target="_blank">Accéder à Moz</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Yoast SEO</h2>
+        <p><strong>Description :</strong> Optimisation SEO on-page pour WordPress, analyse des mots-clés, amélioration de la lisibilité.</p>
+        <p><a href="https://yoast.com/wordpress/plugins/seo/" target="_blank">Accéder à Yoast SEO</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Screaming Frog SEO Spider</h2>
+        <p><strong>Description :</strong> Audit technique de site, analyse des liens internes et externes, vérification des erreurs.</p>
+        <p><a href="https://www.screamingfrog.co.uk/seo-spider/" target="_blank">Accéder à Screaming Frog SEO Spider</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Ubersuggest</h2>
+        <p><strong>Description :</strong> Recherche de mots-clés, analyse de la concurrence, suggestions de contenu.</p>
+        <p><a href="https://neilpatel.com/ubersuggest/" target="_blank">Accéder à Ubersuggest</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Bing Webmaster Tools</h2>
+        <p><strong>Description :</strong> Analyse des performances sur Bing, diagnostic des erreurs de site, outils de recherche de mots-clés.</p>
+        <p><a href="https://www.bing.com/webmasters/" target="_blank">Accéder à Bing Webmaster Tools</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>Majestic</h2>
+        <p><strong>Description :</strong> Analyse des backlinks, exploration de site, évaluation de la qualité des liens.</p>
+        <p><a href="https://majestic.com/" target="_blank">Accéder à Majestic</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>GTmetrix</h2>
+        <p><strong>Description :</strong> Analyse de la vitesse de chargement des pages, recommandations pour l'optimisation de la performance.</p>
+        <p><a href="https://gtmetrix.com/" target="_blank">Accéder à GTmetrix</a></p>
+    </div>
+
+    <div class="resource">
+        <h2>PageSpeed Insights</h2>
+        <p><strong>Description :</strong> Analyse de la performance des pages web, recommandations pour améliorer la vitesse et l'expérience utilisateur.</p>
+        <p><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank">Accéder à PageSpeed Insights</a></p>
+    </div>
+</body>
+</html>
