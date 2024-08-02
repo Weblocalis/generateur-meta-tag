@@ -1,4 +1,4 @@
-# MetaTagGenerator
+# Boostifyseo
 
 MetaTagGenerator est un générateur de balises meta simple en page statique, utilisant JavaScript, HTML5 et CSS. Ce projet offre une solution totalement gratuite pour générer rapidement des balises meta. Conçu pour être léger et facile à utiliser, c'est l'outil parfait pour gagner du temps et optimiser le référencement de votre site web sans tracas.
 
@@ -30,7 +30,7 @@ Ce projet est sous licence [MIT](https://opensource.org/licenses/MIT). Vous ête
 
 ---
 
-# MetaTagGenerator
+# Boostifyseo
 
 MetaTagGenerator is a simple static page meta tag generator, using JavaScript, HTML5, and CSS. This project offers a completely free solution for quickly generating meta tags. Designed to be lightweight and easy to use, it's the perfect tool to save time and optimize the SEO of your website hassle-free.
 
