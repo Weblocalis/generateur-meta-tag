@@ -1742,15 +1742,36 @@ body, input, select, textarea {
 }
 
 /* Ajustements de la taille de police pour les écrans plus petits */
-@media screen and (max-width: 1680px),
-@media screen and (max-width: 1280px),
-@media screen and (max-width: 980px),
-@media screen and (max-width: 736px),
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 1680px) {
     body, input, select, textarea {
         font-size: 12pt; /* Réduction de la taille de police sur les petits écrans */
     }
 }
+
+@media screen and (max-width: 1280px) {
+    body, input, select, textarea {
+        font-size: 11pt; /* Réduction de la taille de police sur les écrans encore plus petits */
+    }
+}
+
+@media screen and (max-width: 980px) {
+    body, input, select, textarea {
+        font-size: 10pt; /* Réduction de la taille de police sur les écrans encore plus petits */
+    }
+}
+
+@media screen and (max-width: 736px) {
+    body, input, select, textarea {
+        font-size: 9pt; /* Réduction de la taille de police sur les écrans encore plus petits */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body, input, select, textarea {
+        font-size: 8pt; /* Réduction de la taille de police sur les plus petits écrans */
+    }
+}
+
 
 /* Liens */
 a {
@@ -1896,8 +1917,8 @@ hr.major {
     margin: 0 auto;
 }
 
-@media screen and (max-width: 1280px),
-@media screen and (max-width: 480px) {
+/* Ajustements de la largeur maximale pour les petits écrans */
+@media screen and (max-width: 1280px), screen and (max-width: 480px) {
     .inner {
         max-width: 90%; /* Réduction de la largeur maximale sur les petits écrans */
     }
