@@ -1801,7 +1801,7 @@ p {
 
 /* Titres */
 h1, h2, h3, h4, h5, h6 {
-    color: #555;
+    color: rgba(255, 255, 255, 0.55);
     font-weight: 400;
     line-height: 1.5;
     margin: 2em 0 1em 0;
@@ -3123,9 +3123,6 @@ button:disabled,
     #banner {
         padding: 7em 0 6em;
     }
-    #banner .inner {
-        padding-top: 6em;
-    }
     #banner h1 {
         font-size: 3em;
     }
@@ -3142,9 +3139,6 @@ button:disabled,
         background-attachment: scroll;
         padding: 5em 0 4em;
     }
-    #banner .inner {
-        padding-top: 4em;
-    }
     #banner h1 {
         font-size: 2.5em;
     }
@@ -3160,9 +3154,6 @@ button:disabled,
 @media screen and (max-width: 736px) {
     #banner {
         padding: 4em 0 3em;
-    }
-    #banner .inner {
-        padding-top: 3em;
     }
     #banner h1 {
         font-size: 2em;
