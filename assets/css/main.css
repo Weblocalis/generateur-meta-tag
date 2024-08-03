@@ -3043,7 +3043,8 @@ button:disabled,
     position: relative;
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    justify-content: center; /* Centrer le contenu horizontalement */
+    height: 100vh; /* Adapte la hauteur à la fenêtre de l'appareil */
     color: #ffffffe2; /* Couleur par défaut du texte pour éviter les répétitions */
 }
 
