@@ -2976,102 +2976,82 @@ button:disabled,
 /* Nav */
 
 @media screen and (max-width: 980px) {
-
-	#nav {
-		display: none;
-	}
-
+    #nav {
+        display: none;
+    }
 }
 
 #navPanel {
-	-moz-transform: translatex(20em);
-	-webkit-transform: translatex(20em);
-	-ms-transform: translatex(20em);
-	transform: translatex(20em);
-	-moz-transition: -moz-transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
-	-webkit-transition: -webkit-transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
-	-ms-transition: -ms-transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
-	transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
-	-webkit-overflow-scrolling: touch;
-	visibility: hidden;
-	overflow-y: auto;
-	position: fixed;
-	right: 0;
-	top: 0;
-	background: #6cc091;
-	color: #daefe3;
-	height: 100%;
-	max-width: 80%;
-	width: 20em;
-	padding: 0.5em 1.25em;
-	z-index: 10010;
+    transform: translateX(20em);
+    transition: transform 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    visibility: hidden;
+    overflow-y: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background: #6cc091;
+    color: #daefe3;
+    height: 100%;
+    width: 20em;
+    max-width: 80%;
+    padding: 0.5em 1.25em;
+    z-index: 10010;
+    -webkit-overflow-scrolling: touch; /* Pour les appareils iOS */
 }
 
 #navPanel.visible {
-	-moz-transform: translatex(0);
-	-webkit-transform: translatex(0);
-	-ms-transform: translatex(0);
-	transform: translatex(0);
-	box-shadow: 0 0 1.5em 0 rgba(0, 0, 0, 0.2);
-	visibility: visible;
+    transform: translateX(0);
+    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+    visibility: visible;
 }
 
 #navPanel a:not(.close) {
-	border-top: solid 1px #8dcca9;
-	color: #daefe3;
-	font-weight: 600;
-	display: block;
-	padding: 0.75em 0;
-	text-decoration: none;
-	font-weight: 400;
+    border-top: solid 1px #8dcca9;
+    color: #daefe3;
+    font-weight: 600;
+    display: block;
+    padding: 0.75em 0;
+    text-decoration: none;
 }
 
 #navPanel a:not(.close):first-child {
-	border: none;
+    border-top: none;
 }
 
 #navPanel .close {
-	text-decoration: none;
-	-moz-transition: color 0.2s ease-in-out;
-	-webkit-transition: color 0.2s ease-in-out;
-	-ms-transition: color 0.2s ease-in-out;
-	transition: color 0.2s ease-in-out;
-	-webkit-tap-highlight-color: transparent;
-	border: 0;
-	color: #daefe3;
-	cursor: pointer;
-	display: block;
-	height: 4em;
-	padding-right: 1.25em;
-	position: absolute;
-	right: 0;
-	text-align: right;
-	top: 0;
-	vertical-align: middle;
-	width: 5em;
+    text-decoration: none;
+    transition: color 0.2s ease-in-out;
+    border: 0;
+    color: #daefe3;
+    cursor: pointer;
+    display: block;
+    height: 4em;
+    padding-right: 1.25em;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: right;
+    width: 5em;
+    line-height: 4em;
+    font-family: FontAwesome;
+    font-size: 1.5em; /* Taille de l'icône */
 }
 
 #navPanel .close:before {
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-font-smoothing: antialiased;
-	font-family: FontAwesome;
-	font-style: normal;
-	font-weight: normal;
-	text-transform: none !important;
-	content: '\f00d';
-	width: 3em;
-	height: 3em;
-	line-height: 3em;
-	display: block;
-	position: absolute;
-	right: 0;
-	top: 0;
-	text-align: center;
+    content: '\f00d'; /* Code Unicode pour l'icône "fermer" */
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    text-align: center;
+    width: 3em;
+    height: 3em;
 }
 
 #navPanel .close:hover {
-	color: inherit;
+    color: inherit;
 }
+
 
 /* Banner */
 #banner {
