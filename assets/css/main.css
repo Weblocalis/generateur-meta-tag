@@ -2280,40 +2280,38 @@ input[type="radio"]+label:before {
 /* Box */
 
 .box {
-	margin-bottom: 2em;
-	padding: 1.5em;
-	border: 2px solid #ccc;
-	border-radius: 10px;
-	box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.box> :last-child,
-.box> :last-child> :last-child,
-.box> :last-child> :last-child> :last-child {
-	margin-bottom: 0;
+.box > *:last-child {
+    margin-bottom: 0;
 }
 
 .box.alt {
-	border: 0;
-	border-radius: 0;
-	padding: 0;
+    border: none;
+    border-radius: 0;
+    padding: 0;
 }
 
 .box.person {
-	border: solid 1px #8dcca9;
-	padding: 3em 1.5em;
+    border: 1px solid #8dcca9;
+    padding: 3em 1.5em;
 }
 
 .box.person h3 {
-	margin: 0;
+    margin: 0;
 }
 
 .box.person .image {
-	margin-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .box.person .image img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 /* Icon */
