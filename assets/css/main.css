@@ -2686,6 +2686,7 @@ button,
     line-height: 3.85em;
     letter-spacing: 2px;
     padding: 0 4em;
+	margin: 0 .3em;
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
@@ -2841,6 +2842,7 @@ button:disabled,
     button,
     .button {
         padding: 0;
+		margin: .3em 0em;
         width: 100%;
     }
 }
@@ -2942,12 +2944,6 @@ button:disabled,
     }
     #header {
         top: 0.5em;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    #header {
-        font-size: 0.9em;
     }
 }
 
@@ -3151,6 +3147,7 @@ button:disabled,
     }
     #banner h1 {
         font-size: 2em;
+		color: #ccc;
     }
     #banner h3 {
         font-size: 1.25em;
