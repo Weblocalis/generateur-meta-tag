@@ -1955,7 +1955,7 @@ article.wrapper article header {
 
 	section.wrapper,
 	article.wrapper {
-		padding: 3em 0em 3em 1em;
+		padding: 3em 0em 3em 0em;
 	}
 
 	section.wrapper header,
