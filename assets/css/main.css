@@ -1717,37 +1717,34 @@ body {
 /* Basic */
 
 @-ms-viewport {
-	width: device-width;
+    width: device-width;
 }
 
 body {
-	-ms-overflow-style: scrollbar;
+    -ms-overflow-style: scrollbar;
+    background: #fff; /* Définir la couleur de fond du corps */
 }
 
+/* Suppression de la largeur minimale fixe pour les petits écrans */
 @media screen and (max-width: 480px) {
-
-	html,
-	body {
-		min-width: 320px;
-	}
-
+    html, body {
+        /* Assurez-vous que le contenu peut s'adapter aux petits écrans */
+        font-size: 14px; /* Exemple d'ajustement de la taille de la police */
+    }
 }
 
-body {
-	background: #fff;
+/* Styles pour les éléments en état de chargement */
+body.is-loading * {
+    /* Désactiver les animations et transitions */
+    animation: none !important;
+    transition: none !important;
 }
 
-body.is-loading *,
+/* Utilisation des préfixes pour les animations et transitions */
 body.is-loading *:before,
 body.is-loading *:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
-	animation: none !important;
-	-moz-transition: none !important;
-	-webkit-transition: none !important;
-	-ms-transition: none !important;
-	transition: none !important;
+    animation: none !important;
+    transition: none !important;
 }
 
 /* Type */
