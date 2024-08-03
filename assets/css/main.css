@@ -1722,260 +1722,186 @@ body {
 
 body {
     -ms-overflow-style: scrollbar;
-    background: #fff; /* Définir la couleur de fond du corps */
+    background: #fff;
 }
 
-/* Suppression de la largeur minimale fixe pour les petits écrans */
+/* Suppression des animations et transitions pour les éléments en état de chargement */
+body.is-loading * {
+    animation: none !important;
+    transition: none !important;
+}
+
+/* Typographie */
+body, input, select, textarea {
+    color: #9a9a9a;
+    font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
+    font-size: 14pt; /* Taille de police par défaut */
+    font-weight: 400;
+    line-height: 1.65;
+}
+
+/* Ajustements de la taille de police pour les écrans plus petits */
+@media screen and (max-width: 1680px),
+@media screen and (max-width: 1280px),
+@media screen and (max-width: 980px),
+@media screen and (max-width: 736px),
 @media screen and (max-width: 480px) {
-    html, body {
-        /* Assurez-vous que le contenu peut s'adapter aux petits écrans */
-        font-size: 14px; /* Exemple d'ajustement de la taille de la police */
+    body, input, select, textarea {
+        font-size: 12pt; /* Réduction de la taille de police sur les petits écrans */
     }
 }
 
-/* Styles pour les éléments en état de chargement */
-body.is-loading * {
-    /* Désactiver les animations et transitions */
-    animation: none !important;
-    transition: none !important;
-}
-
-/* Utilisation des préfixes pour les animations et transitions */
-body.is-loading *:before,
-body.is-loading *:after {
-    animation: none !important;
-    transition: none !important;
-}
-
-/* Type */
-
-body,
-input,
-select,
-textarea {
-	color: #9a9a9a;
-	font-family: "Source Sans Pro", Arial, Helvetica, sans-serif;
-	font-size: 14pt;
-	font-weight: 400;
-	line-height: 1.65;
-}
-
-@media screen and (max-width: 1680px) {
-
-	body,
-	input,
-	select,
-	textarea {
-		font-size: 12pt;
-	}
-
-}
-
-@media screen and (max-width: 1280px) {
-
-	body,
-	input,
-	select,
-	textarea {
-		font-size: 12pt;
-	}
-
-}
-
-@media screen and (max-width: 980px) {
-
-	body,
-	input,
-	select,
-	textarea {
-		font-size: 12pt;
-	}
-
-}
-
-@media screen and (max-width: 736px) {
-
-	body,
-	input,
-	select,
-	textarea {
-		font-size: 12pt;
-	}
-
-}
-
-@media screen and (max-width: 480px) {
-
-	body,
-	input,
-	select,
-	textarea {
-		font-size: 12pt;
-	}
-
-}
-
+/* Liens */
 a {
-	color: #6cc091;
-	text-decoration: underline;
+    color: #6cc091;
+    text-decoration: underline;
 }
 
 a:hover {
-	text-decoration: none;
+    text-decoration: none;
 }
 
-strong,
-b {
-	color: #555;
-	font-weight: 600;
+/* Texte en gras et en italique */
+strong, b {
+    color: #555;
+    font-weight: 600;
 }
 
-em,
-i {
-	font-style: italic;
+em, i {
+    font-style: italic;
 }
 
+/* Paragraphes */
 p {
-	margin: 0 0 2em 0;
-	color: black;
+    margin: 0 0 2em 0;
+    color: black;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	color: #555;
-	font-weight: 400;
-	line-height: 1.5;
-	margin: 2em 0 1em 0;
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+    color: #555;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 2em 0 1em 0;
 }
 
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-	color: inherit;
-	text-decoration: none;
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+    color: inherit;
+    text-decoration: none;
 }
 
 h2 {
-	font-size: 1.85em;
-	font-weight: 300;
+    font-size: 1.85em;
+    font-weight: 300;
 }
 
 h3 {
-	font-size: 1.75em;
+    font-size: 1.75em;
 }
 
 @media screen and (max-width: 480px) {
-
-	h3 {
-		font-size: 1.25em;
-	}
-
+    h3 {
+        font-size: 1.25em; /* Ajustement spécifique pour les petits écrans */
+    }
 }
 
 h4 {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 h5 {
-	font-size: 0.9em;
+    font-size: 0.9em;
 }
 
 h6 {
-	font-size: 0.7em;
+    font-size: 0.7em;
+}
+
+/* Indices et exposants */
+sub, sup {
+    font-size: 0.8em;
 }
 
 sub {
-	font-size: 0.8em;
-	position: relative;
-	top: 0.5em;
+    position: relative;
+    top: 0.5em;
 }
 
 sup {
-	font-size: 0.8em;
-	position: relative;
-	top: -0.5em;
+    position: relative;
+    top: -0.5em;
 }
 
+/* Bloc de citation */
 blockquote {
-	border-left: solid 4px #dbdbdb;
-	font-style: italic;
-	margin: 0 0 2em 0;
-	padding: 0.5em 0 0.5em 2em;
+    border-left: solid 4px #dbdbdb;
+    font-style: italic;
+    margin: 0 0 2em 0;
+    padding: 0.5em 0 0.5em 2em;
 }
 
+/* Code et préformatage */
 code {
-	background: rgba(144, 144, 144, 0.075);
-	border-radius: 0;
-	border: solid 1px #dbdbdb;
-	font-family: "Courier New", monospace;
-	font-size: 0.9em;
-	margin: 0 0.25em;
-	padding: 0.25em 0.65em;
+    background: rgba(144, 144, 144, 0.075);
+    border-radius: 0;
+    border: solid 1px #dbdbdb;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    margin: 0 0.25em;
+    padding: 0.25em 0.65em;
 }
 
 pre {
-	-webkit-overflow-scrolling: touch;
-	font-family: "Courier New", monospace;
-	font-size: 0.9em;
-	margin: 0 0 2em 0;
+    -webkit-overflow-scrolling: touch;
+    font-family: "Courier New", monospace;
+    font-size: 0.9em;
+    margin: 0 0 2em 0;
 }
 
 pre code {
-	display: block;
-	line-height: 1.75;
-	padding: 1em 1.5em;
-	overflow-x: auto;
+    display: block;
+    line-height: 1.75;
+    padding: 1em 1.5em;
+    overflow-x: auto;
 }
 
+/* Séparateurs */
 hr {
-	border: 0;
-	border-bottom: solid 1px #6cc091;
-	margin: 2em 0;
+    border: 0;
+    border-bottom: solid 1px #6cc091;
+    margin: 2em 0;
 }
 
 hr.major {
-	margin: 3em 0;
+    margin: 3em 0;
 }
 
+/* Alignement du texte */
 .align-left {
-	text-align: left;
+    text-align: left;
 }
 
 .align-center {
-	text-align: center;
+    text-align: center;
 }
 
 .align-right {
-	text-align: right;
+    text-align: right;
 }
 
+/* Conteneur interne */
 .inner {
-	max-width: 67em;
-	margin: 0 auto;
+    max-width: 67em;
+    margin: 0 auto;
 }
 
-@media screen and (max-width: 1280px) {
-
-	.inner {
-		max-width: 90%;
-	}
-
-}
-
+@media screen and (max-width: 1280px),
 @media screen and (max-width: 480px) {
-
-	.inner {
-		max-width: 90%;
-	}
-
+    .inner {
+        max-width: 90%; /* Réduction de la largeur maximale sur les petits écrans */
+    }
 }
+
 
 /* Section/Article */
 
