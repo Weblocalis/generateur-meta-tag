@@ -3060,7 +3060,6 @@ button:disabled,
 #banner .inner {
     position: relative;
     z-index: 10005;
-    padding-top: 8em;
 }
 
 #banner h1 {
