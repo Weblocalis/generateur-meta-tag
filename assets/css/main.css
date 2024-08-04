@@ -2890,7 +2890,7 @@ button:disabled,
     position: absolute;
     top: 0;
     left: 0;
-    font-size: 1em;
+    font-size: 1,3em;
 }
 
 #header .logo strong {
