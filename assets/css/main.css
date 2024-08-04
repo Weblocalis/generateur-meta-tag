@@ -3027,8 +3027,8 @@ button:disabled,
 }
 
 
-/* Banner */
-#banner {
+/* Hero */
+#hero {
     padding: 8em 0;
     background: url(../../assets/images/generateur-meta-tag-imagebanner.webp) no-repeat center center fixed;
     background-size: cover;
@@ -3041,7 +3041,7 @@ button:disabled,
     color: #ffffffe2; /* Couleur par défaut du texte pour éviter les répétitions */
 }
 
-#banner:before {
+#hero:before {
     content: "";
     background: rgba(75, 75, 93, 0.719);
     position: absolute;
@@ -3051,112 +3051,112 @@ button:disabled,
     left: 0;
 }
 
-#banner .inner {
+#hero .inner {
     position: relative;
     z-index: 10005;
 }
 
-#banner h1 {
+#hero h1 {
     font-size: 3em;
     font-weight: 400;
 }
 
-#banner h3 {
+#hero h3 {
     font-weight: 400;
     font-size: 1.5em;
     margin: 0;
 }
 
-#banner p {
+#hero p {
     color: rgba(255, 255, 255, 0.55);
 }
 
-#banner .flex {
+#hero .flex {
     display: flex;
     justify-content: center;
     text-align: center;
     margin: 0 auto 4em;
 }
 
-#banner .flex div {
+#hero .flex div {
     border-right: 2px solid rgba(255, 255, 255, 0.2);
     padding: 0 8em;
 }
 
-#banner .flex div:last-child {
+#hero .flex div:last-child {
     border: none;
     padding-right: 0;
 }
 
-#banner .flex div:first-child {
+#hero .flex div:first-child {
     padding-left: 0;
 }
 
-#banner .flex div p {
+#hero .flex div p {
     margin: 0;
 }
 
 /* Media Queries */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
-    #banner {
+    #hero {
         background-attachment: scroll;
     }
 }
 
 @media screen and (max-width: 1680px) {
-    #banner .flex div {
+    #hero .flex div {
         padding: 0 6em;
     }
 }
 
 @media screen and (max-width: 1280px) {
-    #banner {
+    #hero {
         padding: 7em 0 6em;
     }
-    #banner h1 {
+    #hero h1 {
         font-size: 3em;
     }
-    #banner h3 {
+    #hero h3 {
         font-size: 1.25em;
     }
-    #banner .flex div {
+    #hero .flex div {
         padding: 0 3em;
     }
 }
 
 @media screen and (max-width: 980px) {
-    #banner {
+    #hero {
         background-attachment: scroll;
         padding: 5em 0 4em;
     }
-    #banner h1 {
+    #hero h1 {
         font-size: 2.5em;
     }
-    #banner h3 {
+    #hero h3 {
         font-size: 1.25em;
     }
-    #banner .flex div {
+    #hero .flex div {
         font-size: 0.85em;
         padding: 0 1.5em;
     }
 }
 
 @media screen and (max-width: 736px) {
-    #banner {
+    #hero {
         padding: 4em 0 3em;
     }
-    #banner h1 {
+    #hero h1 {
         font-size: 2em;
 		color: #ccc;
     }
-    #banner h3 {
+    #hero h3 {
         font-size: 1.25em;
     }
-    #banner .flex {
+    #hero .flex {
         flex-direction: column;
         margin: 0 auto 2em;
     }
-    #banner .flex div {
+    #hero .flex div {
         font-size: 0.85em;
         padding: 0;
         border: none;
