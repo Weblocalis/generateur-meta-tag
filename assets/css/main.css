@@ -255,17 +255,10 @@ ul.icons {
     display: none !important; /* Cache le texte d'introduction de Google Translate */
 }
 
-body {
-    top: 0px !important; /* Assure que le corps de la page est correctement positionné */
-}
-
 .goog-te-banner-frame {
     display: none !important; /* Cache la bannière de traduction qui peut apparaître */
 }
 
-body {
-    top: 0px !important; /* Assure que le corps de la page est correctement positionné */
-}
 
 .goog-te-gadget {
     background-color: #f8f8f8; /* Changez la couleur de fond */
