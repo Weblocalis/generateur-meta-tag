@@ -1,209 +1,199 @@
-/* Reset CSS */
+/* Reset styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Styles du corps */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
+html {
+    font-size: 16px; /* Base font size */
 }
 
-/* Styles de l'en-tête */
-#header {
-    background: #6cc091;
-    color: #fff;
+body {
+    font-family: Arial, sans-serif; /* Modern font */
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Text color */
+}
+
+/* Header */
+header {
+    background: #333; /* Dark background for header */
+    color: #fff; /* White text */
     padding: 1rem 0;
 }
 
-#header .inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header .inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
-}
-
-#header .logo {
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: #fff;
-}
-
-#nav {
     display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logo and nav */
 }
 
-#nav a {
-    color: #fff;
+header .logo {
+    font-size: 1.8rem; /* Logo size */
     text-decoration: none;
-    margin: 0 15px;
+    color: #fff; /* Logo color */
 }
 
-#nav a:hover {
-    text-decoration: underline;
+nav {
+    display: flex;
+    gap: 20px; /* Space between nav items */
 }
 
-/* Styles de la bannière */
+nav a {
+    color: #fff; /* Nav link color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #6cc091; /* Hover effect */
+}
+
+/* Banner */
 #banner {
-    background: url('assets/images/banner.jpg') no-repeat center center / cover;
-    color: #fff;
-    padding: 100px 0;
-    text-align: center;
-}
-
-#banner h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-#banner p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+    background: #6cc091; /* Primary banner color */
+    color: white; /* White text */
+    padding: 3rem 1rem; /* Padding for the banner */
+    text-align: center; /* Center text */
 }
 
 .banner-buttons {
-    margin-top: 20px;
+    margin-top: 1.5rem;
 }
 
-.banner-buttons .cta-start,
-.banner-buttons .cta-learn-more {
-    background: #fff;
-    color: #6cc091;
+.banner-buttons button {
+    padding: 0.5rem 1.5rem; /* Button padding */
+    margin: 0 10px; /* Spacing between buttons */
     border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin: 0 10px;
+    border-radius: 5px; /* Rounded corners */
+    background: white; /* Button background */
+    color: #6cc091; /* Button text color */
+    cursor: pointer; /* Pointer on hover */
+    transition: background 0.3s, color 0.3s;
 }
 
-.banner-buttons .cta-start:hover,
-.banner-buttons .cta-learn-more:hover {
-    background: #6cc091;
-    color: #fff;
+.banner-buttons button:hover {
+    background: #fff; /* Light hover effect */
+    color: #333; /* Dark text on hover */
 }
 
-/* Styles de la section des outils SEO */
-#three {
-    padding: 60px 20px;
-    background-color: #fff;
+/* Main content */
+main {
+    padding: 2rem 1rem; /* Padding for main content */
 }
 
-#three .inner {
+.wrapper {
     max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto; /* Center the content */
 }
 
-#three h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.flex {
+#three {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    flex-direction: column; /* Stack elements */
+    align-items: center; /* Center items */
 }
 
 .toolkit {
-    background: #f2f2f2;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    flex: 1 1 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: #fff; /* White background for toolkits */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 1rem; /* Padding */
+    margin: 1rem; /* Space around toolkits */
+    width: calc(33% - 2rem); /* Responsive width */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.2s; /* Animation on hover */
+}
+
+.toolkit:hover {
+    transform: translateY(-5px); /* Lift effect */
 }
 
 .toolkit h3 {
-    margin-bottom: 10px;
+    margin-bottom: 0.5rem; /* Space below heading */
 }
 
-.toolkit p {
-    margin-bottom: 15px;
-}
-
-.toolkit .button {
-    background: #6cc091;
-    color: #fff;
+/* Buttons inside toolkits */
+.button {
+    background: #6cc091; /* Toolkit button color */
+    color: white; /* Text color */
+    padding: 0.5rem 1rem; /* Padding */
     border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Align as block */
+    transition: background 0.3s; /* Transition effect */
 }
 
-.toolkit .button:hover {
-    background: #5fae7f;
+.button:hover {
+    background: #5ba57a; /* Darker color on hover */
 }
 
-/* Styles du pied de page */
+/* Footer */
 #footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
+    background: #333; /* Dark footer background */
+    color: #fff; /* White text */
+    padding: 2rem 1rem; /* Padding */
 }
 
 .footer-grid {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between columns */
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Center footer content */
 }
 
 .footer-column {
-    flex: 1;
-    padding: 0 10px;
+    width: 30%; /* Each column takes 30% */
 }
 
 .footer-column h4 {
-    margin-bottom: 10px;
+    margin-bottom: 1rem; /* Space below heading */
 }
 
-.footer-column ul {
-    list-style: none;
+ul.alt {
+    list-style-type: none; /* Remove bullet points */
 }
 
-.footer-column ul li {
-    margin-bottom: 5px;
+ul.alt li {
+    margin-bottom: 0.5rem; /* Space between list items */
 }
 
-.footer-column ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.footer-column ul li a:hover {
-    text-decoration: underline;
-}
-
-.icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-.icons li {
-    margin: 0 10px;
+ul.icons {
+    display: flex; /* Flex layout for icons */
+    gap: 10px; /* Space between icons */
 }
 
 .icons .icon {
-    color: #fff;
-    font-size: 1.5rem;
-    text-decoration: none;
+    color: white; /* Icon color */
+    transition: color 0.3s; /* Transition effect */
 }
 
 .icons .icon:hover {
-    color: #6cc091;
+    color: #6cc091; /* Hover color */
 }
 
-#year {
-    text-align: center;
-    margin-top: 10px;
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 0 1rem; /* Padding for small screens */
+    }
+
+    .flex {
+        flex-direction: column; /* Stack flex items on small screens */
+    }
+
+    .toolkit {
+        width: 100%; /* Full width for toolkits */
+    }
+
+    .footer-grid {
+        flex-direction: column; /* Stack footer columns */
+    }
+
+    .footer-column {
+        width: 100%; /* Full width for footer columns */
+    }
 }
