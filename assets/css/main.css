@@ -77,7 +77,7 @@ nav a:hover {
 
 /* Hide the normal menu on small screens */
 @media (max-width: 768px) {
-    #nav {
+    .desktop-nav {
         display: none; /* Hide normal menu */
     }
 
