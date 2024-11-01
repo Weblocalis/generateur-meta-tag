@@ -37,7 +37,8 @@ $(function () {
 // assets/JS/main.js
 async function loadFooter() {
     try {
-        const response = await fetch('../../partiels/footer.html'); // Chemin confirmé basé sur la structure fournie
+        const response = await fetch('https://raw.githubusercontent.com/Weblocalis/generateur-meta-tag/main/partials/footer.html');
+
         const footerContent = await response.text();
         document.getElementById('footer').innerHTML = footerContent;
 
