@@ -23,33 +23,32 @@ body {
     color: var(--text-color); /* Text color */
 }
 
-/* Header */
+
+/* Header styles */
 header {
-    background: var(--secondary-color); /* Dark background for header */
-    color: #fff; /* White text */
-    padding: 1rem 0; /* Ajoute un espace sur les côtés */
-    position: relative; /* Position relative for absolute elements inside */
+    background: var(--secondary-color);
+    color: #fff;
+    padding: 1rem 0;
 }
 
 header .inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px; /* Ajoute un espace sur les côtés */
+    padding: 0 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Space out logo and nav */
+    justify-content: space-between;
 }
 
 header .logo {
-    font-size: 1.7rem; /* Logo size */
+    font-size: 1.8rem;
     text-decoration: none;
-    color: #fff; /* Logo color */
+    color: #fff;
 }
 
-/* Navigation */
 #nav {
     display: flex;
-    gap: 20px; /* Espace entre les éléments de navigation */
+    gap: 20px;
 }
 
 #nav a {
@@ -61,6 +60,54 @@ header .logo {
 #nav a:hover {
     color: var(--primary-color);
 }
+
+/* Hide the toggle button by default */
+.nav-toggle {
+    display: none;
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #nav {
+        display: none; /* Hide the main nav */
+    }
+
+    .nav-toggle {
+        display: block; /* Show the menu toggle button */
+    }
+
+    /* Mobile navigation panel */
+    #nav.mobile-nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 250px;
+        background: var(--secondary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-top: 60px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        gap: 20px;
+    }
+
+    #nav.mobile-nav.show {
+        transform: translateX(0);
+    }
+
+    #nav.mobile-nav a {
+        color: #fff;
+        padding: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+}
+
 
 /* Banner */
 #banner {
