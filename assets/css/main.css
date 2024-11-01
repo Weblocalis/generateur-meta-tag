@@ -27,13 +27,13 @@ body {
 header {
     background: var(--secondary-color); /* Dark background for header */
     color: #fff; /* White text */
-    padding: 1rem 0;
+    padding: 1rem 20px;
     position: relative; /* Position relative for absolute elements inside */
 }
 
 header .inner {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space out logo and nav */
