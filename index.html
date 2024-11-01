@@ -49,15 +49,29 @@
 <header id="header">
     <div class="inner">
         <a href="/" class="logo">BoostifySEO</a>
-        <nav id="nav">
+        
+        <!-- Menu principal, masqué sur mobile -->
+        <nav id="nav" class="desktop-nav">
             <a href="/" aria-label="Page d'accueil">Accueil</a>
             <a href="pages/contact.html" aria-label="Contact">Contact</a>
         </nav>
-        <a href="#" class="nav-toggle" aria-label="Ouvrir le menu">
+        
+        <!-- Bouton hamburger pour mobile -->
+        <a href="#" class="nav-toggle" aria-label="Ouvrir le menu mobile">
             <span class="fa fa-bars"></span>
         </a>
     </div>
 </header>
+
+<!-- Menu mobile dans une fenêtre modale -->
+<div id="navPanel" class="mobile-nav">
+    <nav>
+        <a href="/" aria-label="Page d'accueil">Accueil</a>
+        <a href="pages/contact.html" aria-label="Contact">Contact</a>
+        <a href="#" class="close" aria-label="Fermer le menu">Fermer</a>
+    </nav>
+</div>
+
 
     <!-- Banner -->
     <section id="banner">
