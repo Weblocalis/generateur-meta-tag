@@ -37,7 +37,7 @@ $(function () {
 // assets/JS/main.js
 async function loadFooter() {
     try {
-        const response = await fetch('./partiels/footer.html'); // Essaie ce chemin si d'autres échouent
+        const response = await fetch('../../partiels/footer.html'); // Chemin confirmé basé sur la structure fournie
         const footerContent = await response.text();
         document.getElementById('footer').innerHTML = footerContent;
 
