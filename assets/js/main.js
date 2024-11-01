@@ -37,7 +37,7 @@ $(function () {
     // Charger le footer avec jQuery et fetch
     async function loadFooter() {
         try {
-            const response = await fetch('https://raw.githubusercontent.com/Weblocalis/generateur-meta-tag/main/partials/footer.html'); // Chemin absolu vers le footer
+            const response = await fetch('https://weblocalis.github.io/generateur-meta-tag/partials/footer.html');
             const footerContent = await response.text();
             $('#footer').html(footerContent); // Utiliser jQuery pour insérer le contenu
 
