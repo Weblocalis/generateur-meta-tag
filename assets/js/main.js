@@ -1,3 +1,5 @@
+// assets/JS/main.js
+
 $(function () {
     var $window = $(window),
         $body = $('body'),
@@ -31,26 +33,24 @@ $(function () {
     if (skel.vars.os === 'wp' && skel.vars.osVersion < 10) {
         $navPanel.css('transition', 'none');
     }
-});
 
-//Footer
-// assets/JS/main.js
-async function loadFooter() {
-    try {
-        const response = await fetch('https://raw.githubusercontent.com/Weblocalis/generateur-meta-tag/main/partials/footer.html');
+    // Charger le footer avec jQuery et fetch
+    async function loadFooter() {
+        try {
+            const response = await fetch('https://raw.githubusercontent.com/Weblocalis/generateur-meta-tag/main/partials/footer.html'); // Chemin absolu vers le footer
+            const footerContent = await response.text();
+            $('#footer').html(footerContent); // Utiliser jQuery pour insérer le contenu
 
-        const footerContent = await response.text();
-        document.getElementById('footer').innerHTML = footerContent;
-
-        // Mettre à jour l'année actuelle
-        const yearElement = document.getElementById('currentYear');
-        if (yearElement) {
-            yearElement.textContent = new Date().getFullYear();
+            // Mettre à jour l'année actuelle
+            const yearElement = document.getElementById('currentYear');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        } catch (error) {
+            console.error('Erreur de chargement du footer:', error);
         }
-    } catch (error) {
-        console.error('Erreur de chargement du footer:', error);
     }
-}
 
-// Charger le footer lorsque le document est prêt
-document.addEventListener("DOMContentLoaded", loadFooter);
+    // Charger le footer lorsque le document est prêt
+    $(document).ready(loadFooter);
+});
