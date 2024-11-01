@@ -153,7 +153,7 @@ main {
     margin-bottom: 1rem; /* Space below heading */
 }
 
-footer-column ul {
+.footer-column ul {
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
