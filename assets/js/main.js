@@ -45,11 +45,11 @@ $(function () {
 });
 
 // FOOTER
-// Sélectionne l'élément HTML avec l'ID 'year' où l'année actuelle sera affichée
-const yearElement = document.getElementById('year');
+// Sélectionne l'élément HTML avec l'ID 'currentYear' où l'année actuelle sera affichée
+const yearElement = document.getElementById('currentYear');
 
 // Obtient l'année actuelle à partir de la date système
 const currentYear = new Date().getFullYear();
 
-// Met à jour le contenu texte de l'élément 'year' pour afficher l'année actuelle avec le message de droits d'auteur
-yearElement.textContent = `{currentYear}`;
+// Met à jour le contenu texte de l'élément 'currentYear' pour afficher l'année actuelle
+yearElement.textContent = currentYear;
