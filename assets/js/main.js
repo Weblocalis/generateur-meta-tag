@@ -46,7 +46,7 @@ $(function () {
 
 // FOOTER
 // Sélectionne l'élément HTML avec l'ID 'currentYear' où l'année actuelle sera affichée
-const yearElement = document.getElementById('currentYear');
+const yearElement = document.getElementById('year');
 
 // Obtient l'année actuelle à partir de la date système
 const currentYear = new Date().getFullYear();
