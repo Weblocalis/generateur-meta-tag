@@ -44,67 +44,6 @@ header .logo {
     text-decoration: none;
     color: #fff; /* Logo color */
 }
-
-nav {
-    display: flex;
-    gap: 20px; /* Space between nav items */
-}
-
-nav a {
-    color: #fff; /* Nav link color */
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: var(--primary-color); /* Hover effect */
-}
-
-/* Styles for the nav panel */
-#navPanel {
-    display: none; /* Hide nav panel by default */
-    position: fixed; /* Position fixed for overlay effect */
-    top: 0;
-    left: 0;
-    height: 100%; /* Full height */
-    width: 75%; /* Width of the nav panel */
-    background: var(--secondary-color); /* Background for the nav panel */
-    color: #fff; /* Text color */
-    padding: 2rem; /* Padding inside nav panel */
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
-    z-index: 1000; /* Ensure it is above other content */
-}
-
-/* Hide the normal menu on small screens */
-@media (max-width: 768px) {
-    .desktop-nav {
-        display: none; /* Hide normal menu */
-    }
-
-    .navPanelToggle {
-        display: block; /* Show toggle button */
-    }
-
-    #navPanel {
-        display: block; /* Ensure nav panel is displayed on mobile */
-    }
-}
-
-/* Show the normal menu on larger screens */
-@media (min-width: 769px) {
-    nav {
-        display: flex; /* Show normal menu */
-    }
-
-    .navPanelToggle {
-        display: none; /* Hide toggle button */
-    }
-
-    #navPanel {
-        display: none; /* Hide nav panel on larger screens */
-    }
-}
-
 /* Banner */
 #banner {
     background: #6cc091; /* Primary banner color */
