@@ -27,23 +27,41 @@ body {
 header {
     background: var(--secondary-color); /* Dark background for header */
     color: #fff; /* White text */
-    padding: 1rem 20px; /* Ajoute un espace sur les côtés */
+    padding: 1rem 0; /* Ajoute un espace sur les côtés */
     position: relative; /* Position relative for absolute elements inside */
 }
 
 header .inner {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px; /* Ajoute un espace sur les côtés */
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space out logo and nav */
 }
 
 header .logo {
-    font-size: 1.8rem; /* Logo size */
+    font-size: 1.7rem; /* Logo size */
     text-decoration: none;
     color: #fff; /* Logo color */
 }
+
+/* Navigation */
+#nav {
+    display: flex;
+    gap: 20px; /* Espace entre les éléments de navigation */
+}
+
+#nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+#nav a:hover {
+    color: var(--primary-color);
+}
+
 /* Banner */
 #banner {
     background: #6cc091; /* Primary banner color */
