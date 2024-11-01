@@ -14,9 +14,3 @@ $(document).ready(function () {
         $navPanel.fadeOut(300); // Masquer le panneau avec une animation
     });
 });
-
-
-// Supprimer le fragment d'URL si présent
-if (window.location.hash) {
-    window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
-}
