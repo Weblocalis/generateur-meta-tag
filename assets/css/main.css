@@ -145,6 +145,16 @@ main {
     padding: 2rem 1rem; /* Padding */
 }
 
+#footer a {
+    text-decoration: none; /* Supprime le soulignement */
+    color: inherit; /* Hérite de la couleur du texte du footer */
+}
+
+#footer a:hover {
+    text-decoration: underline; /* Optionnel : ajoute un soulignement au survol */
+}
+
+
 .footer-grid {
     display: flex;
     justify-content: space-between; /* Space between columns */
