@@ -178,22 +178,26 @@ ul.icons {
 /* Media queries for responsive design */
 @media (max-width: 768px) {
     .wrapper {
-        padding: 0 1rem; /* Padding for small screens */
+        padding: 0 1rem; /* Padding pour petits écrans */
     }
 
-    .flex {
-        flex-direction: column; /* Stack flex items on small screens */
+    #three {
+        display: flex;
+        flex-direction: column; /* Stack verticalement */
+        align-items: center; /* Centre les toolkits */
+        padding: 0; /* Supprime le padding pour un meilleur centrage */
     }
 
     .toolkit {
-        width: 100%; /* Full width for toolkits */
+        width: 90%; /* Largeur ajustée pour centrer */
+        margin: 0.5rem auto; /* Marge automatique pour centrer */
     }
 
     .footer-grid {
-        flex-direction: column; /* Stack footer columns */
+        flex-direction: column; /* Empile les colonnes du footer */
     }
 
     .footer-column {
-        width: 100%; /* Full width for footer columns */
+        width: 100%; /* Largeur complète pour les colonnes du footer */
     }
 }
