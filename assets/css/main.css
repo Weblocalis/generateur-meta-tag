@@ -59,6 +59,37 @@ nav a:hover {
     color: #6cc091; /* Hover effect */
 }
 
+/* Cacher le menu normal sur les petits écrans */
+@media (max-width: 768px) {
+    nav {
+        display: none; /* Cache le menu normal */
+    }
+
+    .navPanelToggle {
+        display: block; /* Affiche le bouton pour ouvrir le panneau */
+    }
+
+    #navPanel {
+        display: block; /* Assurez-vous que le panneau de navigation est visible sur mobile */
+    }
+}
+
+/* Afficher le menu normal sur les grands écrans */
+@media (min-width: 769px) {
+    nav {
+        display: flex; /* Affiche le menu normal */
+    }
+
+    .navPanelToggle {
+        display: none; /* Cache le bouton pour ouvrir le panneau */
+    }
+
+    #navPanel {
+        display: none; /* Cache le panneau de navigation sur les grands écrans */
+    }
+}
+
+
 /* Banner */
 #banner {
     background: #6cc091; /* Primary banner color */
