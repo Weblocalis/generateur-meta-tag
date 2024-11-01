@@ -33,7 +33,7 @@ header {
 
 header .inner {
     max-width: 1200px;
-    margin: 2 auto;
+    margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between; /* Space out logo and nav */
