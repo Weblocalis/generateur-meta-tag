@@ -25,7 +25,7 @@ body {
 
 /* Header */
 header {
-    background: #333; /* Dark background for header */
+    background: var(--secondary-color); /* Dark background for header */
     color: #fff; /* White text */
     padding: 1rem 0;
 }
