@@ -124,7 +124,7 @@ main {
 
 /* Buttons inside toolkits */
 .button {
-    background: #6cc091; /* Toolkit button color */
+    background: var(--primary-color); /* Toolkit button color */
     color: white; /* Text color */
     padding: 0.5rem 1rem; /* Padding */
     border: none;
