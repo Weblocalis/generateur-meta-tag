@@ -34,9 +34,10 @@ $(function () {
 });
 
 //Footer
+// assets/JS/main.js
 async function loadFooter() {
     try {
-        const response = await fetch('../../partials/footer.html'); // Mettez à jour le chemin si nécessaire
+        const response = await fetch('./partiels/footer.html'); // Essaie ce chemin si d'autres échouent
         const footerContent = await response.text();
         document.getElementById('footer').innerHTML = footerContent;
 
