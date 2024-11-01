@@ -1,7 +1,7 @@
 {
-  "name": "Mon Site Statique",
-  "short_name": "MonSite",
-  "description": "Un site statique avec un manifeste Web pour une meilleure expérience utilisateur",
+  "name": "BoostifySEO",
+  "short_name": "BoostifySEO",
+  "description": "Découvrez nos outils pour optimiser votre site web et améliorer votre visibilité en ligne.",
   "icons": [
     {
       "src": "/assets/icons/icon-192x192.png",
