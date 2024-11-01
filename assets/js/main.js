@@ -52,4 +52,4 @@ const yearElement = document.getElementById('year');
 const currentYear = new Date().getFullYear();
 
 // Met à jour le contenu texte de l'élément 'year' pour afficher l'année actuelle avec le message de droits d'auteur
-yearElement.textContent = `©${currentYear} BoostifySEO. Tous droits réservés.`;
+yearElement.textContent = `{currentYear}`;
