@@ -125,3 +125,19 @@ screen and (max-width: 480px) {
         padding: 0 0 0 1em;
     }
 }
+
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 16px; /* Ajustez cette valeur selon vos besoins */
+    }
+    h1 {
+        font-size: 24px; /* Ajustez la taille pour les titres */
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        font-size: 14px; /* Ajustez pour les paragraphes */
+    }
+}
+
