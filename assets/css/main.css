@@ -153,13 +153,13 @@ main {
     margin-bottom: 1rem; /* Space below heading */
 }
 
-.footer-column ul.alt {
+ul.alt {
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
 }
 
-.footer-column ul.alt li {
+ul.alt li {
     margin-bottom: 0.5rem; /* Space between list items */
 }
 
