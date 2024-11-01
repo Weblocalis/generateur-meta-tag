@@ -28,6 +28,7 @@ header {
     background: var(--secondary-color); /* Dark background for header */
     color: #fff; /* White text */
     padding: 1rem 0;
+    position: relative; /* Position relative for absolute elements inside */
 }
 
 header .inner {
@@ -56,39 +57,53 @@ nav a {
 }
 
 nav a:hover {
-    color: #6cc091; /* Hover effect */
+    color: var(--primary-color); /* Hover effect */
 }
 
-/* Cacher le menu normal sur les petits écrans */
+/* Styles for the nav panel */
+#navPanel {
+    display: none; /* Hide nav panel by default */
+    position: fixed; /* Position fixed for overlay effect */
+    top: 0;
+    left: 0;
+    height: 100%; /* Full height */
+    width: 75%; /* Width of the nav panel */
+    background: var(--secondary-color); /* Background for the nav panel */
+    color: #fff; /* Text color */
+    padding: 2rem; /* Padding inside nav panel */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+    z-index: 1000; /* Ensure it is above other content */
+}
+
+/* Hide the normal menu on small screens */
 @media (max-width: 768px) {
     nav {
-        display: none; /* Cache le menu normal */
+        display: none; /* Hide normal menu */
     }
 
     .navPanelToggle {
-        display: block; /* Affiche le bouton pour ouvrir le panneau */
+        display: block; /* Show toggle button */
     }
 
     #navPanel {
-        display: block; /* Assurez-vous que le panneau de navigation est visible sur mobile */
+        display: block; /* Ensure nav panel is displayed on mobile */
     }
 }
 
-/* Afficher le menu normal sur les grands écrans */
+/* Show the normal menu on larger screens */
 @media (min-width: 769px) {
     nav {
-        display: flex; /* Affiche le menu normal */
+        display: flex; /* Show normal menu */
     }
 
     .navPanelToggle {
-        display: none; /* Cache le bouton pour ouvrir le panneau */
+        display: none; /* Hide toggle button */
     }
 
     #navPanel {
-        display: none; /* Cache le panneau de navigation sur les grands écrans */
+        display: none; /* Hide nav panel on larger screens */
     }
 }
-
 
 /* Banner */
 #banner {
