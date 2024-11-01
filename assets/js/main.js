@@ -33,24 +33,3 @@ $(function () {
     if (skel.vars.os === 'wp' && skel.vars.osVersion < 10) {
         $navPanel.css('transition', 'none');
     }
-
-    // Charger le footer avec jQuery et fetch
-    async function loadFooter() {
-        try {
-            const response = await fetch('https://weblocalis.github.io/generateur-meta-tag/partials/footer.html');
-            const footerContent = await response.text();
-            $('#footer').html(footerContent); // Utiliser jQuery pour insérer le contenu
-
-            // Mettre à jour l'année actuelle
-            const yearElement = document.getElementById('currentYear');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-        } catch (error) {
-            console.error('Erreur de chargement du footer:', error);
-        }
-    }
-
-    // Charger le footer lorsque le document est prêt
-    $(document).ready(loadFooter);
-});
