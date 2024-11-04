@@ -64,7 +64,6 @@ body {
     opacity: 1;
 }
 
-
 /* Rendre le menu responsive */
 @media (max-width: 768px) {
     .desktop-nav {
@@ -122,7 +121,6 @@ body {
     }
 }
 
-
 /* Main content */
 main {
     padding: 2rem 1rem;
@@ -139,39 +137,54 @@ main {
     align-items: center;
 }
 
+.toolkit-card {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
 .toolkit {
     background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 1rem;
+    border-radius: 10px; /* Coins arrondis pour un look moderne */
+    padding: 2rem;
     margin: 1rem;
-    width: calc(33% - 2rem);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    width: calc(90%); /* Pour un aspect responsive */
+    max-width: 400px; /* Largeur maximale pour garder un bon aspect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transitions pour effet de survol */
+    text-align: center; /* Centrer le texte */
 }
 
 .toolkit:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
 }
 
-.toolkit h3 {
-    margin-bottom: 0.5rem;
+.icon-container {
+    font-size: 3rem; /* Taille de l'icône pour plus de visibilité */
+    color: var(--primary-color); /* Couleur principale */
+    margin-bottom: 1rem; /* Espace en dessous de l'icône */
 }
 
-/* Buttons inside toolkits */
+h3 {
+    margin: 1rem 0; /* Espace autour du titre */
+}
+
+/* Boutons à l'intérieur des outils */
 .button {
     background: var(--primary-color);
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1.5rem; /* Padding accru pour le confort */
     border: none;
     border-radius: 5px;
     text-decoration: none;
     display: inline-block;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.3s; /* Animation de bouton */
 }
 
 .button:hover {
     background: var(--button-hover-bg);
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
 }
 
 /* Footer */
