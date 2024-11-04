@@ -119,21 +119,21 @@ li {
     position: fixed;
     top: 0;
     right: 0;
-    width: 250px; /* Largeur ajustable selon votre préférence */
+    width: 250px;
     height: 100vh;
-    background-color: #333; /* Couleur de fond pour le panneau mobile */
+    background-color: #333;
     display: flex;
     flex-direction: column;
-    align-items: start; /* Aligne les éléments à gauche */
+    align-items: flex-start;
     padding: 1em;
-    gap: 1em; /* Espacement entre les éléments */
+    gap: 1em;
     box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
     visibility: hidden;
     opacity: 0;
-    transition: opacity 0.3s ease, visibility 0s 0.3s; /* transition douce */
+    transition: opacity 0.3s ease; /* Simplifie la transition */
 }
 
-/* Style pour les liens du menu dans le panneau mobile */
+/* Liens de menu dans le panneau mobile */
 #navPanel a {
     color: #fff;
     text-decoration: none;
@@ -144,13 +144,15 @@ li {
 }
 
 #navPanel a:hover {
-    background-color: #444; /* Couleur de survol pour les liens */
+    background-color: #444;
 }
 
 #navPanel .close {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
     margin-top: auto;
-    text-align: right;
-    font-size: 1.5em;
+    cursor: pointer; /* Indicateur visuel pour l'utilisateur */
 }
 
 /* Rendre le menu responsive */
@@ -164,12 +166,14 @@ li {
     }
 }
 
-#navPanel .close {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    margin-top: 20px;
+/* Cacher le bouton mobile sur les écrans plus grands */
+@media (min-width: 769px) {
+    .navPanelToggle {
+        display: none;
+    }
 }
+
+
 
 /* Banner */
 #banner {
