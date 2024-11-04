@@ -276,7 +276,7 @@ main {
 
 /* Footer */
 #footer {
-    background: var(--secondary-color);
+    background: var(--background-footer);
     color: #fff;
     padding: 2rem 0rem;
     text-align: center;
