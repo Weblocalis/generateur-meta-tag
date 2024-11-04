@@ -87,19 +87,21 @@ li {
 
 /* Header styles */
 #header .inner {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem;
+    max-width: 1200px; /* Limite la largeur pour une meilleure lisibilité */
+    margin: 0 auto; /* Centre l'en-tête */
+    display: flex; /* Utilise Flexbox pour le layout */
+    align-items: center; /* Aligne verticalement au centre */
+    justify-content: space-between; /* Espace égal entre les éléments */
+    padding: 1rem; /* Espacement intérieur */
 }
 
 /* Menu desktop */
 .desktop-nav {
-    display: flex;
-    gap: 20px;
+    display: flex; /* Affiche les liens en ligne */
+    gap: 20px; /* Espacement entre les liens */
 }
+
+
 
 /* Bouton mobile */
 .navPanelToggle {
