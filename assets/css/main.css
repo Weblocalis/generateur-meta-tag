@@ -60,9 +60,10 @@ body {
 }
 
 #navPanel[aria-hidden="false"] {
-    opacity: 1;
     visibility: visible;
+    opacity: 1;
 }
+
 
 /* Rendre le menu responsive */
 @media (max-width: 768px) {
