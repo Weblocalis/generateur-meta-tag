@@ -5,10 +5,22 @@ $(document).ready(function () {
     // Ouvrir/fermer le panneau mobile au clic sur le bouton
     $navToggle.on('click', function (e) {
         e.preventDefault();
-        if ($navPanel.attr('aria-hidden') === 'true') {
-            $navPanel.attr('aria-hidden', 'false'); // Rendre le panneau visible
+        var isHidden = $navPanel.attr('aria-hidden') === 'true';
+
+        // Mettre à jour l'attribut aria-hidden
+        $navPanel.attr('aria-hidden', !isHidden);
+
+        // Afficher ou masquer le panneau avec animation
+        if (isHidden) {
+            $navPanel.css({
+                'visibility': 'visible',
+                'opacity': '1'
+            });
         } else {
-            $navPanel.attr('aria-hidden', 'true'); // Masquer le panneau
+            $navPanel.css({
+                'visibility': 'hidden',
+                'opacity': '0'
+            });
         }
     });
 
@@ -16,8 +28,13 @@ $(document).ready(function () {
     $navPanel.find('.close').on('click', function (e) {
         e.preventDefault();
         $navPanel.attr('aria-hidden', 'true');
+        $navPanel.css({
+            'visibility': 'hidden',
+            'opacity': '0'
+        });
     });
 });
+
 
 
 // Affichage dynamique de l'année
