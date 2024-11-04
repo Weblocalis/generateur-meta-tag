@@ -33,6 +33,20 @@ $(document).ready(function () {
             'opacity': '0'
         });
     });
+
+    // Initialisation de Skel.js pour le menu
+    skel.init({
+        reset: 'full',
+        breakpoints: {
+            // Définir un point d'arrêt pour le menu mobile
+            wide: [ '1200px', '1680px' ],
+            normal: [ '960px', '1200px' ],
+            narrow: [ '740px', '960px' ],
+            mobile: [ '480px', '740px' ],
+            // Si vous avez besoin d'une configuration plus personnalisée
+            // ajouter ici d'autres breakpoints
+        }
+    });
 });
 
 
