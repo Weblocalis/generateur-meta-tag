@@ -85,28 +85,43 @@ body {
 
 /* Banner */
 #banner {
-    background: var(--primary-color);
-    color: white;
-    padding: 3rem 1rem;
-    text-align: center;
+    background: linear-gradient(to right, #6cc091, #4cae4c); /* Dégradé pour le fond */
+    color: white; /* Texte en blanc pour le contraste */
+    padding: 4rem 1rem; /* Plus de padding pour un effet de respiration */
+    text-align: center; /* Centrer le texte */
 }
 
-.banner-buttons button {
-    padding: 0.5rem 1.5rem;
-    margin: 0 10px;
-    border: none;
-    border-radius: 5px;
-    background: white;
-    color: var(--primary-color);
-    cursor: pointer;
-    transition: background 0.3s, color 0.3s;
-    outline: none;
+.banner-buttons {
+    margin-top: 2rem; /* Plus d'espace au-dessus des boutons */
 }
 
-.banner-buttons button:hover {
-    background: #fff;
-    color: var(--secondary-color);
+.banner-buttons a {
+    display: inline-block; /* Boutons alignés */
+    padding: 0.75rem 2rem; /* Padding accru pour le confort */
+    margin: 0 10px; /* Espacement entre les boutons */
+    border-radius: 5px; /* Coins arrondis */
+    background: white; /* Fond blanc pour les boutons */
+    color: #6cc091; /* Couleur des boutons */
+    text-decoration: none; /* Pas de soulignement */
+    transition: background 0.3s, color 0.3s; /* Transition douce */
 }
+
+.banner-buttons a:hover {
+    background: #e0e0e0; /* Changement de couleur au survol */
+    color: #333; /* Couleur du texte au survol */
+}
+
+/* Media queries pour la réactivité */
+@media (max-width: 768px) {
+    #banner {
+        padding: 3rem 1rem; /* Ajuster le padding sur mobile */
+    }
+
+    .banner-buttons a {
+        padding: 0.5rem 1.5rem; /* Ajuster le padding sur mobile */
+    }
+}
+
 
 /* Main content */
 main {
