@@ -21,6 +21,31 @@ body {
     color: var(--text-color);
 }
 
+/* Typographie */
+h1 {
+    font-size: 2.5rem; /* Taille du titre principal */
+    margin-bottom: 1rem;
+}
+
+h2 {
+    font-size: 2rem; /* Taille des sous-titres */
+    margin-bottom: 0.75rem;
+}
+
+h3 {
+    font-size: 1.75rem; /* Taille des titres de sections */
+    margin: 1rem 0; /* Espace autour des titres */
+}
+
+h4, h5, h6 {
+    font-size: 1.25rem; /* Taille des titres secondaires */
+    margin: 0.5rem 0; /* Espace autour des titres secondaires */
+}
+
+p {
+    margin-bottom: 1rem; /* Espace en bas des paragraphes */
+}
+
 /* Header styles */
 #header .inner {
     max-width: 1200px;
@@ -164,10 +189,6 @@ main {
     font-size: 3rem; /* Taille de l'icône pour plus de visibilité */
     color: var(--primary-color); /* Couleur principale */
     margin-bottom: 1rem; /* Espace en dessous de l'icône */
-}
-
-h3 {
-    margin: 1rem 0; /* Espace autour du titre */
 }
 
 /* Boutons à l'intérieur des outils */
