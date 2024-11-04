@@ -153,7 +153,7 @@ li {
     transition: color 0.2s ease, transform 0.2s ease; /* Transition douce */
 }
 
-#navPanel .icons li {
+#navPanel .icons {
     list-style: none; /* Supprime les puces de la liste */
     padding: 0; /* Enlève le padding par défaut */
     margin: 1em 0; /* Marge autour de la liste */
