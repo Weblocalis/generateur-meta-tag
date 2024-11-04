@@ -167,6 +167,12 @@ li {
     text-decoration: none; /* Supprime le soulignement */
 }
 
+/* Ajout d'effet de survol aux icônes */
+#navPanel .icons .icon:hover {
+    color: #ccc; /* Changer la couleur au survol */
+    transform: scale(1.1); /* Légère augmentation de la taille */
+    transition: color 0.2s ease, transform 0.2s ease; /* Transition douce */
+}
 
 /* Rendre le menu responsive */
 @media (max-width: 768px) {
