@@ -271,7 +271,7 @@ main {
 #footer {
     background: var(--secondary-color);
     color: #fff;
-    padding: 0rem 1rem;
+    padding: 2rem 0rem;
     text-align: center;
 }
 
