@@ -113,34 +113,47 @@
     </main>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="footer-grid">
-            <div class="footer-column">
-                <h4>À propos de nous</h4>
-                <ul>
-                    <li><a href="#">Nos services</a></li>
-                    <li><a href="#">Témoignages</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Liens utiles</h4>
-                <ul>
-                    <li><a href="#">Politique de confidentialité</a></li>
-                    <li><a href="#">Conditions d'utilisation</a></li>
-                    <li><a href="#">Contactez-nous</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4>Suivez-nous</h4>
-                <ul class="icons">
-                    <li><a href="https://www.facebook.com/profile.php?id=61559126383318" class="icon fa fa-facebook"></a></li>
-                    <li><a href="https://twitter.com/SeoBoostify" class="icon fa fa-twitter"></a></li>
-                    <li><a href="#" class="icon fa fa-instagram"></a></li>
-                </ul>
-            </div>
+<footer id="footer">
+    <div class="footer-grid">
+        <!-- À propos de nous -->
+        <div class="footer-column">
+            <h4>À propos de nous</h4>
+            <ul>
+                <li><a href="#" aria-label="Découvrez nos services">Nos services</a></li>
+                <li><a href="#" aria-label="Lire les témoignages de nos clients">Témoignages</a></li>
+            </ul>
         </div>
-        <p id="year">©2020 - <span id="currentYear"></span> BoostifySEO. Tous droits réservés.</p>
-    </footer>
+
+        <!-- Liens utiles -->
+        <div class="footer-column">
+            <h4>Liens utiles</h4>
+            <ul>
+                <li><a href="#" aria-label="Lire notre politique de confidentialité">Politique de confidentialité</a></li>
+                <li><a href="#" aria-label="Lire nos conditions d'utilisation">Conditions d'utilisation</a></li>
+                <li><a href="#" aria-label="Nous contacter">Contactez-nous</a></li>
+            </ul>
+        </div>
+
+        <!-- Suivez-nous -->
+        <div class="footer-column">
+            <h4>Suivez-nous</h4>
+            <ul class="icons">
+                <li><a href="https://www.facebook.com/profile.php?id=61559126383318" class="icon fa fa-facebook" aria-label="Visitez notre page Facebook"></a></li>
+                <li><a href="https://twitter.com/SeoBoostify" class="icon fa fa-twitter" aria-label="Suivez-nous sur Twitter"></a></li>
+                <li><a href="#" class="icon fa fa-instagram" aria-label="Suivez-nous sur Instagram"></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Droits d'auteur et année dynamique -->
+    <p id="year">©2020 - <span id="currentYear"></span> BoostifySEO. Tous droits réservés.</p>
+</footer>
+
+<!-- JavaScript pour l'année -->
+<script>
+    document.getElementById("currentYear").textContent = new Date().getFullYear();
+</script>
+
 
     <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
