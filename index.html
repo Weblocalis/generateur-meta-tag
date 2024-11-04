@@ -44,20 +44,22 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header id="header">
-        <div class="inner">
-            <a href="/" class="logo">BoostifySEO</a>
-            <nav id="nav" class="desktop-nav">
-                <a href="/" aria-label="Page d'accueil">Accueil</a>
-                <a href="pages/contact.html" aria-label="Contact">Contact</a>
-            </nav>
-            <!-- Bouton pour afficher le menu mobile -->
-            <a href="#navPanel" class="navPanelToggle" aria-label="Menu mobile">
-                <span class="fa fa-bars"></span>
-            </a>
-        </div>
-    </header>
+
+<!-- Header -->
+<header id="header">
+    <div class="inner">
+        <a href="/" class="logo">BoostifySEO</a>
+        <nav id="nav" class="desktop-nav" role="navigation">
+            <a href="/" aria-label="Page d'accueil">Accueil</a>
+            <a href="pages/contact.html" aria-label="Contact">Contact</a>
+        </nav>
+        <!-- Bouton pour afficher le menu mobile -->
+        <a href="#navPanel" class="navPanelToggle" aria-label="Menu mobile">
+            <span class="fa fa-bars" aria-hidden="true"></span> <!-- Ajout de aria-hidden -->
+        </a>
+    </div>
+</header>
+
 
 <!-- Panneau de navigation mobile -->
 <div id="navPanel" class="mobile-nav" aria-hidden="true">
