@@ -369,3 +369,45 @@ ul.icons {
         margin-bottom: 1.5rem;
     }
 }
+
+
+/* Styles pour la section FAQ */
+#faq {
+    max-width: 800px; /* Limite la largeur de la section */
+    margin: 2rem auto; /* Centre la section */
+    padding: 1.5rem; /* Ajoute du padding */
+    background-color: #f9f9f9; /* Couleur de fond légère */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+}
+
+#faq h2 {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 1.5rem; /* Espacement en bas du titre */
+    color: #333; /* Couleur du texte */
+}
+
+.faq-item {
+    margin-bottom: 1rem; /* Espacement entre les éléments FAQ */
+}
+
+.faq-question {
+    cursor: pointer; /* Curseur en forme de main pour indiquer la cliquabilité */
+    padding: 0.5rem; /* Ajoute du padding */
+    background-color: #007bff; /* Couleur de fond des questions */
+    color: #fff; /* Couleur du texte */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition douce pour le survol */
+}
+
+.faq-question:hover {
+    background-color: #0056b3; /* Couleur de survol */
+}
+
+.faq-answer {
+    display: none; /* Cache la réponse par défaut */
+    padding: 0.5rem; /* Ajoute du padding */
+    background-color: #fff; /* Couleur de fond des réponses */
+    border: 1px solid #ddd; /* Bordure pour la réponse */
+    border-radius: 5px; /* Coins arrondis */
+}
