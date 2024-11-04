@@ -54,7 +54,9 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
     flex-direction: column;
     justify-content: center;
     align-items: center;
