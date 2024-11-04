@@ -376,7 +376,7 @@ ul.icons {
     max-width: 800px; /* Limite la largeur de la section */
     margin: 2rem auto; /* Centre la section */
     padding: 1.5rem; /* Ajoute du padding */
-    background-color: #f9f9f9; /* Couleur de fond légère */
+    background-color: ; /* Couleur de fond légère */
     border: 1px solid #ccc; /* Bordure légère */
     border-radius: 8px; /* Coins arrondis */
 }
@@ -394,14 +394,14 @@ ul.icons {
 .faq-question {
     cursor: pointer; /* Curseur en forme de main pour indiquer la cliquabilité */
     padding: 0.5rem; /* Ajoute du padding */
-    background-color: #007bff; /* Couleur de fond des questions */
+    background-color: ; /* Couleur de fond des questions */
     color: #fff; /* Couleur du texte */
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease; /* Transition douce pour le survol */
 }
 
 .faq-question:hover {
-    background-color: #0056b3; /* Couleur de survol */
+    background-color: ; /* Couleur de survol */
 }
 
 .faq-answer {
