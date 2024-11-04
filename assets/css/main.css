@@ -153,6 +153,21 @@ li {
     transition: color 0.2s ease, transform 0.2s ease; /* Transition douce */
 }
 
+#navPanel .icons {
+    list-style: none; /* Supprime les puces de la liste */
+    padding: 0; /* Enlève le padding par défaut */
+    margin: 1em 0; /* Marge autour de la liste */
+    display: flex; /* Affiche les icônes en ligne */
+    gap: 1em; /* Espacement entre les icônes */
+}
+
+#navPanel .icons .icon {
+    color: white; /* Couleur des icônes */
+    font-size: 1.5em; /* Taille des icônes */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+
 /* Rendre le menu responsive */
 @media (max-width: 768px) {
     .desktop-nav {
