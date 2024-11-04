@@ -260,44 +260,55 @@ main {
     background: var(--secondary-color);
     color: #fff;
     padding: 2rem 1rem;
+    text-align: center;
 }
 
 #footer a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 #footer a:hover {
+    color: var(--primary-color);
     text-decoration: underline;
 }
 
 .footer-grid {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
+    gap: 2rem; /* Pour un espacement uniforme entre les colonnes */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .footer-column {
-    width: 30%;
+    flex: 1 1 30%; /* 30% avec flexibilité pour s'ajuster selon la largeur de l'écran */
+    min-width: 200px; /* Assure une largeur minimale sur petits écrans */
 }
 
 .footer-column h4 {
     margin-bottom: 1rem;
+    font-size: 1.1rem;
 }
 
 .footer-column ul {
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
 ul.icons {
     display: flex;
+    justify-content: center; /* Aligne les icônes au centre */
     gap: 10px;
+    padding: 1rem 0 0;
 }
 
 .icons .icon {
     color: white;
-    transition: color 0.3s;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .icons .icon:hover {
@@ -305,25 +316,14 @@ ul.icons {
 }
 
 @media (max-width: 768px) {
-    .wrapper {
-        padding: 0 1rem;
-    }
-
-    #three {
+    .footer-grid {
         flex-direction: column;
         align-items: center;
     }
 
-    .toolkit {
-        width: 90%;
-        margin: 0.5rem auto;
-    }
-
-    .footer-grid {
-        flex-direction: column;
-    }
-
     .footer-column {
-        width: 100%;
+        width: 100%; /* Prend toute la largeur sur mobile */
+        text-align: center; /* Aligne le contenu pour une meilleure lisibilité */
+        margin-bottom: 1.5rem;
     }
 }
