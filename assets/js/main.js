@@ -55,3 +55,15 @@ $(document).ready(function () {
         }
     });
 });
+
+
+
+$(document).ready(function () {
+    $('.faq-question').on('click', function () {
+        // Cache ou montre la réponse
+        $(this).next('.faq-answer').slideToggle();
+        
+        // Change le style de la question pour indiquer qu'elle est ouverte ou fermée
+        $(this).toggleClass('active');
+    });
+});
