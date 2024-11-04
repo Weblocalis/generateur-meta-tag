@@ -62,9 +62,9 @@ body {
     align-items: center;
 }
 
-#navPanel.active {
-    visibility: visible;
+#navPanel[aria-hidden="false"] {
     opacity: 1;
+    visibility: visible;
 }
 
 /* Rendre le menu responsive */
