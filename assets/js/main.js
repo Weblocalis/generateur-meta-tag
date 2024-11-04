@@ -48,8 +48,3 @@ $(document).ready(function () {
         }
     });
 });
-
-
-
-// Affichage dynamique de l'année
-document.getElementById("currentYear").textContent = new Date().getFullYear();
