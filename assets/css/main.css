@@ -114,26 +114,43 @@ li {
     display: none;
 }
 
+/* Style pour le panneau de navigation mobile */
 #navPanel {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
+    right: 0;
+    width: 250px; /* Largeur ajustable selon votre préférence */
+    height: 100vh;
+    background-color: #333; /* Couleur de fond pour le panneau mobile */
+    display: flex;
+    flex-direction: column;
+    align-items: start; /* Aligne les éléments à gauche */
+    padding: 1em;
+    gap: 1em; /* Espacement entre les éléments */
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
     visibility: hidden;
     opacity: 0;
-    transition: visibility 0s, opacity 0.3s ease-in-out;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0s 0.3s; /* transition douce */
 }
 
-#navPanel[aria-hidden="false"] {
-    visibility: visible;
-    opacity: 1;
+/* Style pour les liens du menu dans le panneau mobile */
+#navPanel a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    font-size: 1.1em;
+    width: 100%;
+}
+
+#navPanel a:hover {
+    background-color: #444; /* Couleur de survol pour les liens */
+}
+
+#navPanel .close {
+    margin-top: auto;
+    text-align: right;
+    font-size: 1.5em;
 }
 
 /* Rendre le menu responsive */
