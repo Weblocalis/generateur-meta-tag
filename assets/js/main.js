@@ -14,3 +14,6 @@ $(document).ready(function () {
         $navPanel.fadeOut(300); // Masquer le panneau avec une animation
     });
 });
+
+
+document.getElementById("currentYear").textContent = new Date().getFullYear();
