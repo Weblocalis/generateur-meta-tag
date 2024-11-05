@@ -467,3 +467,64 @@ ul.icons {
         order: 2; /* Place le texte en second */
     }
 }
+
+
+#blog {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.blog-container {
+    display: flex;
+    flex-wrap: wrap; /* Permet aux articles de se répartir sur plusieurs lignes */
+    justify-content: space-between;
+}
+
+.blog-post {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 15px;
+    flex: 1 1 calc(33.333% - 20px); /* Trois colonnes sur les écrans larges */
+    box-sizing: border-box;
+    transition: transform 0.2s; /* Ajoute une transition pour l'effet hover */
+}
+
+.blog-post:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+}
+
+.blog-image {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.blog-title {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.blog-excerpt {
+    font-size: 1em;
+    color: #555;
+}
+
+.blog-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.blog-link:hover {
+    text-decoration: underline; /* Souligne le lien au survol */
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    .blog-post {
+        flex: 1 1 calc(100% - 20px); /* Une colonne sur les écrans étroits */
+    }
+}
