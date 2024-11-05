@@ -426,3 +426,44 @@ ul.icons {
     border: 1px solid #ddd; /* Bordure pour la réponse */
     border-radius: 5px; /* Coins arrondis */
 }
+
+
+#team {
+    padding: 20px;
+}
+
+.team-container {
+    display: flex;
+    flex-direction: row; /* Alignement en ligne sur les écrans larges */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.team-image {
+    max-width: 100%;
+    height: auto;
+    flex: 1; /* Prend l'espace restant */
+    margin-right: 20px; /* Espacement entre l'image et le texte */
+}
+
+.team-text {
+    flex: 2; /* Prend plus d'espace que l'image */
+}
+
+/* Styles pour les appareils mobiles */
+@media (max-width: 768px) {
+    .team-container {
+        flex-direction: column; /* Aligne en colonne sur les écrans étroits */
+        align-items: center; /* Centre les éléments */
+    }
+
+    .team-image {
+        margin-right: 0; /* Supprime l'espacement à droite */
+        margin-bottom: 20px; /* Ajoute un espacement en bas */
+        order: 1; /* Place l'image en premier */
+    }
+
+    .team-text {
+        order: 2; /* Place le texte en second */
+    }
+}
