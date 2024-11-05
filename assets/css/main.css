@@ -258,7 +258,22 @@ main {
 }
 
 .toolkit {
+    background: .toolkit {
     background: #fff;
+    border-radius: 10px; /* Coins arrondis pour un look moderne */
+    padding: 2rem;
+    margin: 1rem;
+    width: calc(90%); /* Pour un aspect responsive */
+    max-width: 400px; /* Largeur maximale pour garder un bon aspect */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s; /* Transitions pour effet de survol */
+    text-align: center; /* Centrer le texte */
+}
+
+.toolkit:hover {
+    transform: translateY(-5px); /* Légère élévation au survol */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Ombre plus prononcée */
+};
     border-radius: 10px; /* Coins arrondis pour un look moderne */
     padding: 2rem;
     margin: 1rem;
@@ -376,7 +391,7 @@ ul.icons {
     max-width: 800px; /* Limite la largeur de la section */
     margin: 2rem auto; /* Centre la section */
     padding: 1.5rem; /* Ajoute du padding */
-    background-color: ; /* Couleur de fond légère */
+    background-color: #fff; /* Couleur de fond légère */
     border: 1px solid #ccc; /* Bordure légère */
     border-radius: 8px; /* Coins arrondis */
 }
