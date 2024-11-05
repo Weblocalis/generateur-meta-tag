@@ -399,7 +399,7 @@ ul.icons {
 #faq h2 {
     text-align: center; /* Centre le titre */
     margin-bottom: 1.5rem; /* Espacement en bas du titre */
-    color: #333; /* Couleur du texte */
+    color: black; /* Couleur du texte */
 }
 
 .faq-item {
