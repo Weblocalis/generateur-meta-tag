@@ -410,7 +410,7 @@ ul.icons {
     cursor: pointer; /* Curseur en forme de main pour indiquer la cliquabilité */
     padding: 0.5rem; /* Ajoute du padding */
     background-color: ; /* Couleur de fond des questions */
-    color: #fff; /* Couleur du texte */
+    color: black; /* Couleur du texte */
     border-radius: 5px; /* Coins arrondis */
     transition: background-color 0.3s ease; /* Transition douce pour le survol */
 }
