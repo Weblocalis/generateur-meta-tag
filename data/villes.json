@@ -1,43 +1,160 @@
 {
   "cities": [
-    { "id": 75, "name": "Paris" },
-    { "id": 13, "name": "Marseille" },
-    { "id": 69, "name": "Lyon" },
-    { "id": 31, "name": "Toulouse" },
-    { "id": 44, "name": "Nantes" },
-    { "id": 67, "name": "Strasbourg" },
-    { "id": 34, "name": "Montpellier" },
-    { "id": 33, "name": "Bordeaux" },
-    { "id": 59, "name": "Lille" },
-    { "id": 35, "name": "Rennes" },
-    { "id": 51, "name": "Reims" },
-    { "id": 76, "name": "Le Havre" },
-    { "id": 42, "name": "Saint-Étienne" },
-    { "id": 83, "name": "Toulon" },
-    { "id": 49, "name": "Angers" },
-    { "id": 30, "name": "Nîmes" },
-    { "id": 69, "name": "Villeurbanne" },
-    { "id": 63, "name": "Clermont-Ferrand" },
-    { "id": 72, "name": "Le Mans" },
-    { "id": 13, "name": "Aix-en-Provence" },
-    { "id": 29, "name": "Brest" },
-    { "id": 37, "name": "Tours" },
-    { "id": 87, "name": "Limoges" },
-    { "id": 74, "name": "Annecy" },
-    { "id": 66, "name": "Perpignan" },
-    { "id": 57, "name": "Metz" },
-    { "id": 25, "name": "Besançon" },
-    { "id": 45, "name": "Orléans" },
-    { "id": 68, "name": "Mulhouse" },
-    { "id": 76, "name": "Rouen" },
-    { "id": 14, "name": "Caen" },
-    { "id": 95, "name": "Argenteuil" },
-    { "id": 93, "name": "Montreuil" },
-    { "id": 93, "name": "Saint-Denis" },
-    { "id": 93, "name": "Aubervilliers" },
-    { "id": 59, "name": "Tourcoing" },
-    { "id": 17, "name": "La Rochelle" },
-    { "id": 974, "name": "Saint-Paul" },
-    { "id": 972, "name": "Fort-de-France" }
+    {
+      "id": 75,
+      "name": "Paris"
+    },
+    {
+      "id": 13,
+      "name": "Marseille"
+    },
+    {
+      "id": 69,
+      "name": "Lyon"
+    },
+    {
+      "id": 31,
+      "name": "Toulouse"
+    },
+    {
+      "id": 44,
+      "name": "Nantes"
+    },
+    {
+      "id": 67,
+      "name": "Strasbourg"
+    },
+    {
+      "id": 34,
+      "name": "Montpellier"
+    },
+    {
+      "id": 33,
+      "name": "Bordeaux"
+    },
+    {
+      "id": 59,
+      "name": "Lille"
+    },
+    {
+      "id": 35,
+      "name": "Rennes"
+    },
+    {
+      "id": 51,
+      "name": "Reims"
+    },
+    {
+      "id": 76,
+      "name": "Le Havre"
+    },
+    {
+      "id": 42,
+      "name": "Saint-Étienne"
+    },
+    {
+      "id": 83,
+      "name": "Toulon"
+    },
+    {
+      "id": 49,
+      "name": "Angers"
+    },
+    {
+      "id": 30,
+      "name": "Nîmes"
+    },
+    {
+      "id": 69,
+      "name": "Villeurbanne"
+    },
+    {
+      "id": 63,
+      "name": "Clermont-Ferrand"
+    },
+    {
+      "id": 72,
+      "name": "Le Mans"
+    },
+    {
+      "id": 13,
+      "name": "Aix-en-Provence"
+    },
+    {
+      "id": 29,
+      "name": "Brest"
+    },
+    {
+      "id": 37,
+      "name": "Tours"
+    },
+    {
+      "id": 87,
+      "name": "Limoges"
+    },
+    {
+      "id": 74,
+      "name": "Annecy"
+    },
+    {
+      "id": 66,
+      "name": "Perpignan"
+    },
+    {
+      "id": 57,
+      "name": "Metz"
+    },
+    {
+      "id": 25,
+      "name": "Besançon"
+    },
+    {
+      "id": 45,
+      "name": "Orléans"
+    },
+    {
+      "id": 68,
+      "name": "Mulhouse"
+    },
+    {
+      "id": 76,
+      "name": "Rouen"
+    },
+    {
+      "id": 14,
+      "name": "Caen"
+    },
+    {
+      "id": 95,
+      "name": "Argenteuil"
+    },
+    {
+      "id": 93,
+      "name": "Montreuil"
+    },
+    {
+      "id": 93,
+      "name": "Saint-Denis"
+    },
+    {
+      "id": 93,
+      "name": "Aubervilliers"
+    },
+    {
+      "id": 59,
+      "name": "Tourcoing"
+    },
+    {
+      "id": 17,
+      "name": "La Rochelle"
+    },
+    {
+      "id": 974,
+      "name": "Saint-Paul"
+    },
+    {
+      "id": 972,
+      "name": "Fort-de-France"
+    }
   ]
 }
