@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
-    fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')
+    fetch('data/villes.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier JSON');
