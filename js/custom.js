@@ -16,8 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            // Forcer l'affichage du <select>
-            selectElement.style.display = 'block';
+            selectElement.style.display = 'block'; // Forcer l'affichage du <select> au cas où il serait masqué.
 
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
@@ -39,6 +38,9 @@ document.addEventListener('DOMContentLoaded', function() {
             } else {
                 console.error('Le fichier JSON ne contient pas de tableau "cities".');
             }
+
+            // Initialisation de nice-select après ajout des options
+            $(selectElement).niceSelect();
         })
         .catch(error => {
             console.error('Erreur lors du chargement des données JSON:', error);
