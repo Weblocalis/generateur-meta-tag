@@ -26,6 +26,15 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const selectElement = document.getElementById('inputDoctorName');  // Sélectionner le <select> par son id
 
+            // Vérifier si le <select> existe
+            if (!selectElement) {
+                console.error('Element <select> avec l\'id "inputDoctorName" non trouvé');
+                return;
+            }
+
+            // Vider les options existantes (en cas de réexécution du script)
+            selectElement.innerHTML = '';
+
             // Créer une option "All Locations" (toutes les localisations)
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
@@ -33,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selectElement.appendChild(allLocationsOption);
 
             // Vérifier si 'cities' existe et est un tableau
-            if (Array.isArray(data.cities)) {
+            if (Array.isArray(data.cities) && data.cities.length > 0) {
                 data.cities.forEach(city => {
                     const option = document.createElement('option');
                     option.value = city.id;  // L'ID correspond au numéro de département
@@ -41,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     selectElement.appendChild(option);  // Ajouter l'option au <select>
                 });
             } else {
-                console.error('Le fichier JSON ne contient pas de tableau "cities".');
+                console.error('Le fichier JSON ne contient pas de tableau "cities" valide ou le tableau est vide.');
             }
         })
         .catch(error => {
