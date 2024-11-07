@@ -1,32 +1,40 @@
 document.addEventListener('DOMContentLoaded', function() {
+    const inputElement = document.getElementById('inputDoctorName');
+    const suggestionsList = document.getElementById('suggestionsList');
+
     // Charger le fichier JSON contenant les villes
     fetch('data/villes.json')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error('Erreur de chargement du fichier JSON');
-            }
-            return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
-            const selectElement = document.getElementById('inputDoctorName');
-            
-            // Ajouter une option de sélection par défaut
-            const defaultOption = document.createElement('option');
-            defaultOption.value = '';
-            defaultOption.textContent = 'Sélectionner une ville';
-            selectElement.appendChild(defaultOption);
+            const cities = data.cities;
 
-            // Ajouter chaque ville à la liste déroulante
-            if (Array.isArray(data.cities)) {
-                data.cities.forEach(city => {
-                    const option = document.createElement('option');
-                    option.value = city.id; // Assigner l'id de la ville
-                    option.textContent = city.name; // Afficher le nom de la ville
-                    selectElement.appendChild(option);
-                });
-            } else {
-                console.error('Le fichier JSON ne contient pas un tableau "cities".');
-            }
+            // Fonction pour filtrer et afficher les suggestions
+            inputElement.addEventListener('input', function() {
+                const query = inputElement.value.toLowerCase();
+                suggestionsList.innerHTML = ''; // Effacer les anciennes suggestions
+
+                if (query) {
+                    const filteredCities = cities.filter(city => city.name.toLowerCase().includes(query));
+                    
+                    if (filteredCities.length > 0) {
+                        suggestionsList.style.display = 'block'; // Afficher les suggestions
+                        filteredCities.forEach(city => {
+                            const li = document.createElement('li');
+                            li.classList.add('list-group-item');
+                            li.textContent = city.name;
+                            li.addEventListener('click', function() {
+                                inputElement.value = city.name; // Remplir l'input avec la ville sélectionnée
+                                suggestionsList.style.display = 'none'; // Cacher la liste des suggestions
+                            });
+                            suggestionsList.appendChild(li);
+                        });
+                    } else {
+                        suggestionsList.style.display = 'none'; // Cacher la liste si aucune correspondance
+                    }
+                } else {
+                    suggestionsList.style.display = 'none'; // Cacher la liste si l'input est vide
+                }
+            });
         })
         .catch(error => {
             console.error('Erreur lors du chargement des données JSON:', error);
