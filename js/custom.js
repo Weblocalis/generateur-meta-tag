@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
-    fetch('data/villes.json')  // Remplacez 'data/villes.json' par le chemin correct de votre fichier JSON
+    fetch('https://boostifyseo.com/data/villes.json')  // Remplacez le chemin par l'URL complète de votre fichier JSON
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier JSON');
