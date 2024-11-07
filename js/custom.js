@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Charger le fichier JSON contenant les villes
     fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')
         .then(response => {
             console.log("Statut de la réponse:", response.status);
@@ -16,13 +17,13 @@ document.addEventListener('DOMContentLoaded', function() {
                 return;
             }
 
-            selectElement.style.display = 'block'; // Forcer l'affichage du <select> au cas où il serait masqué.
-
+            // Ajouter l'option "Toutes les localisations"
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
             allLocationsOption.textContent = 'Toutes les localisations';
             selectElement.appendChild(allLocationsOption);
 
+            // Vérifier et ajouter les villes
             if (Array.isArray(data.cities)) {
                 const uniqueCities = new Map();
                 data.cities.forEach(city => {
@@ -40,12 +41,13 @@ document.addEventListener('DOMContentLoaded', function() {
             }
 
             // Initialisation de nice-select après ajout des options
-            $(selectElement).niceSelect();
+            $(selectElement).niceSelect(); // Initialiser ou recharger nice-select
         })
         .catch(error => {
             console.error('Erreur lors du chargement des données JSON:', error);
         });
 });
+
 
 
 
