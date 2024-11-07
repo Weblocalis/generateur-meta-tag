@@ -16,7 +16,7 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
-    fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')  // Remplacez le chemin par l'URL complète de votre fichier JSON
+    fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')  // L'URL de votre fichier JSON
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier JSON');
@@ -26,15 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(data => {
             const selectElement = document.getElementById('inputDoctorName');  // Sélectionner le <select> par son id
 
-            // Vérifier si le <select> existe
-            if (!selectElement) {
-                console.error('Element <select> avec l\'id "inputDoctorName" non trouvé');
-                return;
-            }
-
-            // Vider les options existantes (en cas de réexécution du script)
-            selectElement.innerHTML = '';
-
             // Créer une option "All Locations" (toutes les localisations)
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
@@ -42,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             selectElement.appendChild(allLocationsOption);
 
             // Vérifier si 'cities' existe et est un tableau
-            if (Array.isArray(data.cities) && data.cities.length > 0) {
+            if (Array.isArray(data.cities)) {
                 data.cities.forEach(city => {
                     const option = document.createElement('option');
                     option.value = city.id;  // L'ID correspond au numéro de département
@@ -50,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     selectElement.appendChild(option);  // Ajouter l'option au <select>
                 });
             } else {
-                console.error('Le fichier JSON ne contient pas de tableau "cities" valide ou le tableau est vide.');
+                console.error('Le fichier JSON ne contient pas de tableau "cities".');
             }
         })
         .catch(error => {
