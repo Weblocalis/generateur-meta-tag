@@ -14,31 +14,32 @@ $(document).ready(function () {
 
 
 
+
 document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
-    fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')  // L'URL de votre fichier JSON
+    fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')
         .then(response => {
+            console.log("Statut de la réponse:", response.status);  // Journalisation de statut
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier JSON');
             }
-            return response.json();  // Convertir la réponse en JSON
+            return response.json();
         })
         .then(data => {
-            const selectElement = document.getElementById('inputDoctorName');  // Sélectionner le <select> par son id
-
-            // Créer une option "All Locations" (toutes les localisations)
+            console.log("Données JSON chargées:", data);  // Affichage des données
+            const selectElement = document.getElementById('inputDoctorName');
+            
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
             allLocationsOption.textContent = 'Toutes les localisations';
             selectElement.appendChild(allLocationsOption);
 
-            // Vérifier si 'cities' existe et est un tableau
             if (Array.isArray(data.cities)) {
                 data.cities.forEach(city => {
                     const option = document.createElement('option');
-                    option.value = city.id;  // L'ID correspond au numéro de département
-                    option.textContent = city.name;  // Le nom de la ville
-                    selectElement.appendChild(option);  // Ajouter l'option au <select>
+                    option.value = city.id;
+                    option.textContent = city.name;
+                    selectElement.appendChild(option);
                 });
             } else {
                 console.error('Le fichier JSON ne contient pas de tableau "cities".');
