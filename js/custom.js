@@ -16,8 +16,13 @@ $(document).ready(function () {
 
 document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
-    fetch('data/villes.json')  // Assurez-vous que le fichier JSON est accessible à cette URL
-        .then(response => response.json())  // Convertir la réponse en JSON
+    fetch('data/villes.json')  // Remplacez 'data/villes.json' par le chemin correct de votre fichier JSON
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Erreur de chargement du fichier JSON');
+            }
+            return response.json();  // Convertir la réponse en JSON
+        })
         .then(data => {
             const selectElement = document.getElementById('inputDoctorName');  // Sélectionner le <select> par son id
 
@@ -27,13 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
             allLocationsOption.textContent = 'Toutes les localisations';
             selectElement.appendChild(allLocationsOption);
 
-            // Ajouter les villes depuis le fichier JSON
-            data.cities.forEach(city => {
-                const option = document.createElement('option');
-                option.value = city.id;  // L'ID correspond au numéro de département
-                option.textContent = city.name;  // Le nom de la ville
-                selectElement.appendChild(option);  // Ajouter l'option au <select>
-            });
+            // Vérifier si 'cities' existe et est un tableau
+            if (Array.isArray(data.cities)) {
+                data.cities.forEach(city => {
+                    const option = document.createElement('option');
+                    option.value = city.id;  // L'ID correspond au numéro de département
+                    option.textContent = city.name;  // Le nom de la ville
+                    selectElement.appendChild(option);  // Ajouter l'option au <select>
+                });
+            } else {
+                console.error('Le fichier JSON ne contient pas de tableau "cities".');
+            }
         })
-        .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
+        .catch(error => {
+            console.error('Erreur lors du chargement des données JSON:', error);
+        });
 });
