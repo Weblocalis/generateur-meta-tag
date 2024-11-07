@@ -29,6 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
             console.log("Données JSON chargées:", data);  // Affichage des données
             const selectElement = document.getElementById('inputDoctorName');
             
+            if (!selectElement) {
+                console.error("L'élément select avec l'ID 'inputDoctorName' est introuvable.");
+                return;
+            }
+
             const allLocationsOption = document.createElement('option');
             allLocationsOption.value = '';
             allLocationsOption.textContent = 'Toutes les localisations';
