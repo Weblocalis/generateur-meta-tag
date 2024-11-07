@@ -2,46 +2,31 @@ document.addEventListener('DOMContentLoaded', function() {
     // Charger le fichier JSON contenant les villes
     fetch('https://weblocalis.github.io/boostifyseo-directory/data/villes.json')
         .then(response => {
-            console.log("Statut de la réponse:", response.status);
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier JSON');
             }
             return response.json();
         })
         .then(data => {
-            console.log("Données JSON chargées:", data);
             const selectElement = document.getElementById('inputDoctorName');
+            
+            // Ajouter une option de sélection par défaut
+            const defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.textContent = 'Sélectionner une ville';
+            selectElement.appendChild(defaultOption);
 
-            if (!selectElement) {
-                console.error("L'élément select avec l'ID 'inputDoctorName' est introuvable.");
-                return;
-            }
-
-            // Ajouter l'option "Toutes les localisations"
-            const allLocationsOption = document.createElement('option');
-            allLocationsOption.value = '';
-            allLocationsOption.textContent = 'Toutes les localisations';
-            selectElement.appendChild(allLocationsOption);
-
-            // Vérifier et ajouter les villes
+            // Ajouter chaque ville à la liste déroulante
             if (Array.isArray(data.cities)) {
-                const uniqueCities = new Map();
                 data.cities.forEach(city => {
-                    if (!uniqueCities.has(city.id)) {
-                        uniqueCities.set(city.id, city.name);
-
-                        const option = document.createElement('option');
-                        option.value = city.id;
-                        option.textContent = city.name;
-                        selectElement.appendChild(option);
-                    }
+                    const option = document.createElement('option');
+                    option.value = city.id; // Assigner l'id de la ville
+                    option.textContent = city.name; // Afficher le nom de la ville
+                    selectElement.appendChild(option);
                 });
             } else {
-                console.error('Le fichier JSON ne contient pas de tableau "cities".');
+                console.error('Le fichier JSON ne contient pas un tableau "cities".');
             }
-
-            // Initialisation de nice-select après ajout des options
-            $(selectElement).niceSelect(); // Initialiser ou recharger nice-select
         })
         .catch(error => {
             console.error('Erreur lors du chargement des données JSON:', error);
