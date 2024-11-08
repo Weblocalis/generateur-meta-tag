@@ -29,7 +29,7 @@
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#services">
-                Ajouter des services
+                Mes services
               </a>
             </li>
             <li class="nav-item">
@@ -65,10 +65,12 @@
           </form>
         </div>
 
-        <!-- Ajouter des services -->
+        <!-- Mes services -->
         <div id="services" class="section">
-          <h2>Ajouter un service</h2>
-          <form>
+          <h2>Mes services</h2>
+
+          <!-- Formulaire d'ajout de service -->
+          <form id="addServiceForm">
             <div class="form-group">
               <label for="serviceName">Nom du service</label>
               <input type="text" class="form-control" id="serviceName" placeholder="Nom du service">
@@ -79,6 +81,12 @@
             </div>
             <button type="submit" class="btn btn-primary">Ajouter le service</button>
           </form>
+
+          <!-- Liste des services -->
+          <h3 class="mt-5">Services proposés</h3>
+          <ul id="serviceList" class="list-group">
+            <!-- Services ajoutés ici dynamiquement -->
+          </ul>
         </div>
 
         <!-- Mes messages -->
@@ -104,6 +112,30 @@
   <script>
     // Initialiser Nice Select
     $('select').niceSelect();
+
+    // Fonction pour ajouter un service à la liste
+    $('#addServiceForm').on('submit', function(event) {
+      event.preventDefault();
+      
+      // Récupérer les valeurs du formulaire
+      var serviceName = $('#serviceName').val();
+      var serviceDescription = $('#serviceDescription').val();
+
+      // Ajouter un nouveau service dans la liste
+      if (serviceName && serviceDescription) {
+        var serviceHTML = `
+          <li class="list-group-item">
+            <h5>${serviceName}</h5>
+            <p>${serviceDescription}</p>
+          </li>
+        `;
+        $('#serviceList').append(serviceHTML);
+        
+        // Réinitialiser le formulaire
+        $('#serviceName').val('');
+        $('#serviceDescription').val('');
+      }
+    });
   </script>
 </body>
 
