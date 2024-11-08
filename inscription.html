@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscription</title>
-
-    <!-- Dépendances CSS -->
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
-    <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700&display=swap" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
-    <link href="css/style.css" rel="stylesheet" />
-    <link href="css/responsive.css" rel="stylesheet" />
-</head>
 <body>
-
   <div class="hero_area">
     <!-- header section starts -->
     <header class="header_section">
@@ -72,7 +56,7 @@
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card p-4" style="width: 100%; max-width: 400px;">
             <h3 class="text-center mb-4">Inscription</h3>
-            <form action="/register" method="POST">
+            <form id="register-form">
                 <div class="form-group mb-3">
                     <label for="username">Nom d'utilisateur</label>
                     <input type="text" class="form-control" id="username" name="username" placeholder="Choisissez un nom d'utilisateur" required>
@@ -91,29 +75,60 @@
                 </div>
                 <button type="submit" class="btn btn-primary w-100">S'inscrire</button>
             </form>
-            <p class="text-center mt-3">Déjà inscrit ? <a href="connexion">Connectez-vous</a></p>
+            <p class="text-center mt-3">Déjà inscrit ? <a href="connexion.html">Connectez-vous</a></p>
         </div>
     </div>
 
-<script type="module">
-  // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-  // TODO: Add SDKs for Firebase products that you want to use
-  // https://firebase.google.com/docs/web/setup#available-libraries
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js";
 
-  // Your web app's Firebase configuration
-  const firebaseConfig = {
-    apiKey: "AIzaSyAlJvNBLS3umUNJf2HK0XCREzzexkMVif4",
-    authDomain: "auth-boostifyseo.firebaseapp.com",
-    projectId: "auth-boostifyseo",
-    storageBucket: "auth-boostifyseo.firebasestorage.app",
-    messagingSenderId: "1037885289314",
-    appId: "1:1037885289314:web:01e5aeb365cc784e8b323b"
-  };
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAlJvNBLS3umUNJf2HK0XCREzzexkMVif4",
+      authDomain: "auth-boostifyseo.firebaseapp.com",
+      projectId: "auth-boostifyseo",
+      storageBucket: "auth-boostifyseo.firebasestorage.app",
+      messagingSenderId: "1037885289314",
+      appId: "1:1037885289314:web:01e5aeb365cc784e8b323b"
+    };
 
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-</script>
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth();
+
+    // Handle form submission
+    const registerForm = document.getElementById("register-form");
+    registerForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+      const confirmPassword = document.getElementById("confirm_password").value;
+
+      // Check if passwords match
+      if (password !== confirmPassword) {
+        alert("Les mots de passe ne correspondent pas.");
+        return;
+      }
+
+      // Create a new user with Firebase Authentication
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          alert("Inscription réussie !");
+          // Redirect to the login page
+          window.location.href = "connexion.html";
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          alert("Erreur: " + errorMessage);
+        });
+    });
+  </script>
 
   <!-- info section -->
   <section class="info_section ">
@@ -140,8 +155,7 @@
               </a>
             </li>
 
-
-<li>
+            <li>
               <a class="" href="profil.html">
                 Jobs
               </a>
@@ -210,7 +224,6 @@
   </section>
   <!-- end info_section -->
 
-
   <!-- footer section -->
   <footer class="footer_section">
     <div class="container">
@@ -224,9 +237,6 @@
 
     <!-- Dépendances JavaScript -->
     <script src="js/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/nice-select.min.js"></script>
     <script src="js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
-    <script src="js/custom.js"></script>
 </body>
-</html>
